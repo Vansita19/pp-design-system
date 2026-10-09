@@ -1,0 +1,65 @@
+{
+  "scope": "Source and simulated DOM checks only. Browser appearance unverified.",
+  "results": [
+    {
+      "check": "ai-response",
+      "exitCode": 0,
+      "stdout": "{\"responseConfigurations\":46,\"uniqueIds\":12,\"sourcePopoverInteractions\":5,\"followupEvents\":1,\"projectionMath\":\"bounded and correct\",\"tokens\":\"aliased\",\"status\":\"passed\",\"scope\":\"source geometry, markup, data and simulated events; no browser validation\"}\n{\"compactActions\":\"copy success/failure, exclusive feedback, regenerate, cleanup\",\"status\":\"passed\",\"scope\":\"simulated DOM; no browser validation\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "prompt-bar",
+      "exitCode": 0,
+      "stdout": "{\"promptBarConfigurations\":288,\"interactionContracts\":10,\"status\":\"passed\",\"scope\":\"source dimensions, rich mention markup/caret/form value, plain-text paste, voice interim/final/error/unsupported and cleanup; simulated DOM only\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "verify",
+      "exitCode": 0,
+      "stdout": "{\"pages\":79,\"components\":68,\"tokens\":2020,\"variantRenders\":567,\"status\":\"passed\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "standards",
+      "exitCode": 0,
+      "stdout": "{\"contrastPairs\":39,\"solidContrastExceptions\":[{\"foreground\":\"semantic.badge.blue.solid.foreground\",\"background\":\"semantic.badge.blue.solid.background\",\"ratio\":4.47,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"},{\"foreground\":\"semantic.badge.success.solid.foreground\",\"background\":\"semantic.badge.success.solid.background\",\"ratio\":2.404,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"},{\"foreground\":\"semantic.badge.purple.solid.foreground\",\"background\":\"semantic.badge.purple.solid.background\",\"ratio\":3.957,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"},{\"foreground\":\"semantic.badge.warning.solid.foreground\",\"background\":\"semantic.badge.warning.solid.background\",\"ratio\":2.148,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"},{\"foreground\":\"semantic.badge.danger.solid.foreground\",\"background\":\"semantic.badge.danger.solid.background\",\"ratio\":3.781,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"}],\"configurationMappings\":718,\"tokenTypes\":\"matched\",\"syntax\":\"passed\",\"status\":\"passed\",\"scope\":\"source contracts; listed solid badge exceptions do not meet 4.5:1; not computed browser styles\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "spacing",
+      "exitCode": 0,
+      "stdout": "{\"spacingSteps\":15,\"spacingRoles\":199,\"spacingDeclarations\":1429,\"foundationContracts\":\"bounded samples, unchanged copy values, preview before tokens\",\"inputStateBorders\":\"family500\",\"status\":\"passed\",\"scope\":\"registry, CSS and actual template rendering; browser appearance unverified\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "accessibility",
+      "exitCode": 0,
+      "stdout": "PASS buttons avoid accidental form submission and retain explicit form actions\nPASS button family preserves old routes and appears once in search and navigation\nPASS link variants are anchors and disabled links cannot activate\nPASS joined actions do not submit forms or pretend to be toggle selections\nPASS fields only describe helper text that exists, preserving readonly and invalid semantics\nPASS styled selection controls retain native input semantics and decorative indicators\nPASS radio instances form independent native groups with one selected value\nPASS checkbox appearance reuses the Inbox control without replacing native behavior\nPASS indeterminate examples set the native mixed property and badges stay noninteractive\nPASS confirmation dialogs describe the action and initially focus Cancel\nPASS source composer disables unavailable actions while keeping pending input editable\nPASS toast announcements use a pre-existing status region and restore trigger focus\nPASS table select-all tracks mixed selection and only acts on visible results\nPASS multiselect chips reflect checked values and removal updates and focuses the checkbox\nPASS streaming text is available without character-by-character announcements\nPASS stream honors pause, resumes, reacts to reduced motion, and cleans timers/listeners\nPASS a closed popover does not steal focus when Escape is pressed elsewhere\n{\"accessibilityChecks\":17,\"status\":\"passed\",\"scope\":\"markup and simulated event contracts; browser/AT validation not performed\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "detail-pages",
+      "exitCode": 0,
+      "stdout": "{\"detailPages\":256,\"status\":\"passed\",\"scope\":\"Actual template rendering and tab content; simulated DOM bindings\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "variant-matrix",
+      "exitCode": 0,
+      "stdout": "{\"matrixPages\":68,\"matrixSpecimens\":1566,\"badgeSpecimens\":560,\"status\":\"passed\",\"scope\":\"Supported combinations, bounded rendering, token references and unique native input identities\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "full-source-coverage",
+      "exitCode": 0,
+      "stdout": "{\"liveModules\":53,\"ledgers\":5,\"visualPatterns\":226,\"userExcludedVisualPatterns\":13,\"nonvisualDispositions\":29,\"sourceReferences\":308,\"composedRoutes\":50,\"migratedLedgerRoutes\":31,\"status\":\"passed\",\"scope\":\"Source inventory, registered helpers, render/token contracts, catalogue reachability and explicit user exclusions; no browser/AT claim\"}\n",
+      "stderr": ""
+    },
+    {
+      "check": "navigation",
+      "exitCode": 0,
+      "stdout": "{\"checks\":\"tab/header identity, focus, horizontal and sidebar scroll, disclosure preferences, one cleanup, rapid route coalescing/cancellation, new page position, back/forward hashes, category tabs, search restoration, color foundation cohort, page lifecycle cancellation\",\"sameFamilyShellRebuilds\":0,\"sameFamilyVisibleTabScrollResets\":0,\"status\":\"passed\",\"scope\":\"Actual routing/render functions with DOM fixtures; no browser appearance claim\"}\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "removedPages": [
+    "company-report",
+    "collection-workspace",
+    "note-editor"
+  ],
+  "patterns": {
+    "create-list-form": {
+      "helper": "sourceWorkspace",
+      "variant": "save-form"
+    },
+    "collection-library": {
+      "helper": "sourceWorkspace",
+      "variant": "collections"
+    },
+    "collection-empty": {
+      "helper": "sourceWorkspace",
+      "variant": "collections"
+    },
+    "collection-actions": {
+      "helper": "sourceWorkspace",
+      "variant": "collections"
+    },
+    "benchmark-schema": {
+      "helper": "sourceWorkspace",
+      "variant": "benchmark"
+    },
+    "benchmark-selection": {
+      "helper": "sourceWorkspace",
+      "variant": "benchmark"
+    },
+    "benchmark-sort": {
+      "helper": "sourceWorkspace",
+      "variant": "benchmark"
+    },
+    "benchmark-columns": {
+      "helper": "sourceWorkspace",
+      "variant": "benchmark"
+    },
+    "benchmark-evidence": {
+      "helper": "sourceWorkspace",
+      "variant": "benchmark"
+    },
+    "benchmark-metric-detail": {
+      "helper": "sourceWorkspace",
+      "variant": "benchmark"
+    },
+    "assessment-criterion": {
+      "helper": "sourceWorkspace",
+      "variant": "benchmark"
+    },
+    "refinement-dock": {
+      "helper": "sourceWorkspace",
+      "variant": "benchmark"
+    },
+    "save-choice": {
+      "helper": "sourceWorkspace",
+      "variant": "save-choice"
+    },
+    "save-dynamic-form": {
+      "helper": "sourceWorkspace",
+      "variant": "save-form"
+    },
+    "view-readonly": {
+      "helper": "sourceWorkspace",
+      "variant": "benchmark"
+    },
+    "note-company-drilldown": {
+      "helper": "sourceWorkspace",
+      "variant": "collections"
+    },
+    "note-list-row": {
+      "helper": "sourceWorkspace",
+      "variant": "collections"
+    },
+    "notes-empty": {
+      "helper": "sourceWorkspace",
+      "variant": "collections"
+    },
+    "note-company-picker": {
+      "helper": "sourceWorkspace",
+      "variant": "collections"
+    },
+    "note-editor": {
+      "helper": "sourceWorkspace",
+      "variant": "note-editor"
+    },
+    "note-readonly": {
+      "helper": "sourceWorkspace",
+      "variant": "note-editor"
+    },
+    "note-mentions": {
+      "helper": "sourceWorkspace",
+      "variant": "note-editor"
+    },
+    "note-comments": {
+      "helper": "sourceWorkspace",
+      "variant": "note-editor"
+    },
+    "note-new": {
+      "helper": "sourceWorkspace",
+      "variant": "note-editor"
+    },
+    "note-images": {
+      "helper": "sourceWorkspace",
+      "variant": "note-editor"
+    },
+    "note-insight": {
+      "helper": "sourceWorkspace",
+      "variant": "note-editor"
+    },
+    "CHAT-12": {
+      "helper": "sourceChat",
+      "variant": "company-panel"
+    },
+    "CHAT-44": {
+      "helper": "sourceChat",
+      "variant": "save-list"
+    },
+    "CHAT-46": {
+      "helper": "sourceWorkspace",
+      "variant": "save-form"
+    },
+    "CHAT-47": {
+      "helper": "sourceChat",
+      "variant": "company-panel"
+    },
+    "CHAT-48": {
+      "helper": "sourceChat",
+      "variant": "company-panel"
+    },
+    "CHAT-49": {
+      "helper": "sourceChat",
+      "variant": "company-panel"
+    },
+    "CHAT-50": {
+      "helper": "sourceChat",
+      "variant": "company-panel"
+    },
+    "CHAT-52": {
+      "helper": "sourceWorkspace",
+      "variant": "note-editor"
+    },
+    "D04": {
+      "helper": "F.sourceDetails",
+      "variant": "report"
+    },
+    "D05": {
+      "helper": "F.sourceDetails",
+      "variant": "report"
+    },
+    "D07": {
+      "helper": "F.sourceDetails",
+      "variant": "report"
+    },
+    "D08": {
+      "helper": "F.sourceDetails",
+      "variant": "report"
+    },
+    "D09": {
+      "helper": "F.sourceDetails",
+      "variant": "report"
+    },
+    "D10": {
+      "helper": "F.sourceDetails",
+      "variant": "report"
+    },
+    "D11": {
+      "helper": "F.sourceDetails",
+      "variant": "report"
+    },
+    "D13": {
+      "helper": "F.sourceDetails",
+      "variant": "application"
+    },
+    "D14": {
+      "helper": "F.sourceDetails",
+      "variant": "application"
+    },
+    "D15": {
+      "helper": "F.sourceDetails",
+      "variant": "application"
+    },
+    "D16": {
+      "helper": "F.sourceDetails",
+      "variant": "application"
+    },
+    "D17": {
+      "helper": "F.sourceDetails",
+      "variant": "tables"
+    },
+    "D18": {
+      "helper": "F.sourceDetails",
+      "variant": "tables"
+    },
+    "D19": {
+      "helper": "F.sourceDetails",
+      "variant": "tables"
+    },
+    "D20": {
+      "helper": "F.sourceDetails",
+      "variant": "commercial"
+    },
+    "D21": {
+      "helper": "F.sourceDetails",
+      "variant": "tables"
+    },
+    "D22": {
+      "helper": "F.sourceDetails",
+      "variant": "profiles"
+    },
+    "D23": {
+      "helper": "F.sourceDetails",
+      "variant": "profiles"
+    },
+    "D24": {
+      "helper": "F.sourceDetails",
+      "variant": "profiles"
+    },
+    "D25": {
+      "helper": "F.sourceDetails",
+      "variant": "profiles"
+    },
+    "D26": {
+      "helper": "F.sourceDetails",
+      "variant": "profiles"
+    },
+    "D27": {
+      "helper": "F.sourceDetails",
+      "variant": "profiles"
+    },
+    "D28": {
+      "helper": "F.sourceDetails",
+      "variant": "profiles"
+    },
+    "D29": {
+      "helper": "F.sourceDetails",
+      "variant": "roster"
+    },
+    "D31": {
+      "helper": "F.sourceDetails",
+      "variant": "scorecard"
+    },
+    "D32": {
+      "helper": "F.sourceDetails",
+      "variant": "scorecard"
+    },
+    "D33": {
+      "helper": "F.sourceDetails",
+      "variant": "scorecard"
+    },
+    "D34": {
+      "helper": "F.sourceDetails",
+      "variant": "scorecard"
+    },
+    "D35": {
+      "helper": "F.sourceDetails",
+      "variant": "scorecard"
+    },
+    "D36": {
+      "helper": "F.sourceDetails",
+      "variant": "scorecard"
+    },
+    "D37": {
+      "helper": "F.sourceDetails",
+      "variant": "scorecard"
+    },
+    "D38": {
+      "helper": "F.sourceDetails",
+      "variant": "questions"
+    },
+    "D39": {
+      "helper": "F.sourceDetails",
+      "variant": "questions"
+    },
+    "D40": {
+      "helper": "F.sourceDetails",
+      "variant": "questions"
+    },
+    "D41": {
+      "helper": "F.sourceDetails",
+      "variant": "questions"
+    },
+    "D42": {
+      "helper": "F.sourceDetails",
+      "variant": "questions"
+    },
+    "D43": {
+      "helper": "F.sourceDetails",
+      "variant": "research"
+    },
+    "D44": {
+      "helper": "F.sourceDetails",
+      "variant": "research"
+    },
+    "D45": {
+      "helper": "F.sourceDetails",
+      "variant": "research"
+    },
+    "D46": {
+      "helper": "F.sourceDetails",
+      "variant": "research"
+    },
+    "D48": {
+      "helper": "F.sourceDetails",
+      "variant": "research"
+    },
+    "D50": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D51": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D53": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D54": {
+      "helper": "F.sourceDetails",
+      "variant": "panel"
+    },
+    "D55": {
+      "helper": "F.sourceDetails",
+      "variant": "panel"
+    },
+    "D56": {
+      "helper": "F.sourceDetails",
+      "variant": "panel"
+    },
+    "D57": {
+      "helper": "F.sourceDetails",
+      "variant": "files"
+    },
+    "D58": {
+      "helper": "F.sourceDetails",
+      "variant": "panel"
+    },
+    "D59": {
+      "helper": "F.sourceChat",
+      "variant": "company-panel"
+    },
+    "D61": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D62": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D63": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D64": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D65": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D66": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D67": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D68": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D69": {
+      "helper": "F.sourceDetails",
+      "variant": "summary"
+    },
+    "D82": {
+      "helper": "F.sourceDetails",
+      "variant": "updates"
+    },
+    "D83": {
+      "helper": "F.sourceDetails",
+      "variant": "updates"
+    },
+    "D84": {
+      "helper": "F.sourceDetails",
+      "variant": "updates"
+    },
+    "D85": {
+      "helper": "F.sourceDetails",
+      "variant": "updates"
+    },
+    "D86": {
+      "helper": "F.sourceDetails",
+      "variant": "updates"
+    },
+    "D87": {
+      "helper": "F.sourceDetails",
+      "variant": "updates"
+    },
+    "SHARED-11": {
+      "helper": "sourceDetails",
+      "variant": "files"
+    },
+    "D70": {
+      "helper": "F.sourceTrace",
+      "variant": "confidence"
+    },
+    "D71": {
+      "helper": "F.sourceTrace",
+      "variant": "confidence"
+    },
+    "D72": {
+      "helper": "F.sourceTrace",
+      "variant": "sidebar"
+    },
+    "D73": {
+      "helper": "F.sourceTrace",
+      "variant": "sidebar"
+    },
+    "D74": {
+      "helper": "F.sourceTrace",
+      "variant": "sidebar"
+    },
+    "D75": {
+      "helper": "F.sourceTrace",
+      "variant": "sidebar"
+    },
+    "D76": {
+      "helper": "F.sourceTrace",
+      "variant": "confidence"
+    },
+    "D77": {
+      "helper": "F.sourceTrace",
+      "variant": "sources"
+    },
+    "D78": {
+      "helper": "F.sourceTrace",
+      "variant": "sources"
+    },
+    "D79": {
+      "helper": "F.sourceTrace",
+      "variant": "map"
+    },
+    "D80": {
+      "helper": "F.sourceTrace",
+      "variant": "map"
+    },
+    "D81": {
+      "helper": "F.sourceTrace",
+      "variant": "map"
+    },
+    "CHAT-26": {
+      "helper": "aiResponse",
+      "variant": "comparison"
+    },
+    "CHAT-27": {
+      "helper": "aiResponse",
+      "variant": "comparison"
+    },
+    "CHAT-38": {
+      "helper": "aiResponse",
+      "variant": "meeting"
+    }
+  },
+  "hiddenPages": [
+    "evidence-trace"
+  ]
+}

@@ -1,0 +1,30 @@
+/* Changes only thumb motion; the native input and base switch styling remain. */
+.pp-switch{
+ --switch-stretch:var(--pp-component-switch-motion-stretch-md);
+ --switch-thumb-current:var(--switch-thumb);
+ --switch-motion-duration:var(--pp-component-switch-motion-release-duration);
+ --switch-motion-easing:var(--pp-component-switch-motion-release-easing);
+}
+.pp-switch.size-sm{--switch-stretch:var(--pp-component-switch-motion-stretch-sm)}
+.pp-switch.size-lg{--switch-stretch:var(--pp-component-switch-motion-stretch-lg)}
+.pp-switch:before{
+ width:var(--switch-thumb-current);
+ transition:width var(--switch-motion-duration) var(--switch-motion-easing),transform var(--switch-motion-duration) var(--switch-motion-easing);
+}
+.pp-switch:checked:before{
+ transform:translate(calc(var(--switch-width) - var(--switch-thumb-current) - 2 * var(--pp-border-width)),-50%);
+}
+.pp-switch:not(:disabled):is(:active,[data-switch-pressed="true"]){
+ --switch-thumb-current:calc(var(--switch-thumb) + var(--switch-stretch));
+ --switch-motion-duration:var(--pp-component-switch-motion-press-duration);
+ --switch-motion-easing:var(--pp-component-switch-motion-press-easing);
+}
+body.motion-paused .pp-switch,.preview-paused .pp-switch{
+ --switch-thumb-current:var(--switch-thumb)!important;
+ transition:none!important;
+}
+body.motion-paused .pp-switch:before,.preview-paused .pp-switch:before{transition:none!important}
+@media(prefers-reduced-motion:reduce){
+ .pp-switch{--switch-thumb-current:var(--switch-thumb)!important;transition:none!important}
+ .pp-switch:before{transition:none!important}
+}

@@ -1,0 +1,45 @@
+{
+  "retrieved": "2026-10-09",
+  "references": [
+    {
+      "component": "reasoning-trace",
+      "url": "https://ui.spectrumhq.in/r/reasoning-trace.json",
+      "sha256": "9e2581f77d1f494ee8b4e375c103e47e9a74c6fdcbc11cce70185cba3ecdf30e"
+    },
+    {
+      "component": "message-actions",
+      "url": "https://ui.spectrumhq.in/r/message-actions.json",
+      "sha256": "d5e9398f68d79a0a548eb8cca8b190ba52c9080da9bd9d4c084379e936e01055"
+    },
+    {
+      "component": "voice-input",
+      "url": "https://ui.spectrumhq.in/r/voice-input.json",
+      "sha256": "6dc23a0135c07ebb5f69fc8f6123a35c5fe674047f621ff9e76db62223cf7bb7"
+    },
+    {
+      "component": "task-rows",
+      "url": "https://ui.spectrumhq.in/r/task-rows.json",
+      "sha256": "921828a5ce6edfeadc8986c86d2151d82abc8237443d16649d78f738df7bd826"
+    },
+    {
+      "component": "web-search",
+      "url": "https://ui.spectrumhq.in/r/web-search.json",
+      "sha256": "bba468d7cf96817b241ab967494a18b0de14af612d3394908710e3b1788eafd7"
+    },
+    {
+      "component": "undo-pill",
+      "url": "https://ui.spectrumhq.in/r/undo-pill.json",
+      "sha256": "c295bb929a31f8276f279c587dc1ee29037436df2176f5880c9fbcbedbb80126"
+    },
+    {
+      "component": "toast-stack",
+      "url": "https://ui.spectrumhq.in/r/toast-stack.json",
+      "sha256": "c1f5d3f6629a298475eedd237886741f2427e0500807911118cc1fca928d049d"
+    },
+    {
+      "component": "status-badge",
+      "url": "https://ui.spectrumhq.in/r/status-badge.json",
+      "sha256": "39cf374059b7d0b303532a9391fde33be53374a7cbe62bac2ea7e0724d948c32"
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "name": "Design Agents Toolkit",
+  "attribution": "designsystems.surf (as credited in the supplied Markdown footers)",
+  "sourceArchive": "/Users/vansitaaddanki/Desktop/Portfolio 2026/design-agents-toolkit-dss.zip",
+  "archiveSha256": "c4bf31b08c8235085f0f7e27b1c49808cd4647189eba1710fb6628bf8f189157",
+  "archiveBytes": 34891617,
+  "reviewedOn": "2026-10-09",
+  "purpose": "Project-local reference originals; no globally installed or automatically activated skills",
+  "licenseEvidence": "No separate license or redistribution grant file is present in this archive; original attribution footers retained. No license is invented.",
+  "counts": {
+    "entries": 64,
+    "files": 55,
+    "retainedMarkdown": 15,
+    "pdfs": 5,
+    "macosMetadataFiles": 35
+  },
+  "entries": [
+    {
+      "archivePath": "design-agents-toolkit/",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "crc32": null,
+      "retainedAt": null,
+      "disposition": "directory"
+    },
+    {
+      "archivePath": "__MACOSX/._design-agents-toolkit",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/.DS_Store",
+      "kind": "file",
+      "bytes": 6148,
+      "sha256": "5b0041dd00087e66d8b4f35288e8184316ec21455ee2dc1d7a103cc5c053ad27",
+      "crc32": "5c246918",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/._.DS_Store",
+      "kind": "file",
+      "bytes": 120,
+      "sha256": "2f380f4a3d05a8d90c2106f50da75064e9ce57a598599dc5404f8f69a0223aa9",
+      "crc32": "38c0880b",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "crc32": null,
+      "retainedAt": null,
+      "disposition": "directory"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/._examples",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/templates/",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "crc32": null,
+      "retainedAt": null,
+      "disposition": "directory"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/._templates",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/Design Agents Guide.pdf",
+      "kind": "file",
+      "bytes": 17616987,
+      "sha256": "4b08ae433b0e715f9371f333704950492ac6139b81c447988f23402df4e1ecbe",
+      "crc32": "94150d98",
+      "retainedAt": null,
+      "disposition": "archive-only-pdf"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/._Design Agents Guide.pdf",
+      "kind": "file",
+      "bytes": 233,
+      "sha256": "9a963343aa837a26568adb4576c03434f82d70f0b7da9d1e4946397ab0749484",
+      "crc32": "ac2ac835",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/Design Agents Prompts.pdf",
+      "kind": "file",
+      "bytes": 11433088,
+      "sha256": "7feba98b10cc4338b13a3fcce2d33c9ac1ea67aee05212a0aafe94859249f543",
+      "crc32": "63447b34",
+      "retainedAt": null,
+      "disposition": "archive-only-pdf"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/._Design Agents Prompts.pdf",
+      "kind": "file",
+      "bytes": 233,
+      "sha256": "8e9dbd2b205bceb221848ca9e888ad001d5fdad329c5f540d96e682e3e578169",
+      "crc32": "dadf65e3",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/Token Mapping.pdf",
+      "kind": "file",
+      "bytes": 3341984,
+      "sha256": "b0c044d1ed17fd90f9569d5eabd0fedc713bf9118685339029f014839b7a1d81",
+      "crc32": "14815c81",
+      "retainedAt": null,
+      "disposition": "archive-only-pdf"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/._Token Mapping.pdf",
+      "kind": "file",
+      "bytes": 233,
+      "sha256": "6845a74163ac8a8a87b8312a19f826897a668dad2b805dce65544ad60a797a2b",
+      "crc32": "723e4d4f",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/.DS_Store",
+      "kind": "file",
+      "bytes": 6148,
+      "sha256": "07a50597d2575654e67606c2d16b251d32b319b477b6811a6cb65e728cca92be",
+      "crc32": "dde19fbc",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/._.DS_Store",
+      "kind": "file",
+      "bytes": 120,
+      "sha256": "2f380f4a3d05a8d90c2106f50da75064e9ce57a598599dc5404f8f69a0223aa9",
+      "crc32": "38c0880b",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/_shared-project-instructions.md",
+      "kind": "file",
+      "bytes": 1850,
+      "sha256": "d9c4a3710d550de4180b4a495580c2bf89528cdd5262bb36e16af824c64158fa",
+      "crc32": "a46aa203",
+      "retainedAt": "originals/examples/_shared-project-instructions.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/.__shared-project-instructions.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/component-docs/",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "crc32": null,
+      "retainedAt": null,
+      "disposition": "directory"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/._component-docs",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/Design Review.pdf",
+      "kind": "file",
+      "bytes": 3373929,
+      "sha256": "f3ca3e20f16c1a138a89b1d4cf57ff6d126dd4dcb2264c1bbeeae15fef6fded5",
+      "crc32": "d7266686",
+      "retainedAt": null,
+      "disposition": "archive-only-pdf"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/._Design Review.pdf",
+      "kind": "file",
+      "bytes": 233,
+      "sha256": "f34e5003e053b96aa46a6d32e2bab921e8fcb490dbf72e1b3edd6bbba34160f7",
+      "crc32": "7626f0df",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/token-mapping/",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "crc32": null,
+      "retainedAt": null,
+      "disposition": "directory"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/._token-mapping",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/design-review/",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "crc32": null,
+      "retainedAt": null,
+      "disposition": "directory"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/._design-review",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/Component Documentation.pdf",
+      "kind": "file",
+      "bytes": 3373934,
+      "sha256": "af6b5096be345100d67f22888eb7faaef913e5597f61b2df667a607f26967139",
+      "crc32": "f4a9dc38",
+      "retainedAt": null,
+      "disposition": "archive-only-pdf"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/._Component Documentation.pdf",
+      "kind": "file",
+      "bytes": 233,
+      "sha256": "884efdf071a072f40cc27da72ed94d687f0faec93f6bba76f01731bfea02a718",
+      "crc32": "9c9eed4a",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/templates/TESTS_TEMPLATE.md",
+      "kind": "file",
+      "bytes": 7286,
+      "sha256": "8a920582c6cd3849e9c42497ac284afe6372b140d1999eb2e01249b3e5d5793f",
+      "crc32": "5b2eee29",
+      "retainedAt": "originals/templates/TESTS_TEMPLATE.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/templates/._TESTS_TEMPLATE.md",
+      "kind": "file",
+      "bytes": 263,
+      "sha256": "729f43df1af08e9bdea45deefdc2623ae5e6863568221e363ca76524d9c43420",
+      "crc32": "e755a416",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/templates/.DS_Store",
+      "kind": "file",
+      "bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+      "crc32": "6d88006a",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/templates/._.DS_Store",
+      "kind": "file",
+      "bytes": 120,
+      "sha256": "2f380f4a3d05a8d90c2106f50da75064e9ce57a598599dc5404f8f69a0223aa9",
+      "crc32": "38c0880b",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/templates/SKILL_TEMPLATE.md",
+      "kind": "file",
+      "bytes": 11243,
+      "sha256": "528768e2dba1849d4192a987f97d2685b775caeb9caa9aa76e6399fe5f909fb3",
+      "crc32": "4bf7a37e",
+      "retainedAt": "originals/templates/SKILL_TEMPLATE.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/templates/._SKILL_TEMPLATE.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/component-docs/references/",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "crc32": null,
+      "retainedAt": null,
+      "disposition": "directory"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/component-docs/._references",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/component-docs/TESTS.md",
+      "kind": "file",
+      "bytes": 3487,
+      "sha256": "954475e4bd8f18ba3440dd92ae544183c5b216ff0ef724cf2cac2962534c1b89",
+      "crc32": "a6f6b00b",
+      "retainedAt": "originals/examples/component-docs/TESTS.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/component-docs/._TESTS.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/component-docs/SKILL.md",
+      "kind": "file",
+      "bytes": 5662,
+      "sha256": "af89183c584062ce79c6359b0540bac0511711d8ca8b0d54c2a910495499678e",
+      "crc32": "bde02403",
+      "retainedAt": "originals/examples/component-docs/SKILL.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/component-docs/._SKILL.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/component-docs/CUSTOMIZE.md",
+      "kind": "file",
+      "bytes": 5639,
+      "sha256": "6e1714158b9ba4f12ad2cdab1b3492c4600ddfbe201657533c8880cfab2e2f2c",
+      "crc32": "fa66ae23",
+      "retainedAt": "originals/examples/component-docs/CUSTOMIZE.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/component-docs/._CUSTOMIZE.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/token-mapping/references/",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "crc32": null,
+      "retainedAt": null,
+      "disposition": "directory"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/token-mapping/._references",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/token-mapping/TESTS.md",
+      "kind": "file",
+      "bytes": 3977,
+      "sha256": "5439f4a40bada182caa24d91ca76d5e56bc83b6bcefad8d9d6a2f27c8a57425e",
+      "crc32": "faf19e6b",
+      "retainedAt": "originals/examples/token-mapping/TESTS.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/token-mapping/._TESTS.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/token-mapping/SKILL.md",
+      "kind": "file",
+      "bytes": 5905,
+      "sha256": "0c015ad1e0fdc7a03a90de92ef58e108f07d3ec7e3d5cbd49eb09c11aa112030",
+      "crc32": "d00acf18",
+      "retainedAt": "originals/examples/token-mapping/SKILL.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/token-mapping/._SKILL.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/token-mapping/CUSTOMIZE.md",
+      "kind": "file",
+      "bytes": 5679,
+      "sha256": "47fffde6b9260217cf2eb4c1a559fb82a819e81c1fe9aee09e86e56fa8d4de4f",
+      "crc32": "7324a972",
+      "retainedAt": "originals/examples/token-mapping/CUSTOMIZE.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/token-mapping/._CUSTOMIZE.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/design-review/references/",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "crc32": null,
+      "retainedAt": null,
+      "disposition": "directory"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/design-review/._references",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/design-review/TESTS.md",
+      "kind": "file",
+      "bytes": 3412,
+      "sha256": "bb28173a8f96ef59503c152fb6640f639191fe2960903664b28198343ccd8c81",
+      "crc32": "d1681d85",
+      "retainedAt": "originals/examples/design-review/TESTS.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/design-review/._TESTS.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/design-review/SKILL.md",
+      "kind": "file",
+      "bytes": 5877,
+      "sha256": "369c2d148b82ef6c395deb42c815df84bc3a171e1c647e59d68970174044a87b",
+      "crc32": "c31f65fd",
+      "retainedAt": "originals/examples/design-review/SKILL.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/design-review/._SKILL.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/design-review/CUSTOMIZE.md",
+      "kind": "file",
+      "bytes": 5354,
+      "sha256": "db19021426355045c59bb9886724b0004e068654d7b31a98d476fe2579de11d1",
+      "crc32": "806ee3e2",
+      "retainedAt": "originals/examples/design-review/CUSTOMIZE.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/design-review/._CUSTOMIZE.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/component-docs/references/doc-format.md",
+      "kind": "file",
+      "bytes": 5993,
+      "sha256": "07a602e4de8070a75ee3277c832ec01894ed493710dffd1a6165277254400521",
+      "crc32": "c8197af2",
+      "retainedAt": "originals/examples/component-docs/references/doc-format.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/component-docs/references/._doc-format.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/token-mapping/references/mapping-rules.md",
+      "kind": "file",
+      "bytes": 5752,
+      "sha256": "014bdac426b1599693e93ddc135e6a95687c18b0733da5c135a857f6d9671e85",
+      "crc32": "1829be5c",
+      "retainedAt": "originals/examples/token-mapping/references/mapping-rules.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/token-mapping/references/._mapping-rules.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    },
+    {
+      "archivePath": "design-agents-toolkit/examples/design-review/references/review-criteria.md",
+      "kind": "file",
+      "bytes": 2885,
+      "sha256": "7b39c8f3f37a85ef89e708f1066bf589fd5e0f632c6f135079214c94d35185c0",
+      "crc32": "613e1b62",
+      "retainedAt": "originals/examples/design-review/references/review-criteria.md",
+      "disposition": "original-markdown-retained"
+    },
+    {
+      "archivePath": "__MACOSX/design-agents-toolkit/examples/design-review/references/._review-criteria.md",
+      "kind": "file",
+      "bytes": 163,
+      "sha256": "7e3fa63e33e9ea259bd503e5c8c728204b217775cf0a63b385149a46751f7d1c",
+      "crc32": "f183d5d9",
+      "retainedAt": null,
+      "disposition": "archive-only-macos-metadata"
+    }
+  ]
+}

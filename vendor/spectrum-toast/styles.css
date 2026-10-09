@@ -1,0 +1,11 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "./components/motion/animated-toast-stack.tsx";
+@theme {
+  --color-card: var(--pp-semantic-surface-default);
+  --color-border: var(--pp-semantic-border-default);
+  --color-foreground: var(--pp-semantic-text-body);
+  --color-muted-foreground: var(--pp-semantic-text-secondary);
+  --color-primary: var(--pp-semantic-action-primary);
+  --color-destructive: var(--pp-semantic-status-danger);
+}

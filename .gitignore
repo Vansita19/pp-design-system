@@ -1,0 +1,15 @@
+# Local dependencies and machine settings
+**/node_modules/
+.openai/
+.DS_Store
+**/__pycache__/
+*.py[cod]
+*.log
+.env
+.env.*
+!.env.example
+
+# Generated archives and review screenshots; keep the browser-ready app
+artifacts/*
+!artifacts/forma-design-system.html
+vendor/spectrum-toast/.toast-css.tmp

@@ -1,0 +1,2197 @@
+{
+  "scope": "Company Summary and Details: all seven report tabs, shared report primitives, side panels, source evidence/Trace/research map, watched-company Updates and active file/decision visual states. Other modules are referenced only for the helpers explicitly listed.",
+  "modules": [
+    "detail-pages.js",
+    "detail-pages.css",
+    "review.js",
+    "summary-components.js",
+    "summary-staging.js",
+    "trace-ui.js",
+    "trace-model.js",
+    "trace.css",
+    "company-updates.js",
+    "decision-visuals.js",
+    "personal-review.js",
+    "file-store.js",
+    "detail-samples.js",
+    "detail-report-data.js",
+    "qa.js"
+  ],
+  "patterns": [
+    {
+      "id": "D01",
+      "label": "Framed report section, title, tags, inset body, optional footer",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 20
+        },
+        {
+          "file": "detail-pages.css",
+          "line": 1
+        }
+      ],
+      "helper": "F.informationBlock",
+      "variant": "overview",
+      "status": "covered",
+      "note": "Existing information shell and corrected filled assessment role hierarchy; checks/pitch-patterns.cjs.",
+      "config": {
+        "variant": "overview",
+        "callout": true
+      },
+      "catalogue": {
+        "id": "information-block",
+        "config": {
+          "variant": "overview"
+        }
+      }
+    },
+    {
+      "id": "D02",
+      "label": "Raised title tags",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 14
+        }
+      ],
+      "helper": "F.badge",
+      "variant": "raised",
+      "status": "covered",
+      "note": "Shared raised header tag, tokens and ordinary CSS radius; checks/pitch-patterns.cjs.",
+      "config": {
+        "variant": "raised",
+        "tone": "neutral"
+      }
+    },
+    {
+      "id": "D03",
+      "label": "Inline S/Q citations opening source/answer material",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 16
+        },
+        {
+          "file": "app.js",
+          "line": 72
+        }
+      ],
+      "helper": "F.aiCitation",
+      "variant": "inline",
+      "status": "covered",
+      "note": "Structured record API covers research signal, founder answer, update and unavailable records; checks/ai-response.cjs.",
+      "config": {
+        "variant": "inline"
+      }
+    },
+    {
+      "id": "D04",
+      "label": "Multi-paragraph report prose containing inline citations",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 19
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "report",
+      "status": "excluded",
+      "note": "F.sourceDetailsParts.inline/prose safely render multiple paragraphs and explicit citation/link segments; arbitrary HTML is escaped. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "report"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D05",
+      "label": "Quiet empty-value message inside a report card/table",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 15
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "report",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "report",
+        "state": "empty"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D06",
+      "label": "Company Overview sections and blue Overall assessment inset",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 43
+        }
+      ],
+      "helper": "F.informationBlock",
+      "variant": "overview",
+      "status": "covered",
+      "note": "Existing information shell and corrected filled assessment role hierarchy; checks/pitch-patterns.cjs.",
+      "config": {
+        "variant": "overview",
+        "callout": true
+      },
+      "catalogue": {
+        "id": "information-block",
+        "config": {
+          "variant": "overview"
+        }
+      }
+    },
+    {
+      "id": "D07",
+      "label": "Bull/Bear paired case columns with aligned rows",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 27
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "report",
+      "status": "excluded",
+      "note": "Source-derived comparison, category rows, divided questions and bullet notes now render explicit inline citations through shared F.sourceDetailsParts helpers, using existing Information block CSS and tokens. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "report",
+        "reportStyle": "framed"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D08",
+      "label": "Label/body assessment rows",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 38
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "report",
+      "status": "excluded",
+      "note": "Source-derived comparison, category rows, divided questions and bullet notes now render explicit inline citations through shared F.sourceDetailsParts helpers, using existing Information block CSS and tokens. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "report",
+        "reportStyle": "framed"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D09",
+      "label": "Open-question divided list",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 46
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "report",
+      "status": "excluded",
+      "note": "Source-derived comparison, category rows, divided questions and bullet notes now render explicit inline citations through shared F.sourceDetailsParts helpers, using existing Information block CSS and tokens. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "report",
+        "reportStyle": "framed"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D10",
+      "label": "Notes bullet list",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 47
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "report",
+      "status": "excluded",
+      "note": "Source-derived comparison, category rows, divided questions and bullet notes now render explicit inline citations through shared F.sourceDetailsParts helpers, using existing Information block CSS and tokens. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "report",
+        "reportStyle": "framed"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D11",
+      "label": "Header metadata/count/status beside title, separate from tags",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 20
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "report",
+      "status": "excluded",
+      "note": "F.sourceDetailsParts.section supports title, metadata, tags and optional cited footer without inserting artificial section content. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "report"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D12",
+      "label": "Eight-item raise/application metrics grid, long value and caption",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 54
+        }
+      ],
+      "helper": "F.metricCard",
+      "variant": "metrics",
+      "status": "covered",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Standalone reusable variation now lives on Metric card; composed Company report consumers remain supported.",
+      "config": {
+        "variant": "metrics",
+        "columns": 4
+      },
+      "catalogue": {
+        "id": "metric-card",
+        "config": {
+          "variant": "metrics",
+          "columns": "4"
+        }
+      }
+    },
+    {
+      "id": "D13",
+      "label": "Investor identity inside a metric value",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 55
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "application",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "application"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D14",
+      "label": "Two-column Highlights with optional prominent value and prose",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 56
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "application",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Standalone reusable variation now lives on Metric card; composed Company report consumers remain supported. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "application"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D15",
+      "label": "Unboxed editorial section: heading and report prose",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 57
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "application",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "application"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D16",
+      "label": "Simple single-body report card (Reported Users, Unit Economics, Score Synthesis, Current read)",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 58
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "application",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "application"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D17",
+      "label": "Headerless label/value research table",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 59
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "tables",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "tables",
+        "tableStyle": "sizing"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D18",
+      "label": "Projection table: seven columns, tags and optional Key risk footer",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 113
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "tables",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "tables",
+        "tableStyle": "projection"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D19",
+      "label": "Competition table: company logo/name/type tag plus cited narrative columns",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 117
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "tables",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "tables",
+        "tableStyle": "competition"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D20",
+      "label": "Commercial Snapshot asymmetric two-column section (1:2)",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 119
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "commercial",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "commercial"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D21",
+      "label": "Table-independent Key risk/report footer",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 113
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "tables",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "tables",
+        "tableStyle": "projection"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D22",
+      "label": "Founder header: 44px avatar, name, social link, role, multiple employment/technical badges",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 98
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "profiles",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "profiles",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D23",
+      "label": "Founder bio/equity prose below the identity",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 83
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "profiles",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "profiles",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D24",
+      "label": "Grouped founders in one report shell, repeated person dividers",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 98
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "profiles",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "profiles",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D25",
+      "label": "Enrichment disclosure with fetched/sample metadata, bio, Experience **and** Education",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 70
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "profiles",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "profiles",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D26",
+      "label": "Timeline title, entry count, vertical rail, role/date/description rows",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 61
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "profiles",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Standalone employment/education timeline now lives on Timeline; it may still be composed inside a founder profile. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "profiles",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D27",
+      "label": "Linked employer/institution identity chip inside timeline title",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 66
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "profiles",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Standalone employment/education timeline now lives on Timeline; it may still be composed inside a founder profile. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "profiles",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D28",
+      "label": "Multi-paragraph timeline descriptions and optional missing company",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 67
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "profiles",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Standalone employment/education timeline now lives on Timeline; it may still be composed inside a founder profile. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "profiles",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D29",
+      "label": "Research team-roster row: name, subdued role, score badge, cited explanation",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 100
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "roster",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "roster"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D30",
+      "label": "Overall score meter: 100 stripes, score/100, footer quality",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 133
+        }
+      ],
+      "helper": "F.metricCard",
+      "variant": "score",
+      "status": "covered",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Standalone reusable variation now lives on Metric card; composed Company report consumers remain supported.",
+      "config": {
+        "variant": "score",
+        "value": 84
+      },
+      "catalogue": {
+        "id": "metric-card",
+        "config": {
+          "variant": "score"
+        }
+      }
+    },
+    {
+      "id": "D31",
+      "label": "Compact evidence-statistics label/value row stack",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 134
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "scorecard",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "scorecard"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D32",
+      "label": "Six concentric dimension-score rings with legend and numerical values",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 129
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "scorecard",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "scorecard"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D33",
+      "label": "Strong\u2013Weak spectrum key beneath dimension legend",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 138
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "scorecard",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "scorecard"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D34",
+      "label": "Two-column score composition: score+statistics left, rings/legend right",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 138
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "scorecard",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "scorecard"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D35",
+      "label": "Five-factor conviction strip with header metadata",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 137
+        },
+        {
+          "file": "detail-pages.css",
+          "line": 145
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "scorecard",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "scorecard"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D36",
+      "label": "Grouped research/post-submit adjustments with signed delta, type tag, cited description",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 135
+        },
+        {
+          "file": "detail-pages.css",
+          "line": 137
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "scorecard",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "scorecard"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D37",
+      "label": "Narrative-only adjustment group fallback",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 135
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "scorecard",
+      "status": "excluded",
+      "note": "F.sourceDetailsParts.adjustments accepts groups with either body prose or typed adjustment items; source narrative fallback retained. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "scorecard"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D38",
+      "label": "Q&A heading with answered/total summary",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 151
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "questions",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "questions",
+        "status": "complete",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D39",
+      "label": "Question identity, priority/required marker, answer type, answered/awaiting status",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 149
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "questions",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "questions",
+        "status": "complete",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D40",
+      "label": "Founder answer surface including answer-quality badge/red-flag variation",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 151
+        },
+        {
+          "file": "detail-pages.css",
+          "line": 65
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "questions",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "questions",
+        "status": "complete",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D41",
+      "label": "Question context disclosure: assessment reasoning, provisional note, context, decision impact, good-answer criteria, red flags",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 151
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "questions",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "questions",
+        "status": "complete",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D42",
+      "label": "Unanswered question text and empty overall question set",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 151
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "questions",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "questions",
+        "status": "complete",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D43",
+      "label": "Research-signal disclosure list with ID rail, title, taxonomy, status and chevron",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 181
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "research",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "research",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D44",
+      "label": "Supporting excerpt inset blockquote",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 181
+        },
+        {
+          "file": "detail-pages.css",
+          "line": 51
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "research",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "research",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D45",
+      "label": "Wide source citation + kind + Strength/Confidence/Importance footer",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 164
+        },
+        {
+          "file": "detail-pages.css",
+          "line": 51
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "research",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "research",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D46",
+      "label": "Research introduction and current-read/changes prose sections",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 181
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "research",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "research",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D47",
+      "label": "Patterns/Contradictions bullet sections",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 181
+        }
+      ],
+      "helper": "F.informationBlock",
+      "variant": "text",
+      "status": "covered",
+      "note": "Text block is the canonical Information block content variation. The former notes helper input remains compatible; original cited bullet treatment is retained inside the full Company report.",
+      "config": {
+        "variant": "text"
+      },
+      "catalogue": {
+        "id": "information-block",
+        "config": {
+          "variant": "text"
+        }
+      }
+    },
+    {
+      "id": "D48",
+      "label": "Research-gap rows with question + secondary \u201cWhere to look\u201d text",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 181
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "research",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "research",
+        "open": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D49",
+      "label": "Evidence unavailable and source vs founder-answer record variants",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 168
+        }
+      ],
+      "helper": "F.aiCitation",
+      "variant": "inline",
+      "status": "covered",
+      "note": "Structured record API covers research signal, founder answer, update and unavailable records; checks/ai-response.cjs.",
+      "config": {
+        "variant": "inline"
+      }
+    },
+    {
+      "id": "D50",
+      "label": "Company identity header: avatar, category, stage dot/model/location, recommendation",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 26
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D51",
+      "label": "Breadcrumb with previous/next company controls and position",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 34
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D52",
+      "label": "Summary/Details segmented tabs",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 34
+        }
+      ],
+      "helper": "F.pitchTabs",
+      "variant": "segmented",
+      "status": "covered",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs.",
+      "config": {
+        "variant": "segmented"
+      }
+    },
+    {
+      "id": "D53",
+      "label": "Seven report tabs and optional Updates unread dot",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 16
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D54",
+      "label": "Right tool rail with icon/label active state",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 34
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "panel",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "panel",
+        "panel": "files"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D55",
+      "label": "Persistent side panel with heading/action/close, scroll body and optional composer footer",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 146
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "panel",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "panel",
+        "panel": "files"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D56",
+      "label": "File inventory row: thumbnail, name, type/date, preview action",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 132
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "panel",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "panel",
+        "panel": "files"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D57",
+      "label": "File preview with supported document/image content, unavailable message, original-file link",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 704
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "files",
+      "status": "excluded",
+      "note": "Includes native PDF, image, escaped TXT/MD/CSV/JSON and unavailable states; local upload preview works without persistent storage. Sample PDF is illustrative; checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "files",
+        "fileType": "pdf"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D58",
+      "label": "Compact company-note list row: icon/title, excerpt, author/date/privacy",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 10
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "panel",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "panel",
+        "panel": "notes"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D59",
+      "label": "Company chat bubble/thinking/answer and composer footer",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 160
+        }
+      ],
+      "helper": "F.sourceChat",
+      "variant": "company-panel",
+      "status": "excluded",
+      "note": "Embedded directly by F.sourceDetails panel, with dynamic mount/dispose. checks/source-chat.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "company-panel",
+        "state": "complete",
+        "chart": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D60",
+      "label": "Stacked three-series Growth Analytics chart with legend/year labels",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 171
+        }
+      ],
+      "helper": "F.sourceChatGrowth",
+      "variant": "company-panel",
+      "status": "covered",
+      "note": "Source seven-year three-series stacked chart is rendered by public F.sourceChatGrowth, also included by sourceChat company-panel; checks/source-chat.cjs.",
+      "config": {
+        "variant": "company-panel"
+      }
+    },
+    {
+      "id": "D61",
+      "label": "Summary body sections and bull/bear single-column proof lists",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 50
+        },
+        {
+          "file": "summary-staging.js",
+          "line": 17
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D62",
+      "label": "Summary radar + label/value legend + six fact tiles",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 52
+        },
+        {
+          "file": "summary-staging.js",
+          "line": 6
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D63",
+      "label": "Linked founder pill: portrait/initial, name, muted role",
+      "sources": [
+        {
+          "file": "summary-components.js",
+          "line": 11
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D64",
+      "label": "Ask and Fund Fit split: amount/round/raise and checked criteria plus match status",
+      "sources": [
+        {
+          "file": "summary-components.js",
+          "line": 31
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D65",
+      "label": "Company/Location/Founders contact strip with colored marks and links",
+      "sources": [
+        {
+          "file": "summary-components.js",
+          "line": 36
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D66",
+      "label": "Summary signal count/disclaimer footer",
+      "sources": [
+        {
+          "file": "summary-components.js",
+          "line": 55
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D67",
+      "label": "Decision aside: statistics, recommendation, explanation, action stack or saved private decision",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 46
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Implemented in dist/source-details.js/css; checked by checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D68",
+      "label": "Scheduling/reason decision dialogs (including required/error states)",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 380
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Native local decision dialog uses shared fields/buttons, required reason, optional scheduling field and original PP landscape asset. It saves local specimen state only; real scheduling and notifications are excluded. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D69",
+      "label": "Summary-customization checkbox list + save footer",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 728
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "summary",
+      "status": "excluded",
+      "note": "Customize button opens shared native checkboxes; Save changes actually hides/shows summary sections locally. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "summary"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D70",
+      "label": "Underlined source-backed statement with contextual tooltip and counts",
+      "sources": [
+        {
+          "file": "trace-model.js",
+          "line": 108
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "confidence",
+      "status": "excluded",
+      "note": "Source Trace statement tooltip/confidence glyphs/trust popover; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "confidence",
+        "confidence": "moderate"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D71",
+      "label": "Confidence glyph (High/Moderate/Low), compact icon button and labeled form",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 16
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "confidence",
+      "status": "excluded",
+      "note": "Source Trace statement tooltip/confidence glyphs/trust popover; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "confidence",
+        "confidence": "moderate"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D72",
+      "label": "Source-count pill trigger",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 24
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "sidebar",
+      "status": "excluded",
+      "note": "Source Trace selectable finding, nested synthesis/evidence/source counts/disclosures; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "sidebar",
+        "expanded": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D73",
+      "label": "Selectable finding card with independent confidence trigger",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 30
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "sidebar",
+      "status": "excluded",
+      "note": "Source Trace selectable finding, nested synthesis/evidence/source counts/disclosures; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "sidebar",
+        "expanded": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D74",
+      "label": "Synthesis disclosure with count, nested evidence grouping, source count and \u201cmore\u201d disclosure",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 26
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "sidebar",
+      "status": "excluded",
+      "note": "Source Trace selectable finding, nested synthesis/evidence/source counts/disclosures; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "sidebar",
+        "expanded": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D75",
+      "label": "Compact evidence card (statement trigger + confidence action)",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 25
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "sidebar",
+      "status": "excluded",
+      "note": "Source Trace selectable finding, nested synthesis/evidence/source counts/disclosures; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "sidebar",
+        "expanded": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D76",
+      "label": "Confidence explanation popover with status footer",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 44
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "confidence",
+      "status": "excluded",
+      "note": "Source Trace statement tooltip/confidence glyphs/trust popover; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "confidence",
+        "confidence": "moderate"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D77",
+      "label": "Source list rows: tone dot, name, external indicator, available/pending/not-attached state icon",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 40
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "sources",
+      "status": "excluded",
+      "note": "Available/pending/missing source rows, detail/back/original action; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "sources",
+        "sourceState": "all"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D78",
+      "label": "Source detail drill-in with back action, type/status, excerpt and original link",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 129
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "sources",
+      "status": "excluded",
+      "note": "Available/pending/missing source rows, detail/back/original action; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "sources",
+        "sourceState": "all"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D79",
+      "label": "Research map node family: company, area+count, finding, synthesis, evidence, source link; selected path metadata",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 57
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "map",
+      "status": "excluded",
+      "note": "Typed nodes, curved path connections, source states, branch counts/show-more, pan/zoom/fit, breadcrumb/help and expanded native map dialog; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "map"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D80",
+      "label": "Branching map layout, connectors, column headings/counts, collapsed lanes and Show more",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 64
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "map",
+      "status": "excluded",
+      "note": "Typed nodes, curved path connections, source states, branch counts/show-more, pan/zoom/fit, breadcrumb/help and expanded native map dialog; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "map"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D81",
+      "label": "Map modal shell, breadcrumb, help, zoom/fit controls and pan surface",
+      "sources": [
+        {
+          "file": "trace-ui.js",
+          "line": 113
+        }
+      ],
+      "helper": "F.sourceTrace",
+      "variant": "map",
+      "status": "excluded",
+      "note": "Typed nodes, curved path connections, source states, branch counts/show-more, pan/zoom/fit, breadcrumb/help and expanded native map dialog; checks/source-trace.cjs. Temporarily hidden: user request on 2026-10-09; retained internally for later improvement, no public route.",
+      "config": {
+        "variant": "map"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Hide Evidence Trace completely for now; retain implementation for later improvement."
+      }
+    },
+    {
+      "id": "D82",
+      "label": "Updates heading/unread total/Watching status plus filter tabs and mark-read action",
+      "sources": [
+        {
+          "file": "company-updates.js",
+          "line": 78
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "updates",
+      "status": "excluded",
+      "note": "Founder/research events, month grouping, before/after inset, question/source footer, empty state; filtering and mark-read update local content. checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "updates",
+        "updateFilter": "all"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D83",
+      "label": "Month grouping and activity timeline rail with founder/research event icons",
+      "sources": [
+        {
+          "file": "company-updates.js",
+          "line": 62
+        },
+        {
+          "file": "detail-pages.css",
+          "line": 87
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "updates",
+      "status": "excluded",
+      "note": "Founder/research events, month grouping, before/after inset, question/source footer, empty state; filtering and mark-read update local content. checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "updates",
+        "updateFilter": "all"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D84",
+      "label": "Update event header: actor/avatar, action sentence, area badge, date, unread label",
+      "sources": [
+        {
+          "file": "company-updates.js",
+          "line": 69
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "updates",
+      "status": "excluded",
+      "note": "Founder/research events, month grouping, before/after inset, question/source footer, empty state; filtering and mark-read update local content. checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "updates",
+        "updateFilter": "all"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D85",
+      "label": "Inset update detail with accent rail and before \u2192 after field comparison",
+      "sources": [
+        {
+          "file": "company-updates.js",
+          "line": 70
+        },
+        {
+          "file": "detail-pages.css",
+          "line": 107
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "updates",
+      "status": "excluded",
+      "note": "Founder/research events, month grouping, before/after inset, question/source footer, empty state; filtering and mark-read update local content. checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "updates",
+        "updateFilter": "all"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D86",
+      "label": "Significance prose, optional Original question disclosure, cited source/effect footer",
+      "sources": [
+        {
+          "file": "company-updates.js",
+          "line": 71
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "updates",
+      "status": "excluded",
+      "note": "Founder/research events, month grouping, before/after inset, question/source footer, empty state; filtering and mark-read update local content. checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "updates",
+        "updateFilter": "all"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D87",
+      "label": "Empty full feed and empty filtered category",
+      "sources": [
+        {
+          "file": "company-updates.js",
+          "line": 87
+        }
+      ],
+      "helper": "F.sourceDetails",
+      "variant": "updates",
+      "status": "excluded",
+      "note": "Founder/research events, month grouping, before/after inset, question/source footer, empty state; filtering and mark-read update local content. checks/source-details.cjs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "variant": "updates",
+        "updateFilter": "all"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "D88",
+      "label": "Update evidence record and unavailable record",
+      "sources": [
+        {
+          "file": "company-updates.js",
+          "line": 91
+        }
+      ],
+      "helper": "F.aiCitation",
+      "variant": "inline",
+      "status": "covered",
+      "note": "Structured record API covers research signal, founder answer, update and unavailable records; checks/ai-response.cjs.",
+      "config": {
+        "variant": "inline"
+      }
+    },
+    {
+      "id": "NV-D1",
+      "label": "Scoring formulas, evidence trust computation and report parsing",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 1
+        },
+        {
+          "file": "detail-samples.js",
+          "line": 1
+        },
+        {
+          "file": "detail-report-data.js",
+          "line": 1
+        },
+        {
+          "file": "trace-model.js",
+          "line": 1
+        },
+        {
+          "file": "qa.js",
+          "line": 1
+        }
+      ],
+      "helper": null,
+      "variant": null,
+      "status": "nonvisual",
+      "note": "Static source-representative score/evidence values are displayed. The design system does not compute investment or research conclusions."
+    },
+    {
+      "id": "NV-D2",
+      "label": "Company eligibility, stored read state and report selection",
+      "sources": [
+        {
+          "file": "company-updates.js",
+          "line": 1
+        },
+        {
+          "file": "review.js",
+          "line": 1
+        }
+      ],
+      "helper": null,
+      "variant": null,
+      "status": "nonvisual",
+      "note": "Local preview interactions demonstrate read/filter/navigation states; persisted watcher permissions and records remain application behavior."
+    },
+    {
+      "id": "NV-D3",
+      "label": "Persistent uploads, database and outbound scheduling",
+      "sources": [
+        {
+          "file": "file-store.js",
+          "line": 1
+        },
+        {
+          "file": "personal-review.js",
+          "line": 1
+        }
+      ],
+      "helper": null,
+      "variant": null,
+      "status": "nonvisual",
+      "note": "Local attachment previews and decision controls are implemented; IndexedDB persistence, outbound messages and real scheduling are not design-system services."
+    },
+    {
+      "id": "NV-D4",
+      "label": "Inactive legacy evidence-reader helpers",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 1
+        },
+        {
+          "file": "summary-staging.js",
+          "line": 1
+        }
+      ],
+      "helper": null,
+      "variant": null,
+      "status": "nonvisual",
+      "note": "detailEvidence and stagingSummaryEvidence are not imported by the active app entry; active record popovers are represented, not duplicated."
+    }
+  ]
+}

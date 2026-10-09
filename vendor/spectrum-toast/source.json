@@ -1,0 +1,29 @@
+{
+  "registry": "https://ui.spectrumhq.in/r/toast-stack.json",
+  "retrieved": "2026-10-09",
+  "upstream": "https://github.com/arihantcodes/spectrum-ui",
+  "upstreamAttribution": "beui.dev/components/motion/animated-toast-stack",
+  "files": [
+    {
+      "path": "components/motion/animated-toast-stack.tsx",
+      "sha256": "a7434d0aa2ee6d164354e5239ce903c6882042be61469a90cb6f48cd1b50d91f"
+    },
+    {
+      "path": "lib/ease.ts",
+      "sha256": "bdfa2814cffaa4d974a5fc8614868ddb89e0310a0ead9e7105f2e8132b219ff3"
+    }
+  ],
+  "registrySha256": "c1f5d3f6629a298475eedd237886741f2427e0500807911118cc1fca928d049d",
+  "supportFiles": [
+    {
+      "path": "lib/utils.ts",
+      "url": "https://raw.githubusercontent.com/arihantcodes/spectrum-ui/main/lib/utils.ts",
+      "sha256": "5d9676114c8f870aad41528e23ee88b5271ff104730ba0e5e735ac5ecb0efd2f"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/arihantcodes/spectrum-ui/main/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ]
+}

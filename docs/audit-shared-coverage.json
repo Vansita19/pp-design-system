@@ -1,0 +1,504 @@
+{
+  "scope": "Shared control contracts and fixture/asset module classification",
+  "modules": [
+    "ui.js",
+    "controls.js",
+    "dropdown.js",
+    "smooth-cards.js",
+    "icons.js",
+    "decision-visuals.js",
+    "application-fixtures.js",
+    "assets.js",
+    "company-marks.js",
+    "data.js",
+    "design-copy.js",
+    "detail-report-data.js",
+    "detail-samples.js",
+    "hugeicon-data.js",
+    "lucide-data.js",
+    "note-examples.js",
+    "phosphor-data.js",
+    "research-fixtures.js",
+    "summary-source-data.js",
+    "styles.css",
+    "onboarding-system.css",
+    "trace.css",
+    "detail-pages.css",
+    "color-tokens.js"
+  ],
+  "patterns": [
+    {
+      "id": "SHARED-01",
+      "label": "Authored select/listbox with leading icon and compact chevron",
+      "sources": [
+        {
+          "file": "dropdown.js",
+          "line": 2
+        }
+      ],
+      "helper": "select",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "config": {
+        "icon": "leading",
+        "value": "Design"
+      }
+    },
+    {
+      "id": "SHARED-02",
+      "label": "Option keyboard selection and outside/Escape dismissal",
+      "sources": [
+        {
+          "file": "controls.js",
+          "line": 9
+        }
+      ],
+      "helper": "select",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "config": {
+        "value": "Design"
+      }
+    },
+    {
+      "id": "SHARED-03",
+      "label": "Shared named company mark and fallback",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 33
+        }
+      ],
+      "helper": "pitchTable",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "config": {
+        "variant": "chat"
+      }
+    },
+    {
+      "id": "SHARED-04",
+      "label": "Recommendation status capsule and indicator",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 53
+        }
+      ],
+      "helper": "badge",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "variant": "status-neutral",
+      "config": {
+        "tone": "success",
+        "indicator": "dot",
+        "label": "Take Meeting"
+      }
+    },
+    {
+      "id": "SHARED-05",
+      "label": "Category and stage tag",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 55
+        }
+      ],
+      "helper": "badge",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "variant": "category",
+      "config": {
+        "tone": "success",
+        "label": "Live",
+        "categorySize": "md"
+      }
+    },
+    {
+      "id": "SHARED-06",
+      "label": "Filled decision-status icon and soft surface",
+      "sources": [
+        {
+          "file": "decision-visuals.js",
+          "line": 14
+        }
+      ],
+      "helper": "badge",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "variant": "status-subtle",
+      "config": {
+        "tone": "success",
+        "indicator": "icon",
+        "iconName": "check-circle-fill",
+        "label": "Interested"
+      }
+    },
+    {
+      "id": "SHARED-07",
+      "label": "Metric label and value",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 58
+        }
+      ],
+      "helper": "statsBar",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "config": {
+        "framed": false
+      }
+    },
+    {
+      "id": "SHARED-08",
+      "label": "Native action and icon button",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 60
+        }
+      ],
+      "helper": "button",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "config": {
+        "variant": "secondary",
+        "icon": "leading",
+        "label": "Add item"
+      }
+    },
+    {
+      "id": "SHARED-09",
+      "label": "Inline notification and Undo",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 68
+        }
+      ],
+      "helper": "preview",
+      "status": "covered",
+      "note": "Uses the existing Toast renderer; one pre-existing live region, scoped local Undo and focus restoration.",
+      "config": {
+        "itemId": "toast"
+      }
+    },
+    {
+      "id": "SHARED-10",
+      "label": "Dialog header, close, body, action footer",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 75
+        }
+      ],
+      "helper": "preview",
+      "status": "covered",
+      "note": "Native dialog implementation preserves focus semantics; source-specific bodies are listed in the shell/workspace ledgers.",
+      "config": {
+        "itemId": "modal"
+      }
+    },
+    {
+      "id": "SHARED-11",
+      "label": "Paper thumbnail decorative anatomy",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 11
+        }
+      ],
+      "helper": "sourceDetails",
+      "status": "excluded",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "variant": "files",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "SHARED-12",
+      "label": "Colored criterion icon and text composition",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 84
+        }
+      ],
+      "helper": "sourceShell",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "variant": "settings",
+      "config": {
+        "settingKind": "definition"
+      }
+    },
+    {
+      "id": "SHARED-13",
+      "label": "Canonical smooth surface algorithm",
+      "sources": [
+        {
+          "file": "smooth-cards.js",
+          "line": 3
+        }
+      ],
+      "helper": "noteCard",
+      "status": "covered",
+      "note": "Shared tangent-curve painter; cards and compact category/status tokens use the requested 60%; capsules stay native round. Nested mounts share one painted surface per element.",
+      "config": {
+        "tone": "blue"
+      }
+    },
+    {
+      "id": "SHARED-14",
+      "label": "Inbox checkbox native checked/mixed selection",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 101
+        }
+      ],
+      "helper": "choiceControl",
+      "status": "covered",
+      "note": "Source final Inbox geometry: 16px,5px round corners,1.5px thin check; shared by tables and standalone atom.",
+      "config": {
+        "controlType": "checkbox"
+      }
+    },
+    {
+      "id": "SHARED-15",
+      "label": "Standalone search, sort and filter trigger controls",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 87
+        }
+      ],
+      "helper": "pitchFilterBar",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "variant": "toolbar"
+    },
+    {
+      "id": "SHARED-16",
+      "label": "Tabs with source leading icon and trailing count",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 85
+        }
+      ],
+      "helper": "pitchTabs",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "variant": "counted"
+    },
+    {
+      "id": "SHARED-17",
+      "label": "Chat table with all source-driven column families",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 1
+        }
+      ],
+      "helper": "pitchTable",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "variant": "chat",
+      "config": {
+        "columnSet": "financial"
+      }
+    },
+    {
+      "id": "SHARED-18",
+      "label": "Inbox table and local row/selection actions",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 75
+        }
+      ],
+      "helper": "pitchTable",
+      "status": "covered",
+      "note": "Source geometry is normalized to the registered token and Phosphor contracts.",
+      "variant": "inbox",
+      "config": {
+        "selectable": true
+      }
+    },
+    {
+      "id": "DATA-application-fixtures",
+      "label": "application-fixtures.js",
+      "sources": [
+        {
+          "file": "application-fixtures.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-assets",
+      "label": "assets.js",
+      "sources": [
+        {
+          "file": "assets.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-company-marks",
+      "label": "company-marks.js",
+      "sources": [
+        {
+          "file": "company-marks.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-data",
+      "label": "data.js",
+      "sources": [
+        {
+          "file": "data.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-design-copy",
+      "label": "design-copy.js",
+      "sources": [
+        {
+          "file": "design-copy.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-detail-report-data",
+      "label": "detail-report-data.js",
+      "sources": [
+        {
+          "file": "detail-report-data.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-detail-samples",
+      "label": "detail-samples.js",
+      "sources": [
+        {
+          "file": "detail-samples.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-hugeicon-data",
+      "label": "hugeicon-data.js",
+      "sources": [
+        {
+          "file": "hugeicon-data.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-lucide-data",
+      "label": "lucide-data.js",
+      "sources": [
+        {
+          "file": "lucide-data.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-note-examples",
+      "label": "note-examples.js",
+      "sources": [
+        {
+          "file": "note-examples.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-phosphor-data",
+      "label": "phosphor-data.js",
+      "sources": [
+        {
+          "file": "phosphor-data.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-research-fixtures",
+      "label": "research-fixtures.js",
+      "sources": [
+        {
+          "file": "research-fixtures.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "DATA-summary-source-data",
+      "label": "summary-source-data.js",
+      "sources": [
+        {
+          "file": "summary-source-data.js",
+          "line": 1
+        }
+      ],
+      "status": "nonvisual",
+      "note": "Fixture records, copy, company marks or icon asset geometry. Visual consumers are covered by the UI ledgers; no distinct interaction or component page is created for the data container."
+    },
+    {
+      "id": "SHARED-19",
+      "label": "Primitive scales and purpose-based semantic aliases",
+      "sources": [
+        {
+          "file": "color-tokens.js",
+          "line": 1
+        }
+      ],
+      "helper": "tokenCSS",
+      "status": "covered",
+      "note": "Registered foundation primitives and semantic aliases retain source colors or the documented accepted extensions. Named inspector aliases and type/contrast checks cover component consumers."
+    }
+  ]
+}

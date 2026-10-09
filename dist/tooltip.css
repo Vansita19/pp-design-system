@@ -1,0 +1,4 @@
+.pp-motion-tooltip .pp-tooltip{display:block;z-index:10;left:50%;top:auto;bottom:calc(100% + var(--pp-component-tooltip-gap));transform:translate(-50%,0);transform-origin:center bottom;background:var(--pp-component-tooltip-background);color:var(--pp-component-tooltip-foreground);border-radius:var(--pp-component-tooltip-radius);padding:var(--pp-component-tooltip-padding);font-family:var(--pp-font-family-sans);font-size:var(--pp-component-tooltip-font);line-height:var(--pp-component-tooltip-line);pointer-events:auto}
+.pp-motion-tooltip.bottom .pp-tooltip{top:calc(100% + var(--pp-component-tooltip-gap));bottom:auto;transform-origin:center top}
+.pp-motion-tooltip .pp-tooltip[hidden]{display:none!important}
+@media(forced-colors:active){.pp-motion-tooltip .pp-tooltip{outline:1px solid CanvasText}}

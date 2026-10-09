@@ -1,0 +1,29 @@
+/* One avatar geometry for image, fallback and grouped variants. */
+.pp-avatar.pp-avatar-root{
+ display:inline-flex;position:relative;isolation:isolate;flex:none;
+ width:var(--avatar-size);height:var(--avatar-size);border-radius:var(--avatar-radius);
+ background:var(--avatar-background);color:var(--avatar-foreground);
+ font-family:var(--pp-font-family-sans);font-size:var(--avatar-font);font-weight:var(--avatar-weight);line-height:1;
+ user-select:none;vertical-align:middle;
+}
+.pp-avatar-root::after{content:"";position:absolute;inset:0;pointer-events:none;border:var(--avatar-border-width) solid var(--avatar-border);border-radius:inherit;mix-blend-mode:multiply;z-index:1}
+.pp-avatar-fallback,.pp-avatar-image{width:100%;height:100%;border-radius:inherit}
+.pp-avatar-fallback{display:flex;align-items:center;justify-content:center}
+.pp-avatar-photo{position:absolute;inset:0;overflow:hidden;border-radius:inherit}
+.pp-avatar-image{position:absolute;inset:0;object-fit:cover;object-position:center;opacity:0}
+.pp-avatar-photo.sample-portrait .pp-avatar-image{height:150%;object-position:center top}
+.pp-avatar-placeholder{display:flex;align-items:center;justify-content:center;width:100%;height:100%;overflow:hidden;border-radius:inherit;color:var(--avatar-placeholder-foreground)}
+.pp-avatar-placeholder>svg{width:100%;height:100%;transform:translateY(12%)}
+.pp-avatar-root[data-image-state="loaded"] .pp-avatar-image{opacity:1}
+.pp-avatar-root[data-image-state="loaded"] .pp-avatar-fallback{visibility:hidden}
+.pp-avatar-root[data-image-state="fallback"] .pp-avatar-image{display:none}
+.pp-avatar-badge{position:absolute;inset-inline-end:0;inset-block-end:0;z-index:2;display:inline-flex;align-items:center;justify-content:center;width:var(--avatar-badge-size);height:var(--avatar-badge-size);border-radius:var(--avatar-badge-radius);background:var(--avatar-badge-background);color:var(--avatar-badge-foreground,inherit);box-shadow:0 0 0 var(--avatar-ring-width) var(--avatar-ring)}
+.pp-avatar-badge>svg{width:var(--avatar-badge-icon);height:var(--avatar-badge-icon)}
+.pp-avatar-group[data-slot="avatar-group"]{display:inline-flex;align-items:center;isolation:isolate;padding:0;vertical-align:middle}
+.pp-avatar-group[data-slot="avatar-group"]>.pp-avatar,.pp-avatar-count{margin:0;box-shadow:0 0 0 var(--avatar-ring-width) var(--avatar-ring)}
+.pp-avatar-group[data-slot="avatar-group"]>*+*{margin-inline-start:calc(-1 * var(--avatar-overlap))}
+.pp-avatar-group>.pp-avatar:first-child{margin-inline-start:0}
+.pp-avatar-count{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;width:var(--avatar-size);height:var(--avatar-size);border-radius:var(--avatar-radius);background:var(--avatar-count-background);color:var(--avatar-count-foreground);font-family:var(--pp-font-family-sans);font-size:var(--avatar-font);font-weight:var(--avatar-weight);line-height:1;user-select:none}
+.pp-avatar-count>span{display:flex;align-items:center;justify-content:center}
+.pp-avatar-count svg{width:var(--avatar-count-icon);height:var(--avatar-count-icon)}
+@media(forced-colors:active){.pp-avatar-root::after{border-color:CanvasText;mix-blend-mode:normal}.pp-avatar-badge{outline:var(--avatar-ring-width) solid Canvas}.pp-avatar-group>.pp-avatar,.pp-avatar-count{outline:var(--avatar-ring-width) solid Canvas}}

@@ -1,0 +1,11 @@
+# Component motion
+
+The tab selection follows the moving surface in [AlignUI Segmented Control](https://www.alignui.com/docs/v1.2/ui/segmented-control). Forma retains its existing segmented, counted and underline geometry and colors. A measured indicator moves and resizes over `component.tabs.motion.duration` (300ms), with `component.tabs.motion.easing` (`cubic-bezier(.65, 0, .35, 1)`). Resize observation keeps it aligned with the active tab. Tab roles, roving focus, keyboard wrapping and panel selection remain local to each preview; disabled tabs are skipped.
+
+The accordion adapts the height expansion/collapse described by [AlignUI Accordion](https://www.alignui.com/docs/v1.2/ui/accordion). Forma uses its existing 200ms accordion duration and easing. Both directions animate between measured heights, with no fixed maximum height. Native details and summary elements remain the controls. While mounted, the controller owns single-open groups so the browser's `name` behavior cannot immediately close a sibling before its collapse animation. It restores those names on disposal.
+
+A closing body stays laid out until collapse finishes but becomes inert; focus inside it returns to the summary. Rapid reversal starts at the currently rendered height, cancels the old animation, and ignores stale completions. Programmatic native open changes settle immediately. Unsupported animation APIs retain native disclosure behavior.
+
+Reduced motion and global/preview pause changes settle active effects at their requested final state. The shared preference watcher observes ancestor classes and the live reduced-motion media query. Cleanup cancels animation objects, disconnects observers, removes listeners and restores native styles and attributes. Neither component requires an animation-frame loop or timeout.
+
+`checks/disclosure-motion.cjs` exercises actual registered handlers using simulated layout and Web Animations objects: opening and closing, reversal, cancellation, stale completion, native state, grouped panels, disabled controls, keyboard focus, live preferences, resize and disposal. Existing feedback and Pitch Protocol contract checks remain applicable. These checks do not establish browser appearance, touch behavior or assistive-technology conformance.

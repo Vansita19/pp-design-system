@@ -1,0 +1,361 @@
+{
+  "auditDate": "2026-10-09",
+  "scope": "Source, token, rendered configuration and simulated interaction checks. Browser appearance, zoom, touch and assistive-technology conformance were not verified.",
+  "checks": [
+    {
+      "check": "verify",
+      "exitCode": 0,
+      "result": "{\"pages\":77,\"components\":66,\"tokens\":1989,\"variantRenders\":573,\"status\":\"passed\"}"
+    },
+    {
+      "check": "standards",
+      "exitCode": 0,
+      "result": "{\"contrastPairs\":44,\"configurationMappings\":719,\"tokenTypes\":\"matched\",\"syntax\":\"passed\",\"status\":\"passed\",\"scope\":\"source contracts; not computed browser styles\"}"
+    },
+    {
+      "check": "detail-pages",
+      "exitCode": 0,
+      "result": "{\"detailPages\":248,\"status\":\"passed\",\"scope\":\"Actual template rendering and tab content; simulated DOM bindings\"}"
+    },
+    {
+      "check": "variant-matrix",
+      "exitCode": 0,
+      "result": "{\"matrixPages\":66,\"matrixSpecimens\":1562,\"badgeSpecimens\":560,\"status\":\"passed\",\"scope\":\"Supported combinations, bounded rendering, token references and unique native input identities\"}"
+    },
+    {
+      "check": "accessibility",
+      "exitCode": 0,
+      "result": "PASS buttons avoid accidental form submission and retain explicit form actions\nPASS button family preserves old routes and appears once in search and navigation\nPASS link variants are anchors and disabled links cannot activate\nPASS joined actions do not submit forms or pretend to be toggle selections\nPASS fields only describe helper text that exists, preserving readonly and invalid semantics\nPASS styled selection controls retain native input semantics and decorative indicators\nPASS radio instances form independent native groups with one selected value\nPASS checkbox appearance reuses the Inbox control without replacing native behavior\nPASS indeterminate examples set the native mixed property and badges stay noninteractive\nPASS confirmation dialogs describe the action and initially focus Cancel\nPASS source composer disables unavailable actions while keeping pending input editable\nPASS toast announcements use a pre-existing status region and restore trigger focus\nPASS table select-all tracks mixed selection and only acts on visible results\nPASS multiselect chips reflect checked values and removal updates and focuses the checkbox\nPASS streaming text is available without character-by-character announcements\nPASS stream honors pause, resumes, reacts to reduced motion, and cleans timers/listeners\nPASS a closed popover does not steal focus when Escape is pressed elsewhere\n{\"accessibilityChecks\":17,\"status\":\"passed\",\"scope\":\"markup and simulated event contracts; browser/AT validation not performed\"}"
+    },
+    {
+      "check": "full-source-coverage",
+      "exitCode": 0,
+      "result": "{\"liveModules\":53,\"ledgers\":5,\"visualPatterns\":239,\"nonvisualDispositions\":29,\"sourceReferences\":308,\"composedRoutes\":47,\"status\":\"passed\",\"scope\":\"Source inventory, registered helpers, render/token contracts and catalogue reachability; no browser/AT claim\"}"
+    },
+    {
+      "check": "source-shell",
+      "exitCode": 0,
+      "result": "{\"sourceShellConfigurations\":33,\"behaviorContracts\":18,\"validationContracts\":11,\"status\":\"passed\",\"scope\":\"Render/token contracts, navigation/menu focus, grouped form validation, clipboard fallback, setup tabs, native dialog lifecycle, local file escaping and cleanup; no browser visual or assistive-technology review\"}"
+    },
+    {
+      "check": "source-chat",
+      "exitCode": 0,
+      "result": "{\"configurations\":28,\"uniqueIds\":72,\"history\":\"search, selection, clamp, Escape and repeated cleanup\",\"compact\":\"validation, text escaping, IME, Shift+Enter, files and disabled\",\"save\":\"membership switch, naming form and focus return\",\"motion\":\"bounded row entry/reorder, pause/reduced-motion and cleanup\",\"scope\":\"static and simulated event contracts; no browser\",\"status\":\"passed\"}"
+    },
+    {
+      "check": "source-workspace",
+      "exitCode": 0,
+      "result": "{\"configurations\":40,\"behaviorContracts\":15,\"filters\":11,\"status\":\"passed\",\"scope\":\"Source markup, token aliases, immutable local states, delegated preview events, popover bounds/Escape/focus, image validation and listener cleanup. Browser layout and screen readers unverified.\"}"
+    },
+    {
+      "check": "source-details",
+      "exitCode": 0,
+      "result": "Source details: 52 rendering configurations; rich tables, profiles, Q&A, score, updates, summary and token contracts pass."
+    },
+    {
+      "check": "source-trace",
+      "exitCode": 0,
+      "result": "{\"configurations\":27,\"sourcePatterns\":23,\"interactionContracts\":23,\"status\":\"passed\",\"limitations\":\"Static geometry and event contracts only; no browser appearance or assistive-technology verification.\"}"
+    },
+    {
+      "check": "pitch-patterns",
+      "exitCode": 0,
+      "result": "{\"filterConfigurations\":8,\"filterInteractions\":16,\"countedTabKeyboardActions\":5,\"inboxConfigurations\":12,\"inboxInteractions\":\"pagination, selection, decisions, delete, undo, reset, company links/actions, list membership, cleanup\",\"pitchPatternConfigurations\":62,\"uniqueTabIds\":88,\"numericSortActions\":4,\"chatControllerActions\":6,\"sourceGeometry\":\"matched\",\"tokens\":\"aliased\",\"status\":\"passed\",\"scope\":\"markup, token, CSS and simulated event contracts; not browser visual validation\"}"
+    },
+    {
+      "check": "card-patterns",
+      "exitCode": 0,
+      "result": "{\"cardPatternConfigurations\":39,\"cycleBehavior\":\"front-note change, focus, announcement, idempotent mount and timer/corner cleanup\",\"status\":\"passed\",\"scope\":\"Markup, source dimensions, reusable atom composition, scoped cycle behavior and token contracts; browser appearance unverified\"}"
+    },
+    {
+      "check": "ai-response",
+      "exitCode": 0,
+      "result": "{\"responseConfigurations\":42,\"uniqueIds\":12,\"sourcePopoverInteractions\":5,\"followupEvents\":1,\"projectionMath\":\"bounded and correct\",\"tokens\":\"aliased\",\"status\":\"passed\",\"scope\":\"source geometry, markup, data and simulated events; no browser validation\"}"
+    }
+  ],
+  "cornerAndLogoFollowup": {
+    "changes": [
+      "Shared canonical 60% smoothing across painted cards and pills",
+      "One SVG surface and observer per element across nested mounts",
+      "Removed competing CSS superellipse from SVG-painted hosts",
+      "Unchanged Pitch Protocol logo asset and aspect ratio in organizer project switcher"
+    ],
+    "checks": [
+      "verify",
+      "standards",
+      "pitch-patterns",
+      "card-patterns",
+      "smooth-corners",
+      "prompt-suggestions"
+    ],
+    "status": "passed",
+    "geometryCases": 45,
+    "sharedMountContracts": 8,
+    "limitations": "Source and simulated contracts only. Screenshot transfer failed; reported information-card overlap not visually confirmed. No deployment."
+  },
+  "informationFamilyFollowup": {
+    "scope": "Source, token, rendered configuration and simulated behavior checks. Screenshot pixels and browser appearance unavailable; no deployment.",
+    "changes": [
+      "Information block restricted to common shell/body layouts",
+      "List unifies rows with optional labels/dividers; Notes is Text",
+      "Comparison supports heading/no heading",
+      "Questions and two-founder stack follow live source construction",
+      "Metric cards and Timeline have distinct pages; Notifications excluded",
+      "Composition and controls reflect configured content; old links migrate"
+    ],
+    "checks": [
+      {
+        "check": "verify",
+        "exitCode": 0,
+        "result": "{\"pages\":79,\"components\":68,\"tokens\":1994,\"variantRenders\":570,\"status\":\"passed\"}\n"
+      },
+      {
+        "check": "standards",
+        "exitCode": 0,
+        "result": "{\"contrastPairs\":44,\"configurationMappings\":722,\"tokenTypes\":\"matched\",\"syntax\":\"passed\",\"status\":\"passed\",\"scope\":\"source contracts; not computed browser styles\"}\n"
+      },
+      {
+        "check": "detail-pages",
+        "exitCode": 0,
+        "result": "{\"detailPages\":255,\"status\":\"passed\",\"scope\":\"Actual template rendering and tab content; simulated DOM bindings\"}\n"
+      },
+      {
+        "check": "variant-matrix",
+        "exitCode": 0,
+        "result": "{\"matrixPages\":68,\"matrixSpecimens\":1570,\"badgeSpecimens\":560,\"status\":\"passed\",\"scope\":\"Supported combinations, bounded rendering, token references and unique native input identities\"}\n"
+      },
+      {
+        "check": "information-families",
+        "exitCode": 0,
+        "result": "{\"configurations\":34,\"families\":3,\"migratedLinks\":11,\"status\":\"passed\",\"scope\":\"Catalogue boundaries, token references, selected composition, nested markup and saved-link migration; not browser appearance\"}\n"
+      }
+    ],
+    "additionalVerified": {
+      "detailBlocks": {
+        "evidenceConfigurations": 32,
+        "metricConfigurations": 20,
+        "profileConfigurations": 24,
+        "status": "passed"
+      },
+      "sourceDetails": {
+        "configurations": 52,
+        "status": "passed"
+      },
+      "sourceCoverage": {
+        "liveModules": 53,
+        "visualPatterns": 238,
+        "userExcludedVisualPatterns": 1,
+        "nonvisualDispositions": 29,
+        "sourceReferences": 308,
+        "composedRoutes": 50,
+        "migratedLedgerRoutes": 22,
+        "status": "passed"
+      },
+      "covers": {
+        "newCovers": 2,
+        "poses": 30,
+        "officialBenches": 77,
+        "status": "passed"
+      }
+    },
+    "reviewCorrections": [
+      "Blank/unknown and migrated unsupported tabs canonicalize correctly",
+      "Question Assessment control is contextually labeled and hidden when pending"
+    ],
+    "status": "passed"
+  },
+  "chatBubbleAndAccordionFollowup": {
+    "changes": [
+      "Conversation replaced by presentational Chat bubble with five appearances, alignment and grouping",
+      "Removed full transcript controls, navigation, table and composer from public bubble page",
+      "Legacy conversation links migrate to supported bubble controls",
+      "Accordion defaults to grouped Setup with inset open panels and per-group single expansion",
+      "Updated configuration-aware composition/token contracts and scope coverage"
+    ],
+    "checks": [
+      {
+        "check": "chat-bubble",
+        "exitCode": 0,
+        "result": "{\"configurations\":20,\"contrastPairs\":5,\"scope\":\"bubble-only markup, aliases, source dimensions, escaping, wrapping and logical alignment; no browser\",\"status\":\"passed\"}"
+      },
+      {
+        "check": "feedback",
+        "exitCode": 0,
+        "result": "{\"alertConfigurations\":180,\"accordionConfigurations\":120,\"interactionContracts\":17,\"status\":\"passed\",\"scope\":\"native semantics, focus recovery, independent setup groups, cleanup, alias resolution, and motion\"}"
+      },
+      {
+        "check": "verify",
+        "exitCode": 0,
+        "result": "{\"pages\":79,\"components\":68,\"tokens\":2020,\"variantRenders\":565,\"status\":\"passed\"}"
+      },
+      {
+        "check": "standards",
+        "exitCode": 0,
+        "result": "{\"contrastPairs\":44,\"configurationMappings\":715,\"tokenTypes\":\"matched\",\"syntax\":\"passed\",\"status\":\"passed\",\"scope\":\"source contracts; not computed browser styles\"}"
+      },
+      {
+        "check": "detail-pages",
+        "exitCode": 0,
+        "result": "{\"detailPages\":256,\"status\":\"passed\",\"scope\":\"Actual template rendering and tab content; simulated DOM bindings\"}"
+      },
+      {
+        "check": "variant-matrix",
+        "exitCode": 0,
+        "result": "{\"matrixPages\":68,\"matrixSpecimens\":1566,\"badgeSpecimens\":560,\"status\":\"passed\",\"scope\":\"Supported combinations, bounded rendering, token references and unique native input identities\"}"
+      },
+      {
+        "check": "source-chat",
+        "exitCode": 0,
+        "result": "28 internal source configurations plus bubble-only public preview and four route-migration assertions passed."
+      },
+      {
+        "check": "full-source-coverage",
+        "exitCode": 0,
+        "result": "53 live modules, 5 ledgers, 226 covered visual patterns, 13 user-excluded patterns, 29 nonvisual dispositions, 308 source references, 50 composed routes, 31 migrated ledger routes passed."
+      }
+    ],
+    "status": "passed",
+    "limitations": "Source/render/token and simulated behavior verification only. Screenshot pixel materialization and direct block HTML returned HTTP 403; Figma node returned access errors. Public Align UI block structure was read. No browser visual verification or deployment."
+  },
+  "navigationAccordionBadgeFollowup": {
+    "changes": [
+      "Stable component/category/foundation tabs and sidebar disclosure state",
+      "Rapid route updates coalesced; pending navigation cancelled on pagehide",
+      "Shared smooth-corner painter batches all measurements before SVG writes",
+      "Accordion disclosure uses16px Phosphor icons with gray500 foreground; frame/body use shared60% curve",
+      "Standard badge radius8; all non-circular/non-capsule badges use shared60% painter",
+      "Solid badge text/icons white; offending fills mapped to existing readable shades"
+    ],
+    "checks": [
+      {
+        "check": "badge",
+        "exitCode": 0,
+        "result": "{\"configurations\":1260,\"solidText\":\"white with 4.5:1 minimum\",\"smoothing\":\"shared 60%; native circles/capsules\",\"status\":\"passed\"}"
+      },
+      {
+        "check": "feedback",
+        "exitCode": 0,
+        "result": "{\"alertConfigurations\":180,\"accordionConfigurations\":120,\"interactionContracts\":17,\"status\":\"passed\",\"scope\":\"native semantics, focus recovery, independent setup groups, cleanup, alias resolution, and motion\"}"
+      },
+      {
+        "check": "smooth-corners",
+        "exitCode": 0,
+        "result": "{\"smoothingScheduleDiagnostic\":{\"surfaces\":120,\"readsDuringMount\":0,\"readPassesDuringMount\":0,\"queuedFrames\":1}}\n{\"geometryCases\":45,\"sharedMountContracts\":8,\"batching\":{\"surfaces\":120,\"readPasses\":1,\"coalescedEvents\":\"hover, focus, resize, forced colors\",\"cancelledOnUnmount\":true},\"status\":\"passed\",\"scope\":\"bounded geometry, simulated DOM read/write ordering, shared ownership and cleanup; browser appearance and wall-clock timings unverified\"}"
+      },
+      {
+        "check": "verify",
+        "exitCode": 0,
+        "result": "{\"pages\":79,\"components\":68,\"tokens\":2024,\"variantRenders\":565,\"status\":\"passed\"}"
+      },
+      {
+        "check": "standards",
+        "exitCode": 0,
+        "result": "{\"contrastPairs\":44,\"configurationMappings\":715,\"tokenTypes\":\"matched\",\"syntax\":\"passed\",\"status\":\"passed\",\"scope\":\"source contracts; not computed browser styles\"}"
+      },
+      {
+        "check": "variant-matrix",
+        "exitCode": 0,
+        "result": "{\"matrixPages\":68,\"matrixSpecimens\":1566,\"badgeSpecimens\":560,\"status\":\"passed\",\"scope\":\"Supported combinations, bounded rendering, token references and unique native input identities\"}"
+      },
+      {
+        "check": "navigation",
+        "exitCode": 0,
+        "result": "Same-component and color foundation tabs preserve DOM identity, focus and scroll; category tabs retain identity; sidebar preferences persist. Rapid hashes coalesce; pagehide cancels pending routing. All simulated navigation assertions passed."
+      },
+      {
+        "check": "detail-pages",
+        "exitCode": 0,
+        "result": "256 detail-page render/binding contracts passed."
+      }
+    ],
+    "status": "passed",
+    "limitations": "DOM/source contracts and simulated measurement ordering only. No browser visual or wall-clock performance check. Supplied screenshot pixel downloads returned HTTP403; available extracted text was read. No deployment."
+  },
+  "spacingAndFoundationFollowup": {
+    "changes": [
+      "Canonical space.* scale: 0,2,4,6,8,12,16,20,24,28,32,36,40,48,64; off-grid source geometry retained through size.*",
+      "Spacing samples clip within the flexible track and keep actual displayed/copied values",
+      "Borders specimens precede the Tokens used section",
+      "Focus, invalid and success input borders resolve to blue500/red500/green500; helper text keeps semantic text/status roles",
+      "Solid badges use family500 with white text; contrast exceptions explicitly recorded"
+    ],
+    "checks": [
+      {
+        "check": "verify",
+        "exitCode": 0,
+        "result": "79 pages,68 component families,2020 tokens,565 variant renders"
+      },
+      {
+        "check": "spacing",
+        "exitCode": 0,
+        "result": "15 spacing steps,199 component spacing roles,1414 CSS spacing declarations; bounded sample/copy value/order contracts;500 input border inspector mappings"
+      },
+      {
+        "check": "standards",
+        "exitCode": 0,
+        "result": "715 configuration mappings,39 enforced contrast pairs,all token types and JS syntax;5 explicit solid badge contrast exceptions"
+      },
+      {
+        "check": "badge",
+        "exitCode": 0,
+        "result": "1260 configurations; family500/white and smoothing contracts"
+      },
+      {
+        "check": "feedback",
+        "exitCode": 0,
+        "result": "180 alert +120 accordion configurations,17 interaction contracts"
+      },
+      {
+        "check": "menus",
+        "exitCode": 0,
+        "result": "17 placement,keyboard,selection,filtering,disabled,form synchronization and cleanup contracts"
+      },
+      {
+        "check": "layout-system",
+        "exitCode": 0,
+        "result": "6 contracts,14409 geometries,27 tokens"
+      },
+      {
+        "check": "pitch-patterns",
+        "exitCode": 0,
+        "result": "62 pattern configurations; filters,counted tabs,inbox,sort and chat controllers"
+      },
+      {
+        "check": "card-patterns",
+        "exitCode": 0,
+        "result": "39 configurations plus note cycle,focus,announcement and cleanup contracts"
+      },
+      {
+        "check": "ai-response",
+        "exitCode": 0,
+        "result": "42 configurations,12 unique identities,5 source-popover interactions,followup event and projection math"
+      },
+      {
+        "check": "source-trace",
+        "exitCode": 0,
+        "result": "27 configurations,23 source patterns,23 interaction contracts"
+      },
+      {
+        "check": "detail-pages",
+        "exitCode": 0,
+        "result": "256 actual template render/binding contracts"
+      },
+      {
+        "check": "navigation",
+        "exitCode": 0,
+        "result": "Stable tabs and sidebar,focus and scroll,route coalescing,cancellation,history and search contracts"
+      }
+    ],
+    "solidBadgeContrastExceptions": {
+      "blue": 4.47,
+      "success": 2.404,
+      "purple": 3.957,
+      "warning": 2.148,
+      "danger": 3.781
+    },
+    "contrastNote": "Listed ratios are white text on user-selected500 fills and do not meet4.5:1. No accessibility conformance claim.",
+    "status": "passed-with-documented-contrast-exceptions",
+    "limitations": "Registry/source/template and simulated behavior checks only. No browser visual verification or deployment. Historical check results above describe earlier snapshots."
+  },
+  "cornerTreatmentStatus": "Historical corner-smoothing checks are superseded by the latest user request: ordinary CSS border-radius only. See checks/corner-radius.cjs and checks/corner-radius-browser.cjs."
+}

@@ -1,0 +1,51 @@
+/* Source and simulated DOM checks for file-selection contracts; no browser/server. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const dist=path.join(__dirname,'../dist');let document;
+class Node{
+ constructor(tag='div',attrs={}){this.tagName=tag;this.attrs={...attrs};this.children=[];this.parentElement=null;this.listeners=new Map();this.style={overflow:''};this.open=false;this.textContent='';this.value=attrs.value||'';this.classList={contains:name=>(this.attrs.class||'').split(' ').includes(name),add:name=>this.attrs.class=(this.attrs.class||'')+' '+name,remove:name=>this.attrs.class=(this.attrs.class||'').split(' ').filter(c=>c!==name).join(' ')};this.dataset=new Proxy({}, {get:(_,key)=>this.attrs['data-'+key.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())],set:(_,key,value)=>{this.attrs['data-'+key.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())]=String(value);return true;}});}
+ get disabled(){return 'disabled'in this.attrs;}get hidden(){return 'hidden'in this.attrs;}set hidden(v){if(v)this.attrs.hidden='';else delete this.attrs.hidden;}get isConnected(){return this===document.body||Boolean(this.parentElement?.isConnected);}
+ setAttribute(k,v){this.attrs[k]=String(v);}getAttribute(k){return this.attrs[k]??null;}removeAttribute(k){delete this.attrs[k];}
+ append(child){child.parentElement=this;this.children.push(child);}contains(node){return node===this||this.children.some(c=>c.contains(node));}
+ matches(s){if(s.startsWith('.'))return this.classList.contains(s.slice(1));if(s.startsWith('#'))return this.attrs.id===s.slice(1);const a=s.match(/^\[([^\]]+)\]$/);return a?a[1]in this.attrs:this.tagName===s;}
+ closest(s){return this.matches(s)?this:this.parentElement?.closest(s)||null;}querySelectorAll(s){return this.children.flatMap(c=>[...(c.matches(s)?[c]:[]),...c.querySelectorAll(s)]);}querySelector(s){return this.querySelectorAll(s)[0]||null;}
+ set innerHTML(html){this.html=html;this.children=[];const stack=[this];for(const part of html.match(/<[^>]+>|[^<]+/g)||[]){if(part.startsWith('</')){stack.pop();continue;}if(!part.startsWith('<'))continue;const match=part.match(/^<([\w-]+)(.*?)>/s);if(!match)continue;const attrs={};for(const a of match[2].matchAll(/([\w:-]+)(?:="([^"]*)")?/g))attrs[a[1]]=a[2]||'';const node=new Node(match[1],attrs);stack.at(-1).append(node);if(!['input','br','img','hr'].includes(match[1])&&!part.endsWith('/>'))stack.push(node);}}
+ addEventListener(t,fn){if(!this.listeners.has(t))this.listeners.set(t,new Set());this.listeners.get(t).add(fn);}removeEventListener(t,fn){this.listeners.get(t)?.delete(fn);}
+ emit(type,props={}){const event={type,target:this,preventDefault(){this.prevented=true;},...props};for(const fn of [...(this.listeners.get(type)||[])])fn(event);return event;}
+ focus(){document.activeElement=this;}click(){if(!this.disabled)this.emit('click');}showModal(){this.open=true;}close(){this.open=false;this.emit('close');}reportValidity(){return this.valid!==false;}reset(){this.resetCalled=true;}
+ getBoundingClientRect(){return {left:400,right:800,top:0,bottom:600};}
+}
+const window=new Node('window');window.CustomEvent=class{constructor(type,options){this.type=type;Object.assign(this,options);}};
+Node.prototype.dispatchEvent=function(event){this.lastDispatched=event;this.emit(event.type,event);return true;};
+document=new Node('document');document.body=new Node('body');document.head=new Node('head');document.defaultView=window;document.append(document.head);document.append(document.body);document.createElement=tag=>new Node(tag);document.getElementById=id=>document.querySelector('#'+id)||{};
+const context={window,document};vm.createContext(context);for(const name of ['tokens.js','hugeicons-icons.js','tag.js','utility-atoms.js','previews.js','file-upload.js'])vm.runInContext(fs.readFileSync(path.join(dist,name),'utf8'),context,{filename:name});
+const F=window.Forma,css=fs.readFileSync(path.join(dist,'file-upload.css'),'utf8');let checks=0;
+const test=(name,fn)=>{try{fn();checks++;}catch(e){e.message=name+': '+e.message;throw e;}};
+function build(config={}){const root=new Node('form');document.body.append(root);root.innerHTML=F.fileUpload(config);const cleanup=F.wireFileUpload(root),host=root.querySelector('[data-file-upload]');return {root,host,cleanup,input:root.querySelector('[data-file-input]'),browse:root.querySelector('[data-file-browse]'),drop:root.querySelector('[data-file-drop]'),list:root.querySelector('[data-file-list]'),error:root.querySelector('[data-file-error]'),status:root.querySelector('[data-file-status]')};}
+const file=(name='Deck.pdf',size=1000000,type='application/pdf',lastModified=1)=>({name,size,type,lastModified});
+const choose=(ui,files)=>{ui.input.files=files;ui.input.emit('change');};
+test('public renderer and named aliases cover each state',()=>{
+ for(const state of ['idle','selected','error'])for(const multiple of [false,true])for(const disabled of [false,true]){const html=F.fileUpload({state,multiple,disabled});assert.match(html,/type="file"/);assert.match(html,/data-file-browse/);assert.match(html,/50 MB/);assert.match(html,/role="status"/);assert.equal(html.includes('Example selection'),state==='selected');for(const id of F.fileUploadTokens({state,multiple,disabled})){assert.ok(F.tokens[id],id);F.resolve(id);}}
+ const a=F.fileUpload(),b=F.fileUpload();for(const [,id]of a.matchAll(/\bid="([^"]+)"/g))assert.ok(!b.includes(`id="${id}"`));assert.match(F.fileUpload({label:'<img onerror=x>'}),/&lt;img onerror=x&gt;/);
+ const vars=new Set(Object.keys(F.tokens).map(F.varName));for(const [,variable]of css.matchAll(/var\((--pp-[a-zA-Z0-9-]+)/g))assert.ok(vars.has(variable),variable);assert.match(css,/prefers-reduced-motion:reduce/);assert.match(css,/motion-paused/);assert.match(css,/forced-colors:active/);assert.match(css,/text-overflow:ellipsis/);
+});
+test('type and decimal 50 MB limit including empty MIME and mismatch',()=>{
+ assert.equal(F.fileUploadValidation(file('photo.JPG',50000000,'image/jpeg')),'');assert.match(F.fileUploadValidation(file('photo.png',50000001,'image/png')),/larger/);assert.equal(F.fileUploadValidation(file('deck.pdf',0,'')),'');assert.equal(F.fileUploadValidation(file('deck.pdf',10,'application/octet-stream')),'');assert.match(F.fileUploadValidation(file('unsafe.pdf.exe',100,'')),/Use JPEG/);assert.match(F.fileUploadValidation(file('image.png',100,'video/mp4')),/does not match/);assert.match(F.fileUploadValidation(file('doc.pdf',-1,'')),/could not be read/);
+});
+test('native browse activation and local selection event retain real records',()=>{
+ const ui=build();let picked=0;ui.input.addEventListener('click',()=>picked++);ui.browse.click();assert.equal(picked,1);const first=file();choose(ui,[first]);assert.equal(ui.list.hidden,false);assert.match(ui.list.html,/Selected locally/);assert.equal(ui.host.lastDispatched.type,'forma:file-selection');assert.equal(ui.host.lastDispatched.detail.files[0],first);assert.equal(ui.input.value,'');choose(ui,[first]);assert.equal(ui.list.querySelectorAll('[data-file-remove]').length,1,'Repeated selection does not duplicate the same file');ui.cleanup();
+});
+test('validation preserves prior selection and combines valid drop files',()=>{
+ const ui=build();choose(ui,[file()]);choose(ui,[file('Archive.zip',100,'application/zip')]);assert.equal(ui.error.hidden,false);assert.match(ui.error.textContent,/Archive.zip/);assert.equal(ui.list.querySelectorAll('[data-file-remove]').length,1);
+ ui.drop.emit('dragenter');assert.equal(ui.drop.dataset.dragging,'true');ui.drop.emit('drop',{dataTransfer:{files:[file('Photo.png',1200,'image/png'),file('Video.mp4',50000001,'video/mp4')]}});assert.equal(ui.drop.dataset.dragging,undefined);assert.equal(ui.list.querySelectorAll('[data-file-remove]').length,2);assert.match(ui.error.textContent,/Video.mp4/);assert.match(ui.status.textContent,/2 files selected locally/);ui.cleanup();
+});
+test('single mode rejects batches and replaces selection only with a valid file',()=>{
+ const ui=build({multiple:false});choose(ui,[file()]);ui.drop.emit('drop',{dataTransfer:{files:[file('A.pdf'),file('B.pdf')]}});assert.match(ui.error.textContent,/one file/);assert.match(ui.list.html,/Deck.pdf/);choose(ui,[file('New.pdf')]);assert.equal(ui.list.querySelectorAll('[data-file-remove]').length,1);assert.match(ui.list.html,/New.pdf/);assert.equal(ui.error.hidden,true);ui.cleanup();
+});
+test('remove restores focus and selecting real files replaces specimen examples',()=>{
+ const ui=build({state:'selected'});assert.equal(ui.list.querySelectorAll('[data-file-remove]').length,2);choose(ui,[file('First.pdf'),file('Second.pdf')]);assert.doesNotMatch(ui.list.html,/Example selection/);const first=ui.list.querySelector('[data-file-remove]');ui.list.emit('click',{target:first});assert.equal(ui.list.querySelectorAll('[data-file-remove]').length,1);assert.equal(document.activeElement,ui.list.querySelector('[data-file-remove]'));ui.list.emit('click',{target:ui.list.querySelector('[data-file-remove]')});assert.equal(ui.list.hidden,true);assert.equal(document.activeElement,ui.browse);assert.equal(ui.host.lastDispatched.detail.files.length,0);ui.cleanup();
+});
+test('disabled, drag depth, native reset and cleanup',()=>{
+ const disabled=build({disabled:true});let clicks=0;disabled.input.addEventListener('click',()=>clicks++);disabled.browse.click();assert.equal(clicks,0);disabled.drop.emit('drop',{dataTransfer:{files:[file()]}});assert.equal(disabled.list.hidden,true);disabled.cleanup();
+ const ui=build();F.wireFileUpload(ui.root);assert.equal(ui.browse.listeners.get('click').size,1);ui.drop.emit('dragenter');ui.drop.emit('dragenter');ui.drop.emit('dragleave');assert.equal(ui.drop.dataset.dragging,'true');ui.drop.emit('dragleave');assert.equal(ui.drop.dataset.dragging,undefined);choose(ui,[file()]);ui.root.emit('reset');assert.equal(ui.list.hidden,true);assert.equal(ui.input.value,'');ui.cleanup();for(const node of [ui.browse,ui.input,ui.drop,ui.list])assert.ok([...node.listeners.values()].every(list=>list.size===0));assert.equal(ui.root.listeners.get('reset').size,0);
+});
+console.log(JSON.stringify({fileUploadChecks:checks,status:'passed',scope:'markup, aliases and simulated selection/validation/drop/removal/reset events; browser appearance and native picker unverified'}));

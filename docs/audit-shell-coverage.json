@@ -1,0 +1,549 @@
+{
+  "scope": "shell-settings-onboarding-dialogs-system-states",
+  "modules": [
+    "app.js",
+    "workspace.js",
+    "ui.js",
+    "controls.js",
+    "dropdown.js",
+    "onboarding.js",
+    "onboarding-preferences.js",
+    "integrations.js",
+    "account-flow.js",
+    "file-store.js",
+    "decision-visuals.js",
+    "icons.js"
+  ],
+  "patterns": [
+    {
+      "id": "shell-geometry",
+      "label": "Application shell dimensions",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 58
+        }
+      ],
+      "helper": "layoutProfile",
+      "variant": "workspace",
+      "config": {},
+      "status": "covered",
+      "note": "Existing 248/80px navigation and workspace/review geometry tokens; responsive diagram remains a documented extension."
+    },
+    {
+      "id": "shell-navigation",
+      "label": "Expanded and collapsed navigation",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 28
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "navigation",
+      "config": {},
+      "status": "covered",
+      "note": "Source row, grouping, count, selected, hover and focus composition; preview links select locally."
+    },
+    {
+      "id": "shell-fund-identity",
+      "label": "Fund identity and collapse control",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 46
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "navigation",
+      "config": {},
+      "status": "covered",
+      "note": "Single-fund identity and one persistent collapse action. No obsolete source workspace switcher is introduced."
+    },
+    {
+      "id": "shell-profile-menu",
+      "label": "Profile trigger and account menu",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 49
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "navigation",
+      "config": {},
+      "status": "covered",
+      "note": "Avatar/name/email trigger and identity heading; actual links and sign-out action; arrow-key, Escape, Tab, outside-click and focus restoration."
+    },
+    {
+      "id": "shell-icon-controls",
+      "label": "Navigation icon controls",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 51
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "navigation",
+      "config": {},
+      "status": "covered",
+      "note": "Shared Phosphor/Button implementation composed into source 30px toggle geometry and navigation shadow."
+    },
+    {
+      "id": "shell-page-heading",
+      "label": "Icon/title/subtitle/action heading",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 61
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "settings",
+      "config": {},
+      "status": "covered",
+      "note": "Reusable heading helper; source decorative image assets normalized to Phosphor while preserving hierarchy."
+    },
+    {
+      "id": "shell-profile-form",
+      "label": "Profile name/email form",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 227
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "settings",
+      "config": {
+        "settingKind": "account"
+      },
+      "status": "covered",
+      "note": "Native name/email form, save feedback, session and workspace rows; example state only."
+    },
+    {
+      "id": "shell-setting-rows",
+      "label": "Settings definition rows and tags",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 176
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "settings",
+      "config": {
+        "settingKind": "definition"
+      },
+      "status": "covered",
+      "note": "Source label/value alignment, icon, wrapping category tags, divided rows and muted thesis panel."
+    },
+    {
+      "id": "shell-danger-section",
+      "label": "Settings danger section",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 217
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "settings",
+      "config": {
+        "settingKind": "account"
+      },
+      "status": "covered",
+      "note": "Source-style description/action row with local sample-reset action; destructive confirmation remains existing alert-dialog."
+    },
+    {
+      "id": "shell-scheduling",
+      "label": "Scheduling URL setting",
+      "sources": [
+        {
+          "file": "account-flow.js",
+          "line": 5
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "settings",
+      "config": {
+        "settingKind": "scheduling"
+      },
+      "status": "covered",
+      "note": "URL field, HTTPS validation, save/remove and empty disabled remove state."
+    },
+    {
+      "id": "shell-team-management",
+      "label": "Team management rows",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 223
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "management",
+      "config": {
+        "managementKind": "team"
+      },
+      "status": "covered",
+      "note": "Identity, email, role, pending/active badge and local remove action in Settings composition; not a new Data table style."
+    },
+    {
+      "id": "shell-key-management",
+      "label": "API key management rows",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 219
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "management",
+      "config": {
+        "managementKind": "keys"
+      },
+      "status": "covered",
+      "note": "Label, fake prefix, date/status and local revoke action; copyable fake value. No real credential generation."
+    },
+    {
+      "id": "shell-invitations",
+      "label": "Repeated invitation controls",
+      "sources": [
+        {
+          "file": "onboarding.js",
+          "line": 24
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "invitations",
+      "config": {},
+      "status": "covered",
+      "note": "Email/person icon, shared role select, remove and Add another; unique IDs and native email validation."
+    },
+    {
+      "id": "shell-range-currency",
+      "label": "Numeric min/max currency group",
+      "sources": [
+        {
+          "file": "onboarding.js",
+          "line": 82
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "range",
+      "config": {},
+      "status": "covered",
+      "note": "Shared select/number/checkbox atoms, No preference disables all controls, group validation, error association and local save."
+    },
+    {
+      "id": "shell-preference-picker",
+      "label": "Multiple preference picker",
+      "sources": [
+        {
+          "file": "onboarding.js",
+          "line": 70
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "onboarding",
+      "config": {
+        "onboardingStep": "preferences"
+      },
+      "status": "covered",
+      "note": "Searchable rounds/sectors/geography with clear, empty results and exclusive No preference behavior; normalized listbox semantics."
+    },
+    {
+      "id": "shell-logo-upload",
+      "label": "Logo upload and preview",
+      "sources": [
+        {
+          "file": "onboarding.js",
+          "line": 76
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "logo-upload",
+      "config": {},
+      "status": "covered",
+      "note": "PNG/JPEG/WebP file chooser and selected local image preview; object URLs revoked on cleanup. No upload service."
+    },
+    {
+      "id": "shell-invitation-form",
+      "label": "Invitation and readonly email",
+      "sources": [
+        {
+          "file": "onboarding.js",
+          "line": 93
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "onboarding",
+      "config": {
+        "onboardingStep": "invitation"
+      },
+      "status": "covered",
+      "note": "Name, invited email readonly, sign-in button, divider and submit action; the sign-in action explicitly stays a preview."
+    },
+    {
+      "id": "shell-onboarding",
+      "label": "Onboarding split composition",
+      "sources": [
+        {
+          "file": "onboarding.js",
+          "line": 36
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "onboarding",
+      "config": {
+        "onboardingStep": "workspace"
+      },
+      "status": "covered",
+      "note": "Four configurations compose the shared fields; workspace name/thesis update a contextual side preview. Source scenic/glass art is deliberately normalized, not claimed pixel-identical."
+    },
+    {
+      "id": "shell-form-states",
+      "label": "Readonly, invalid, required and disabled fields",
+      "sources": [
+        {
+          "file": "onboarding.js",
+          "line": 90
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "range",
+      "config": {},
+      "status": "covered",
+      "note": "Source group-level errors and disabled numeric fields plus existing Input/Form-field states. No source password screen exists in these routes; the existing Input password variation is an extension."
+    },
+    {
+      "id": "shell-modal",
+      "label": "Modal structure and footer",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 75
+        }
+      ],
+      "helper": "preview",
+      "variant": "modal",
+      "config": {},
+      "status": "covered",
+      "note": "Existing native-dialog family covers generic heading, close, scroll body, width and footer; source focus behavior normalized to native dialog."
+    },
+    {
+      "id": "shell-confirmation",
+      "label": "Destructive confirmations",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 833
+        }
+      ],
+      "helper": "preview",
+      "variant": "alert-dialog",
+      "config": {},
+      "status": "covered",
+      "note": "Existing shared confirmation with soft intent action covers reset/delete/revoke confirmation bodies."
+    },
+    {
+      "id": "shell-form-dialogs",
+      "label": "Invite, role, key and fund form dialogs",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 735
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "form-dialog",
+      "config": {
+        "dialogKind": "fund"
+      },
+      "status": "covered",
+      "note": "Source form bodies are available as invite/fund/key/role configurations using shared fields/custom selects and native dialog lifecycle."
+    },
+    {
+      "id": "shell-decision-dialog",
+      "label": "Company-context decision dialog",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 378
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "decision",
+      "config": {
+        "decisionKind": "reason"
+      },
+      "status": "covered",
+      "note": "Company identity, optional/required reason, source compact 400px/20px modal geometry; scenic hero normalized to tokenized identity region."
+    },
+    {
+      "id": "shell-scheduling-dialog",
+      "label": "Scheduling step dialog",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 385
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "decision",
+      "config": {
+        "decisionKind": "scheduling"
+      },
+      "status": "covered",
+      "note": "Required HTTPS URL and Skip/Save actions inside the shared contextual dialog."
+    },
+    {
+      "id": "shell-decision-choices",
+      "label": "Current decision action list",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 611
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "decision",
+      "config": {
+        "decisionKind": "choices"
+      },
+      "status": "covered",
+      "note": "Interested/Watch/Pass choices with shared filled Phosphor icons, current marker and local selection feedback."
+    },
+    {
+      "id": "shell-copyable",
+      "label": "Copyable value and fallback",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 437
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "copyable",
+      "config": {},
+      "status": "covered",
+      "note": "Readonly field, copy action, success status and selected-text fallback on unsupported/denied clipboard."
+    },
+    {
+      "id": "shell-setup-card",
+      "label": "Integration setup composition",
+      "sources": [
+        {
+          "file": "integrations.js",
+          "line": 8
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "setup",
+      "config": {},
+      "status": "covered",
+      "note": "Collapsible identity header, sample URL, numbered instructions, accessible App/Code tabs, code block and information notice."
+    },
+    {
+      "id": "shell-file-preview",
+      "label": "Document preview and unavailable states",
+      "sources": [
+        {
+          "file": "file-store.js",
+          "line": 8
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "file-preview",
+      "config": {},
+      "status": "covered",
+      "note": "Text/image/PDF/unsupported/unavailable configurations; selected local file preview, escaping, original download and object URL cleanup. No network upload."
+    },
+    {
+      "id": "shell-toast",
+      "label": "Toast and undo feedback",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 68
+        }
+      ],
+      "helper": "preview",
+      "variant": "toast",
+      "config": {},
+      "status": "covered",
+      "note": "Existing shared toast has live announcement, optional Undo and explicit dismissal."
+    },
+    {
+      "id": "shell-session",
+      "label": "Signed-out recovery state",
+      "sources": [
+        {
+          "file": "account-flow.js",
+          "line": 6
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "session",
+      "config": {},
+      "status": "covered",
+      "note": "User icon, status copy and local recovery action; no live account session."
+    },
+    {
+      "id": "shell-fund-directory",
+      "label": "Fund directory external-link card",
+      "sources": [
+        {
+          "file": "account-flow.js",
+          "line": 7
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "directory",
+      "config": {},
+      "status": "covered",
+      "note": "Live source is one informational card/link, not the unreachable legacy Fund Index list branch."
+    },
+    {
+      "id": "shell-permission-pattern",
+      "label": "Permission-dependent controls",
+      "sources": [
+        {
+          "file": "account-flow.js",
+          "line": 3
+        }
+      ],
+      "helper": "preview",
+      "variant": "button",
+      "config": {
+        "state": "disabled"
+      },
+      "status": "covered",
+      "note": "Existing disabled/hidden-action patterns plus role examples represent the UI; actual authorization is separately nonvisual."
+    },
+    {
+      "id": "shell-account-services",
+      "label": "Account authentication and storage services",
+      "sources": [
+        {
+          "file": "account-flow.js",
+          "line": 3
+        },
+        {
+          "file": "file-store.js",
+          "line": 3
+        },
+        {
+          "file": "app.js",
+          "line": 491
+        }
+      ],
+      "helper": "sourceShell",
+      "variant": "session",
+      "status": "nonvisual",
+      "note": "Live authorization/session, invitation email delivery, credential backend and file persistence are service behavior, not additional visual families. Specimens explicitly keep actions local; source app itself uses local demo data."
+    }
+  ]
+}

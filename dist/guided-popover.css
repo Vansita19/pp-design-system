@@ -1,0 +1,24 @@
+.pp-guided-popover-host{display:inline-flex;flex-direction:column;align-items:flex-start;gap:var(--pp-component-guidedPopover-anchor-gap);position:relative;max-width:100%}
+.pp-guided-popover{
+ box-sizing:border-box;position:fixed;inset:auto;margin:0;z-index:var(--pp-component-guidedPopover-layer);
+ width:var(--pp-component-guidedPopover-width);max-width:calc(100vw - var(--pp-component-guidedPopover-viewport-inset) * 2);overflow:auto;
+ padding:var(--pp-component-guidedPopover-padding);border:var(--pp-border-width) solid var(--pp-component-guidedPopover-border);border-radius:var(--pp-component-guidedPopover-radius);
+ background:var(--pp-component-guidedPopover-background);box-shadow:var(--pp-component-guidedPopover-shadow);color:var(--pp-component-guidedPopover-title-color);font-family:var(--pp-font-family-sans);font-weight:var(--pp-font-weight-400);text-align:left;
+}
+.pp-guided-popover[data-inline]{position:relative;inset:auto;width:var(--pp-component-guidedPopover-width);max-width:100%;max-height:none}
+.pp-guided-popover[hidden]{display:none!important}
+.pp-guided-popover [data-guided-close]{position:absolute;right:var(--pp-component-guidedPopover-close-inset);top:var(--pp-component-guidedPopover-close-inset)}
+.pp-guided-popover-icon{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:var(--pp-component-guidedPopover-icon-container);height:var(--pp-component-guidedPopover-icon-container);border:var(--pp-border-width) solid var(--pp-component-guidedPopover-border);border-radius:var(--pp-component-guidedPopover-icon-radius);color:var(--pp-component-guidedPopover-icon-color);box-shadow:var(--pp-component-guidedPopover-icon-shadow)}
+.pp-guided-popover-icon svg{width:var(--pp-component-guidedPopover-icon-size);height:var(--pp-component-guidedPopover-icon-size)}
+.pp-guided-popover .pp-guided-popover-title{margin:var(--pp-component-guidedPopover-title-gap) 0 0;font-size:var(--pp-component-guidedPopover-title-font);font-weight:var(--pp-component-guidedPopover-title-weight);line-height:var(--pp-component-guidedPopover-title-line);overflow-wrap:anywhere}
+.pp-guided-popover-title:focus-visible{outline:var(--pp-border-width) solid var(--pp-semantic-border-focus);outline-offset:var(--pp-space-4)}
+.pp-guided-popover .pp-guided-popover-description{margin:var(--pp-component-guidedPopover-description-gap) 0 0;color:var(--pp-component-guidedPopover-description-color);font-size:var(--pp-component-guidedPopover-description-font);line-height:var(--pp-component-guidedPopover-description-line);overflow-wrap:anywhere}
+.pp-guided-popover-footer{display:flex;align-items:center;gap:var(--pp-component-guidedPopover-footer-layoutGap);margin:var(--pp-component-guidedPopover-footer-gap) calc(-1 * var(--pp-component-guidedPopover-padding)) calc(-1 * var(--pp-component-guidedPopover-padding));padding:var(--pp-component-guidedPopover-footer-paddingY) var(--pp-component-guidedPopover-footer-paddingX);border-top:var(--pp-border-width) solid var(--pp-component-guidedPopover-border)}
+.pp-guided-popover-step{flex-shrink:0;white-space:nowrap;color:var(--pp-component-guidedPopover-step-color);font-size:var(--pp-component-guidedPopover-step-font);line-height:var(--pp-component-guidedPopover-step-line)}
+.pp-guided-popover-actions{display:flex;flex:1;min-width:0;gap:var(--pp-component-guidedPopover-footer-actionGap)}
+.pp-guided-popover-actions>.pp-button{flex:1;min-width:0}
+@media(max-width:280px){.pp-guided-popover-footer{flex-wrap:wrap}.pp-guided-popover-actions{flex-basis:100%}}
+/* Position changes and local step changes intentionally have no motion; pause and reduced-motion remain stable. */
+@media(prefers-reduced-motion:reduce){.pp-guided-popover,.pp-guided-popover *{animation:none!important;transition:none!important}}
+body.motion-paused .pp-guided-popover *,.preview-paused .pp-guided-popover *{animation:none!important;transition:none!important}
+@media(forced-colors:active){.pp-guided-popover,.pp-guided-popover-icon{border-color:CanvasText}.pp-guided-popover-footer{border-top-color:CanvasText}}

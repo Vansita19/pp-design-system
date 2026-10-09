@@ -1,0 +1,34 @@
+/* Neutral, square pagination. Shared button semantics with a navigation-specific surface. */
+.pp-page-navigation{justify-content:safe center;gap:var(--pp-component-pagination-gap);flex-wrap:nowrap;max-width:100%;overflow-x:auto;padding:var(--pp-space-4)}
+.pp-pagination-pages{display:flex;align-items:center;gap:var(--pp-component-pagination-gap);flex-shrink:0}
+.pp-theme .pp-page-navigation .pp-button{box-sizing:border-box;flex:none;width:var(--pp-component-pagination-size);min-width:var(--pp-component-pagination-size);height:var(--pp-component-pagination-size);min-height:var(--pp-component-pagination-size);padding:0;border-radius:var(--pp-component-pagination-radius);border:var(--pp-border-width) solid transparent;background:transparent;box-shadow:none;color:var(--pp-component-pagination-foreground);font-size:var(--pp-component-pagination-font);font-weight:var(--pp-component-pagination-weight)}
+.pp-theme .pp-page-navigation [data-pagination-page]{border-color:var(--pp-component-pagination-border);background:var(--pp-component-pagination-surface)}
+.pp-theme .pp-page-navigation .pp-button:hover:not(:disabled),.pp-theme .pp-page-navigation [aria-current=page]{background:var(--pp-component-pagination-selected);color:var(--pp-component-pagination-current)}
+.pp-theme .pp-page-navigation .pp-button:disabled{color:var(--pp-semantic-text-disabled);cursor:default;opacity:1}
+.pp-page-navigation [data-pagination-prev] svg{transform:rotate(180deg)}
+.pp-pagination-ellipsis{display:grid;place-items:center;min-width:var(--pp-component-pagination-size);height:var(--pp-component-pagination-size);color:var(--pp-component-pagination-foreground)}
+.pp-pagination-label,.pp-pagination-pages[data-pagination-compact]{font-size:var(--pp-component-pagination-font);color:var(--pp-component-pagination-foreground);white-space:nowrap}
+/* Stepper uses the same button atom; state belongs to the indicator rather than a large filled button. */
+.pp-step-navigation{max-width:100%;font-family:var(--pp-font-family-sans)}
+.pp-theme .pp-step-list{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:var(--pp-component-stepper-gap);list-style:none;padding:0;margin:0}
+.pp-step-list>li{display:flex;align-items:center;gap:var(--pp-component-stepper-gap);min-width:0}
+.pp-theme .pp-step-list .pp-button{min-height:var(--pp-space-32);height:auto;padding:var(--pp-space-4);gap:var(--pp-component-stepper-labelGap);border:0;background:transparent;box-shadow:none;color:var(--pp-component-stepper-default);font-size:var(--pp-component-stepper-font);line-height:var(--pp-component-stepper-line);font-weight:var(--pp-font-weight-400)}
+.pp-step-label{min-width:0;overflow-wrap:anywhere;text-align:left}
+.pp-step-indicator{display:inline-flex;align-items:center;justify-content:center;flex:none;box-sizing:border-box;width:var(--pp-component-stepper-indicator);height:var(--pp-component-stepper-indicator);border:var(--pp-border-width) solid var(--pp-component-stepper-border);border-radius:var(--pp-radius-full);background:var(--pp-component-stepper-surface);font-size:var(--pp-font-size-11);transition:background var(--pp-component-stepper-duration) var(--pp-component-stepper-easing),color var(--pp-component-stepper-duration) var(--pp-component-stepper-easing)}
+.pp-theme .pp-step-list [data-state=current] .pp-button,.pp-theme .pp-step-list [data-state=complete] .pp-button{color:var(--pp-semantic-text-heading)}
+.pp-step-list [data-state=current] .pp-step-indicator{background:var(--pp-component-stepper-active);border-color:transparent;color:var(--pp-semantic-text-inverse)}
+.pp-step-list [data-state=complete] .pp-step-indicator{background:var(--pp-component-stepper-complete);border-color:transparent;color:var(--pp-semantic-text-inverse)}
+.pp-step-separator{display:flex;color:var(--pp-component-stepper-default)}
+.is-vertical .pp-step-list{flex-direction:column;align-items:flex-start;gap:var(--pp-space-8)}
+.is-vertical .pp-step-list>li{flex-direction:column;align-items:flex-start;gap:var(--pp-space-8)}
+.is-vertical .pp-step-separator{margin-left:var(--pp-space-4);width:var(--pp-component-stepper-indicator);justify-content:center;transform:rotate(90deg)}
+.pp-theme .is-dots .pp-step-list{gap:0}
+.pp-theme .is-dots .pp-step-list .pp-button{width:var(--pp-space-32);height:var(--pp-space-32);padding:0;border-radius:var(--pp-radius-full)}
+.is-dots .pp-step-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.is-dots .pp-step-list .pp-button:before{content:'';width:var(--pp-component-stepper-dot);height:var(--pp-component-stepper-dot);border-radius:var(--pp-radius-full);background:var(--pp-component-stepper-dotInactive);transition:background var(--pp-component-stepper-duration),transform var(--pp-component-stepper-duration)}
+.is-dots.dots-small .pp-step-list .pp-button:before{width:var(--pp-component-stepper-dotSmall);height:var(--pp-component-stepper-dotSmall)}
+.is-dots .pp-step-list [data-state=current] .pp-button:before{background:var(--pp-component-stepper-active);transform:scale(1.15)}
+.pp-theme .pp-step-list .pp-button:disabled{opacity:.45;cursor:default}
+body.motion-paused .pp-step-navigation *,.preview-paused .pp-step-navigation *,body.motion-paused .pp-step-navigation :before,.preview-paused .pp-step-navigation :before{transition:none!important}
+@media(prefers-reduced-motion:reduce){.pp-step-navigation *,.pp-step-navigation :before{transition:none!important}}
+@media(forced-colors:active){.pp-page-navigation [aria-current=page],.pp-step-list [aria-current=step]{outline:var(--pp-border-width) solid Highlight}.pp-step-indicator{border-color:CanvasText}}

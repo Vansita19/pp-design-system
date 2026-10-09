@@ -1,0 +1,962 @@
+{
+  "scope": "workspace-home-inbox-notes-lists-views",
+  "modules": [
+    "workspace.js",
+    "app.js",
+    "inbox-filters.js",
+    "inbox-actions.js",
+    "list-actions.js",
+    "view-builder.js",
+    "view-assessments.js",
+    "view-collections.js",
+    "view-save-dialog.js",
+    "notes.js",
+    "notes-motion.js",
+    "insight-notes.js",
+    "note-examples.js",
+    "view-examples.js",
+    "personal-review.js",
+    "smooth-cards.js"
+  ],
+  "patterns": [
+    {
+      "id": "home-context-links",
+      "label": "Contextual colored navigation labels",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 64
+        }
+      ],
+      "helper": "link",
+      "variant": "link",
+      "status": "covered",
+      "note": "Composes shared Badge and native Link; no separate interactive badge family."
+    },
+    {
+      "id": "home-prompt",
+      "label": "Home AI prompt composition",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 67
+        }
+      ],
+      "helper": "promptBar",
+      "variant": "home",
+      "status": "covered",
+      "note": "Shared prompt module; its complete interaction audit belongs to chat."
+    },
+    {
+      "id": "home-start-cards",
+      "label": "Start here prompt cards",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 68
+        }
+      ],
+      "helper": "promptSuggestions",
+      "variant": "group",
+      "status": "covered",
+      "note": "Source 24px spacing, 16px corners and 22px icons; shared token and 60% curve normalization."
+    },
+    {
+      "id": "inbox-table",
+      "label": "Inbox identity, stage, score and status table",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 75
+        }
+      ],
+      "helper": "pitchInboxTable",
+      "variant": "inbox",
+      "status": "covered",
+      "note": "Core source table with local selection, decisions and paging. Row action coverage tracked separately."
+    },
+    {
+      "id": "inbox-counted-tabs",
+      "label": "Counted underline tabs",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 91
+        }
+      ],
+      "helper": "pitchTabs",
+      "variant": "counted",
+      "status": "covered",
+      "note": "Source status categories, counts and icons with shared selected/focus states."
+    },
+    {
+      "id": "inbox-search-sort",
+      "label": "Expandable search and source sort controls",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 87
+        }
+      ],
+      "helper": "pitchFilterBar",
+      "variant": "toolbar",
+      "status": "covered",
+      "note": "Existing basic controls remain separate from the data table."
+    },
+    {
+      "id": "advanced-properties",
+      "label": "Eleven-property advanced filter and stable value flyout",
+      "sources": [
+        {
+          "file": "inbox-filters.js",
+          "line": 12
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "advanced-filter",
+      "status": "covered",
+      "note": "Property/value search, selected counts, contextual result counts, checkbox options, keyboard row navigation and empty results; inline and top-layer popover presentations."
+    },
+    {
+      "id": "active-criteria",
+      "label": "Removable criteria and Clear all",
+      "sources": [
+        {
+          "file": "inbox-filters.js",
+          "line": 46
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "advanced-filter",
+      "status": "covered",
+      "note": "Same filter model drives chips and counts; removal updates local rows. Uses system control dimensions rather than an independent pill family."
+    },
+    {
+      "id": "inbox-empty-paging",
+      "label": "Inbox no-results, reset and paging boundaries",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 104
+        }
+      ],
+      "helper": "pitchInboxTable",
+      "variant": "inbox",
+      "status": "covered",
+      "note": "Existing local table covers zero rows and disabled boundary actions."
+    },
+    {
+      "id": "inbox-selection-actions",
+      "label": "Inbox row Open/Add to list and bulk membership actions",
+      "sources": [
+        {
+          "file": "list-actions.js",
+          "line": 5
+        }
+      ],
+      "helper": "pitchInboxTable",
+      "variant": "inbox",
+      "status": "covered",
+      "note": "Verified in pitch-patterns.js:89,229\u2013276: unopened dot/medium label and safe company anchor; Open company/Add to list action dialog; bulk membership entry; shared sourceWorkspace picker and enriched companyIds events, with cleanup."
+    },
+    {
+      "id": "membership-picker",
+      "label": "Static-list mixed/checked/unchecked membership picker",
+      "sources": [
+        {
+          "file": "list-actions.js",
+          "line": 10
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "membership",
+      "status": "covered",
+      "note": "Native mixed checkbox, source icon/name rows, search/clear/empty; disabled read-only view. Emits forma:list-membership-change."
+    },
+    {
+      "id": "membership-rich-rows",
+      "label": "List metadata and create-list footer",
+      "sources": [
+        {
+          "file": "list-actions.js",
+          "line": 15
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "membership",
+      "status": "covered",
+      "note": "Count/sharing metadata and Add to new list open a local naming dialog; compact and full roles share the same helper."
+    },
+    {
+      "id": "create-list-form",
+      "label": "Static-list naming and confirmation",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 638
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "save-form",
+      "status": "excluded",
+      "note": "Required maxlength-100 input, selected company identities, local save message and forma:collection-save. No backend write. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "kind": "static"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "collection-library",
+      "label": "Saved-view library row schema",
+      "sources": [
+        {
+          "file": "view-builder.js",
+          "line": 51
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "collections",
+      "status": "excluded",
+      "note": "Name/description, Static/Dynamic, company count, created date, visibility identity, native action disclosure. Composed template; no third top-level Data table appearance. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "collection-empty",
+      "label": "Empty and search-filtered collection library",
+      "sources": [
+        {
+          "file": "view-builder.js",
+          "line": 51
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "collections",
+      "status": "excluded",
+      "note": "Local search and zero-record state use the same collection template. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "state": "empty"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "collection-actions",
+      "label": "Open, rename, share and delete collection actions",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 580
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "collections",
+      "status": "excluded",
+      "note": "Local dialogs and preview changes, with read-only disabling. Open emits forma:open-collection; persistence and ownership backend remain consumer responsibilities. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "collection-access",
+      "label": "Personal, everyone and selected teammate access",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 586
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "sharing",
+      "status": "covered",
+      "note": "Native shared checkboxes plus Avatar/name/email metadata; Everyone and individual values stay coherent. Access change updates collection row visibility and emits an event."
+    },
+    {
+      "id": "benchmark-schema",
+      "label": "Sticky identity/score and configurable comparison columns",
+      "sources": [
+        {
+          "file": "view-builder.js",
+          "line": 67
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "benchmark",
+      "status": "excluded",
+      "note": "Supports source numeric/team/market/GTM/traction/revenue-growth, stage/round/text and evidence types. Shared pitchTableCell handles numeric cells; system badges/avatars carry other cells. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "benchmark-selection",
+      "label": "Select one/all, mixed header, count and Add to list",
+      "sources": [
+        {
+          "file": "view-builder.js",
+          "line": 81
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "benchmark",
+      "status": "excluded",
+      "note": "Selection is local to the preview. Header checkbox and dock share the same selected IDs. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "benchmark-sort",
+      "label": "Sortable numeric headers and readonly state",
+      "sources": [
+        {
+          "file": "view-builder.js",
+          "line": 80
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "benchmark",
+      "status": "excluded",
+      "note": "Ascending/descending local sorting and non-editing presentation, without rerunning application scoring. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "benchmark-columns",
+      "label": "Column visibility, ordering and introduced-field highlight",
+      "sources": [
+        {
+          "file": "view-builder.js",
+          "line": 116
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "benchmark",
+      "status": "excluded",
+      "note": "Checkbox visibility and drag or accessible directional-button reorder; evidence highlight is configurable. Same table remains visible as columns change. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "benchmark-evidence",
+      "label": "Supported, not-supported and unavailable evidence explanations",
+      "sources": [
+        {
+          "file": "view-assessments.js",
+          "line": 16
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "benchmark",
+      "status": "excluded",
+      "note": "Cell action opens an accessible explanation with shared status badge/source citation. Values are explicit illustrative states, not claims about real founders. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "benchmark-metric-detail",
+      "label": "Score, revenue, team founders and company explanation",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 1196
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "benchmark",
+      "status": "excluded",
+      "note": "Metric display, reporting-period caution, founder chips, company problem/solution and source citation. Click/keyboard dialog normalization replaces fragile source hover-only dependence. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "assessment-criterion",
+      "label": "Required/Preferred criterion and Remove",
+      "sources": [
+        {
+          "file": "view-assessments.js",
+          "line": 22
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "benchmark",
+      "status": "excluded",
+      "note": "Uses source founder-track-record anatomy. Required mode changes match count while all evidence states remain inspectable, matching the live combined-row view. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "refinement-dock",
+      "label": "Refinement prompt, suggestions, clarification and error",
+      "sources": [
+        {
+          "file": "view-builder.js",
+          "line": 104
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "benchmark",
+      "status": "excluded",
+      "note": "Shared aiFollowups with local prompt form; input produces a deterministic clarification, not AI output. Emits forma:refine-request; no service is contacted. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "save-choice",
+      "label": "Static/Dynamic save choice and unavailable selection",
+      "sources": [
+        {
+          "file": "view-save-dialog.js",
+          "line": 11
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "save-choice",
+      "status": "excluded",
+      "note": "Choice cards explain behavior; Static is disabled when selectedCount is zero. Available inside collection workspace save dialog and chat Save List composition. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "save-dynamic-form",
+      "label": "Dynamic criteria summary and naming form",
+      "sources": [
+        {
+          "file": "view-save-dialog.js",
+          "line": 26
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "save-form",
+      "status": "excluded",
+      "note": "Name, mode badge and current criterion summary use the same local save contract. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "kind": "dynamic"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "view-readonly",
+      "label": "Read-only saved view presentation",
+      "sources": [
+        {
+          "file": "view-builder.js",
+          "line": 177
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "benchmark",
+      "status": "excluded",
+      "note": "Editing controls, membership writes and save actions are omitted or disabled; no real authorization decision is made. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "readonly": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-paper-text",
+      "label": "Text note paper card",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 25
+        }
+      ],
+      "helper": "noteCard",
+      "variant": "note",
+      "status": "covered",
+      "note": "Retains source frame/paper dimensions and text skeleton; local disclosure shows body.",
+      "config": {
+        "noteKind": "text"
+      }
+    },
+    {
+      "id": "note-paper-table",
+      "label": "Table note paper card",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 25
+        }
+      ],
+      "helper": "noteCard",
+      "variant": "note",
+      "status": "covered",
+      "note": "Source bordered 1.4:1:1 ghost grid with 15px rows and filled header cells.",
+      "config": {
+        "noteKind": "table"
+      }
+    },
+    {
+      "id": "note-paper-image",
+      "label": "Image note paper card",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 25
+        }
+      ],
+      "helper": "noteCard",
+      "variant": "note",
+      "status": "covered",
+      "note": "Source 72px neutral image ghost with 5px corners; not an invented external photo.",
+      "config": {
+        "noteKind": "image"
+      }
+    },
+    {
+      "id": "note-authors",
+      "label": "Single author and overlapping author group",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 16
+        }
+      ],
+      "helper": "noteCard",
+      "variant": "note",
+      "status": "covered",
+      "note": "Reuses shared Avatar/AvatarGroup; author initials deliberately normalize source per-user photo assets.",
+      "config": {
+        "authors": true
+      }
+    },
+    {
+      "id": "note-stack",
+      "label": "Layered note stack with next-note peek/cycling",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 33
+        }
+      ],
+      "helper": "noteCard",
+      "variant": "note",
+      "status": "covered",
+      "note": "Sibling peek button avoids nested interactive controls; cycling changes visible note, restores focus, announces index and respects reduced motion/pause. Short paper transition normalizes source departing-card animation.",
+      "config": {
+        "stacked": true
+      }
+    },
+    {
+      "id": "note-company-drilldown",
+      "label": "Notes library/company drilldown and breadcrumb",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 43
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "collections",
+      "status": "excluded",
+      "note": "Company stack \u2192 individual notes, All/Personal/Shared filters, search and back/focus action. Detail preview retains 144px height. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "layout": "notes",
+        "noteLayout": "cards"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-list-row",
+      "label": "Compact note row with excerpt and metadata",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 10
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "collections",
+      "status": "excluded",
+      "note": "Clickable note row includes three-line excerpt, author/date/audience; opens the shared local editor. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "layout": "notes",
+        "noteLayout": "rows"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "notes-empty",
+      "label": "Empty/search-miss notes collection",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 43
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "collections",
+      "status": "excluded",
+      "note": "Local zero-record and search result messages; creation remains available. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "layout": "notes",
+        "state": "empty"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-company-picker",
+      "label": "Choose-company picker before new note",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 105
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "collections",
+      "status": "excluded",
+      "note": "New note opens a searchable company identity picker and passes the chosen identity into the editor. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "layout": "notes"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-editor",
+      "label": "Company-linked editable note document",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 90
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "note-editor",
+      "status": "excluded",
+      "note": "Title/body textareas, company context, local draft status, Save/Close/reopen, sharing and comments. Textareas preserve source anatomy; no invented rich-text toolbar. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-readonly",
+      "label": "Non-owner readonly document with comments",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 97
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "note-editor",
+      "status": "excluded",
+      "note": "Title/body readonly, no save/upload/remove; access checkboxes disabled; existing-note comments remain available. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "readonly": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-mentions",
+      "label": "Caret-aware person mentions in body and reply",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 120
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "note-editor",
+      "status": "excluded",
+      "note": "Avatar/name results, ArrowUp/Down, Enter and Escape; insertion does not change access permissions. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-sharing",
+      "label": "Owner access picker and read-only access list",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 109
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "sharing",
+      "status": "covered",
+      "note": "One helper is used standalone and inside the editor. Search, everyone and individuals, owner-only editing copy and no-teammate/no-result states."
+    },
+    {
+      "id": "note-comments",
+      "label": "Comment activity rows and reply composer",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 99
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "note-editor",
+      "status": "excluded",
+      "note": "Shared Avatar, textarea and Button; local add-comment validation/count/message; new notes show Save-first state. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-new",
+      "label": "Unsaved-note Save-first discussion state",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 99
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "note-editor",
+      "status": "excluded",
+      "note": "Saving locally enables the discussion composer. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "newNote": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-images",
+      "label": "Image attachment figure, caption and removal",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 104
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "note-editor",
+      "status": "excluded",
+      "note": "Local PNG/JPEG/WebP add/paste \u22642 MB with error announcement, safe data URL display and cleanup/abort. An illustrative placeholder can demonstrate existing attachment layout. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "images": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "note-insight",
+      "label": "Saved AI insight snapshot",
+      "sources": [
+        {
+          "file": "insight-notes.js",
+          "line": 17
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "note-editor",
+      "status": "excluded",
+      "note": "Heading/date/status/question/answer/table/source citation compose existing InformationTable and AI citation helpers; no AI request. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "snapshot": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "notifications",
+      "label": "Activity rows and read/unread states",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 69
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "notifications",
+      "status": "excluded",
+      "note": "Intentionally removed from the public catalogue at the user\u2019s request on 9 October 2026. This is still a visual pattern, not a nonvisual service. The internal sourceWorkspace notifications helper and isolated behavior checks remain for compatibility; no public notification specimen is claimed.",
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Notifications from Information block: its activity-feed anatomy does not match the information-card family."
+      }
+    },
+    {
+      "id": "source-motion-normalization",
+      "label": "Notes navigation motion and focus behavior",
+      "sources": [
+        {
+          "file": "notes-motion.js",
+          "line": 1
+        }
+      ],
+      "helper": "noteCard",
+      "variant": "note",
+      "status": "covered",
+      "note": "Local cycle/focus behavior and pause/reduced motion retained. Full app route-transition and scroll history are consumer routing concerns, not an additional component family.",
+      "config": {
+        "stacked": true
+      }
+    },
+    {
+      "id": "business-persistence",
+      "label": "Actual record persistence, authorization and list membership storage",
+      "sources": [
+        {
+          "file": "view-collections.js",
+          "line": 1
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Preview specimens emit events and operate on local sample state; original PP data, account permissions and saved records are not modified."
+    },
+    {
+      "id": "business-filter-parser",
+      "label": "AI/free-text criteria parsing and scoring",
+      "sources": [
+        {
+          "file": "view-builder.js",
+          "line": 121
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Visual prompt/error/clarification/results patterns exist. Parser, scoring and real AI/network execution belong to the app."
+    },
+    {
+      "id": "business-notifications",
+      "label": "Notification delivery and note access enforcement",
+      "sources": [
+        {
+          "file": "notes.js",
+          "line": 63
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Activity/read/comment UI is covered. Real access control and notification delivery remain application services."
+    },
+    {
+      "id": "legacy-custom-view",
+      "label": "Legacy unreachable custom-view branch",
+      "sources": [
+        {
+          "file": "workspace.js",
+          "line": 126
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Current saved records route to savedBuiltView first. The old standalone table/grid screen is not revived as a separate component; shared metrics remain covered."
+    }
+  ],
+  "verification": {
+    "renderConfigurations": 40,
+    "behaviorContracts": 15,
+    "cardConfigurations": 39,
+    "browser": "Not run; source/render/state/event checks do not prove rasterized appearance or assistive technology behavior."
+  }
+}

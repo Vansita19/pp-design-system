@@ -1,0 +1,1197 @@
+{
+  "scope": "Live Pitch Protocol source inventory with explicit user-requested catalogue exclusions. Chat bubble is the public standalone message family; full transcript/history compositions are retained internally but not exposed on that page. Local render contracts, not browser certification.",
+  "modules": [
+    "conversations.js",
+    "composer-menus.js",
+    "conversation-motion.js",
+    "company-brief.js",
+    "research-activity.js",
+    "projections.js",
+    "search-criteria.js"
+  ],
+  "patterns": [
+    {
+      "id": "CHAT-01",
+      "label": "History trigger",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 14
+        },
+        {
+          "file": "styles.css",
+          "line": 4393
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "history",
+      "status": "excluded",
+      "note": "History navigation is intentionally absent from Chat bubble; no separate public history specimen is retained.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-02",
+      "label": "Chat breadcrumb with truncated current title and 14px chevron",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 14
+        },
+        {
+          "file": "styles.css",
+          "line": 4704
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "history",
+      "status": "excluded",
+      "note": "Chat breadcrumb/history-switcher composition is intentionally absent from Chat bubble.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-03",
+      "label": "History search, empty history and no matches",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 8
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "history",
+      "status": "excluded",
+      "note": "History search and its empty/no-match composition are intentionally absent from Chat bubble.",
+      "config": {
+        "query": "notfound"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-04",
+      "label": "Scroll transcript, 780px content lane and bottom composer",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 190
+        },
+        {
+          "file": "styles.css",
+          "line": 4421
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "conversation",
+      "status": "excluded",
+      "note": "Full transcript, result/table and bottom-composer composition is intentionally absent from Chat bubble.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-05",
+      "label": "Right-aligned sent user bubble, 76% maximum",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 185
+        },
+        {
+          "file": "styles.css",
+          "line": 3593
+        }
+      ],
+      "helper": "chatBubble",
+      "variant": "",
+      "status": "covered",
+      "note": "Standalone outgoing bubble is represented by Chat bubble. Its appearance/grouping options are normalized to the shared system and the requested bubble reference; this does not claim preservation of the entire source transcript or its exact asymmetric 9px geometry.",
+      "config": {
+        "appearance": "primary",
+        "align": "end",
+        "grouping": "single"
+      },
+      "catalogue": {
+        "id": "conversation",
+        "config": {
+          "appearance": "primary",
+          "align": "end",
+          "grouping": "single"
+        }
+      }
+    },
+    {
+      "id": "CHAT-06",
+      "label": "Sent tool label and file metadata",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 186
+        },
+        {
+          "file": "styles.css",
+          "line": 4528
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "message",
+      "status": "excluded",
+      "note": "The standalone specimen is bubble text only; the combined sent-tool label and readonly file-metadata composition is not a public Chat bubble variation.",
+      "config": {
+        "metadata": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-07",
+      "label": "Pending reply reserves vertical room",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 188
+        },
+        {
+          "file": "styles.css",
+          "line": 4429
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "conversation",
+      "status": "excluded",
+      "note": "Transcript pending-height reservation belongs to the excluded full conversation layout. Thinking indicators remain separately covered under AI response.",
+      "config": {
+        "state": "thinking"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-08",
+      "label": "New conversation empty prompt",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 190
+        },
+        {
+          "file": "styles.css",
+          "line": 4531
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "empty",
+      "status": "excluded",
+      "note": "The full empty conversation with bottom composer is intentionally absent from Chat bubble.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-09",
+      "label": "Missing conversation with New chat link",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 192
+        },
+        {
+          "file": "styles.css",
+          "line": 4534
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "missing",
+      "status": "excluded",
+      "note": "The missing-conversation route/navigation state is intentionally absent from Chat bubble.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-10",
+      "label": "Home/conversation composer geometry and disabled/pending",
+      "sources": [
+        {
+          "file": "ui.js",
+          "line": 103
+        },
+        {
+          "file": "app.js",
+          "line": 282
+        }
+      ],
+      "helper": "promptBar",
+      "variant": "conversation",
+      "status": "covered",
+      "note": "Home and conversation geometries and pending/disabled states remain shared.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-11",
+      "label": "Context/tools menu, company/list search, active removable tool",
+      "sources": [
+        {
+          "file": "composer-menus.js",
+          "line": 6
+        }
+      ],
+      "helper": "promptBar",
+      "variant": "conversation",
+      "status": "covered",
+      "note": "Context, company/list search, removable mode, @/slash and cleanup.",
+      "config": {
+        "mention": "both",
+        "mode": "Deep research"
+      }
+    },
+    {
+      "id": "CHAT-12",
+      "label": "File draft rows, remove, picker",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 675
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "company-panel",
+      "status": "excluded",
+      "note": "Compact composer provides native filename selection; prompt-bar sample attachments provide draft/removal visuals. No upload service. Reachable inside Company report \u2192 Panel \u2192 Chat, not as a Chat bubble variation. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "CHAT-13",
+      "label": "Prompt submit, Enter/Shift+Enter, pending guard and recovery",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 282
+        },
+        {
+          "file": "conversations.js",
+          "line": 202
+        }
+      ],
+      "helper": "promptBar",
+      "variant": "conversation",
+      "status": "covered",
+      "note": "Native form transport, Enter/ShiftEnter/IME and local submission states; timed sample answers/persistence are nonvisual app logic.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-14",
+      "label": "Plain assistant paragraph / clarifying company suggestions",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 24
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "text",
+      "status": "covered",
+      "note": "Plain paragraph and optional suggestion actions without mandatory citation/bullets.",
+      "config": {
+        "format": "plain"
+      }
+    },
+    {
+      "id": "CHAT-15",
+      "label": "Intro \u2192 result \u2192 follow-up sequence",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 188
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "table",
+      "status": "covered",
+      "note": "Shared intro/result/follow-up composition.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-16",
+      "label": "Suggestion action single/group/icon/disabled",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 156
+        },
+        {
+          "file": "styles.css",
+          "line": 4514
+        }
+      ],
+      "helper": "aiFollowups",
+      "variant": "group",
+      "status": "covered",
+      "note": "Shared Suggestion family with single/group/icon/disabled configurations.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-17",
+      "label": "Base company result table",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 89
+        }
+      ],
+      "helper": "pitchTable",
+      "variant": "chat",
+      "status": "covered",
+      "note": "Shared source table geometry; known company source links and safe per-row href are normalized by table owner.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-18",
+      "label": "Team, traction, revenue numeric columns",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 89
+        }
+      ],
+      "helper": "pitchTable",
+      "variant": "chat",
+      "status": "covered",
+      "note": "Nine source column definitions include score/team/traction/revenue units; explicit column arrays are supported.",
+      "config": {
+        "columnSet": "financial"
+      }
+    },
+    {
+      "id": "CHAT-19",
+      "label": "Founder background and customer problem long-text columns",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 89
+        }
+      ],
+      "helper": "pitchTable",
+      "variant": "chat",
+      "status": "covered",
+      "note": "Founder background and problem long-text column sets with natural wider layout.",
+      "config": {
+        "columnSet": "team"
+      }
+    },
+    {
+      "id": "CHAT-20",
+      "label": "Horizontal focusable table region and sort state",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 113
+        }
+      ],
+      "helper": "pitchTable",
+      "variant": "chat",
+      "status": "covered",
+      "note": "Focusable horizontal region, per-metric sorting and aria-sort.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-21",
+      "label": "Result title/count and compact Save List entry",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 141
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "conversation",
+      "status": "excluded",
+      "note": "The transcript-level table-to-Save-List menu orchestration is excluded with the full conversation. Data table retains its title, count and save-request event; Company report retains its separate Add-to-list menu.",
+      "config": {
+        "response": "table"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-22",
+      "label": "Active removable criteria pills",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 137
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "advanced-filter",
+      "status": "covered",
+      "note": "Removable criteria chips reuse the separate Filter controls family; intentionally omitted from table specimens per user direction.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-23",
+      "label": "Initial five rows and load-more remaining",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 145
+        }
+      ],
+      "helper": "pitchTable",
+      "variant": "chat",
+      "status": "covered",
+      "note": "Five-row initial result, Show more, current total and appended rows.",
+      "config": {
+        "pageSize": 5
+      }
+    },
+    {
+      "id": "CHAT-24",
+      "label": "No matches paragraph without empty table",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 83
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "text",
+      "status": "covered",
+      "note": "Empty results suppress structured result/card, retaining paragraph and follow-ups.",
+      "config": {
+        "format": "empty"
+      }
+    },
+    {
+      "id": "CHAT-25",
+      "label": "Four-value statistics strip and footnote",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 132
+        }
+      ],
+      "helper": "statsBar",
+      "variant": "statistics",
+      "status": "covered",
+      "note": "One shared four-value statistics strip used in AI response.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-26",
+      "label": "Comparison bars, marks, grid and labels",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 126
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "comparison",
+      "status": "excluded",
+      "note": "The source pattern remains in the inventory as a visual, user-requested exclusion from AI response. It is not public coverage or a nonvisual pattern. Reusable Information block comparison and native Accordion remain separately available.",
+      "config": {
+        "metric": "score"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Comparison and Meeting examples from AI response; preserve reusable Information block comparison and Accordion families."
+      }
+    },
+    {
+      "id": "CHAT-27",
+      "label": "Comparison team / traction / revenue scales",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 126
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "comparison",
+      "status": "excluded",
+      "note": "The source pattern remains in the inventory as a visual, user-requested exclusion from AI response. It is not public coverage or a nonvisual pattern. Reusable Information block comparison and native Accordion remain separately available.",
+      "config": {
+        "metric": "revenue"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Comparison and Meeting examples from AI response; preserve reusable Information block comparison and Accordion families."
+      }
+    },
+    {
+      "id": "CHAT-28",
+      "label": "Result-count changes and added/reordered rows",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 76
+        },
+        {
+          "file": "conversation-motion.js",
+          "line": 19
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "conversation",
+      "status": "excluded",
+      "note": "Transcript-specific row-change choreography is excluded with the full conversation. Data table still supports sorting and load-more without claiming the transcript animation.",
+      "config": {
+        "response": "table"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-29",
+      "label": "Thinking 5\u00d75 dot grid and source shimmer",
+      "sources": [
+        {
+          "file": "research-activity.js",
+          "line": 16
+        },
+        {
+          "file": "styles.css",
+          "line": 5255
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "text",
+      "status": "covered",
+      "note": "Actual25-dot source motion graphic plus shared text shimmer; source color mapped to action-primary.",
+      "config": {
+        "state": "thinking"
+      }
+    },
+    {
+      "id": "CHAT-30",
+      "label": "Research disclosure rail, branch, inset note",
+      "sources": [
+        {
+          "file": "research-activity.js",
+          "line": 24
+        },
+        {
+          "file": "styles.css",
+          "line": 4683
+        }
+      ],
+      "helper": "aiResearchActivity",
+      "variant": "research",
+      "status": "covered",
+      "note": "Native disclosure rail with branch rules and inset notes.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-31",
+      "label": "Reading \u2192 read, calculating \u2192 reported figures, drafting \u2192 drafted",
+      "sources": [
+        {
+          "file": "research-activity.js",
+          "line": 33
+        },
+        {
+          "file": "conversations.js",
+          "line": 217
+        }
+      ],
+      "helper": "aiResearchActivity",
+      "variant": "research",
+      "status": "covered",
+      "note": "Explicit reading/calculating/drafting/complete stages.",
+      "config": {
+        "stage": "drafting"
+      }
+    },
+    {
+      "id": "CHAT-32",
+      "label": "Research source navigation chips",
+      "sources": [
+        {
+          "file": "research-activity.js",
+          "line": 33
+        }
+      ],
+      "helper": "aiResearchActivity",
+      "variant": "research",
+      "status": "covered",
+      "note": "Native source record links; optional popover reader remains available.",
+      "config": {
+        "sourceMode": "link"
+      }
+    },
+    {
+      "id": "CHAT-33",
+      "label": "Citation/source reader popup",
+      "sources": [
+        {
+          "file": "detail-pages.js",
+          "line": 16
+        },
+        {
+          "file": "app.js",
+          "line": 69
+        }
+      ],
+      "helper": "aiCitation",
+      "variant": "inline",
+      "status": "covered",
+      "note": "Shared citation/source popover remains reused by detail evidence and structured answers.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-34",
+      "label": "Diligence brief outer inset, identity, 3 metrics, icon sections, action",
+      "sources": [
+        {
+          "file": "company-brief.js",
+          "line": 34
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "brief",
+      "status": "covered",
+      "note": "Inset report, identity, three metrics, icon sections and Open company action.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-35",
+      "label": "Team brief metrics: team score / founders / stage",
+      "sources": [
+        {
+          "file": "company-brief.js",
+          "line": 38
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "brief",
+      "status": "covered",
+      "note": "Correct team score, founder count and stage metrics.",
+      "config": {
+        "focus": "team"
+      }
+    },
+    {
+      "id": "CHAT-36",
+      "label": "Traction brief metrics: revenue / funding / runway",
+      "sources": [
+        {
+          "file": "company-brief.js",
+          "line": 38
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "brief",
+      "status": "covered",
+      "note": "Correct revenue, funding and runway metrics.",
+      "config": {
+        "focus": "traction"
+      }
+    },
+    {
+      "id": "CHAT-37",
+      "label": "Risk/problem icon sections and summary",
+      "sources": [
+        {
+          "file": "company-brief.js",
+          "line": 11
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "brief",
+      "status": "covered",
+      "note": "Existing risks/problem content configurations retain source anatomy.",
+      "config": {
+        "focus": "risks"
+      }
+    },
+    {
+      "id": "CHAT-38",
+      "label": "Meeting numbered disclosures, first open and company action",
+      "sources": [
+        {
+          "file": "company-brief.js",
+          "line": 42
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "meeting",
+      "status": "excluded",
+      "note": "The source pattern remains in the inventory as a visual, user-requested exclusion from AI response. It is not public coverage or a nonvisual pattern. Reusable Information block comparison and native Accordion remain separately available.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Comparison and Meeting examples from AI response; preserve reusable Information block comparison and Accordion families."
+      }
+    },
+    {
+      "id": "CHAT-39",
+      "label": "Full overview: 3 stats, problem/approach, facts table, action",
+      "sources": [
+        {
+          "file": "company-brief.js",
+          "line": 57
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "overview",
+      "status": "covered",
+      "note": "Three stats, narrative sections, facts table and shared action.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-40",
+      "label": "Compact revenue metric, monthly curve, quarterly hover/focus readouts",
+      "sources": [
+        {
+          "file": "projections.js",
+          "line": 12
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "revenue",
+      "status": "covered",
+      "note": "Monthly curve, quarterly focus/hover readouts and bounded local model.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-41",
+      "label": "Revenue caption with final value/rate/horizon",
+      "sources": [
+        {
+          "file": "projections.js",
+          "line": 81
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "revenue",
+      "status": "covered",
+      "note": "Caption derives rate, final amount and horizon from the same series as chart.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-42",
+      "label": "Market annular partitions, target, legend, keyboard readout",
+      "sources": [
+        {
+          "file": "projections.js",
+          "line": 24
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "market",
+      "status": "covered",
+      "note": "Disjoint source annular sectors, target, legend and focus readouts.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-43",
+      "label": "Open company navigation at report end",
+      "sources": [
+        {
+          "file": "company-brief.js",
+          "line": 7
+        }
+      ],
+      "helper": "aiResponse",
+      "variant": "brief",
+      "status": "covered",
+      "note": "Safe supplied report href renders shared Button as anchor; missing href emits local selection event.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-44",
+      "label": "Save List menu: Static / Dynamic / Existing, descriptions and disabled availability",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 142
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "save-list",
+      "status": "excluded",
+      "note": "Static/dynamic/existing paths, descriptions, disabled options, back and local naming dialog. Reachable inside Company report \u2192 Panel \u2192 Chat, not as a Chat bubble variation. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "CHAT-45",
+      "label": "Existing-list membership picker, search, checked/mixed, empty/no results, New list",
+      "sources": [
+        {
+          "file": "list-actions.js",
+          "line": 10
+        },
+        {
+          "file": "app.js",
+          "line": 123
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "membership",
+      "status": "covered",
+      "note": "One shared searchable membership/mixed/empty/New-list composition in Popover; also reused by Company report Add to list.",
+      "config": {},
+      "catalogue": {
+        "id": "popover",
+        "config": {
+          "variant": "membership"
+        }
+      }
+    },
+    {
+      "id": "CHAT-46",
+      "label": "Save type choices and naming dialog with static company stack / dynamic criteria",
+      "sources": [
+        {
+          "file": "view-save-dialog.js",
+          "line": 6
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "save-form",
+      "status": "excluded",
+      "note": "Shared static avatar-stack and dynamic criteria naming forms with native validation. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "kind": "dynamic"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "CHAT-47",
+      "label": "Compact company Agent panel header/close/content/footer",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 146
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "company-panel",
+      "status": "excluded",
+      "note": "Compact Agent header, close/reopen, transcript and footer. Reachable inside Company report \u2192 Panel \u2192 Chat, not as a Chat bubble variation. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "CHAT-48",
+      "label": "Compact thought-process row, pending review text and Add to list",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 164
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "company-panel",
+      "status": "excluded",
+      "note": "Thought disclosure and pending review status; complete variation includes Add to list. Reachable inside Company report \u2192 Panel \u2192 Chat, not as a Chat bubble variation. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "state": "thinking"
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "CHAT-49",
+      "label": "Compact query textarea, attachment icon, labeled Send action",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 167
+        },
+        {
+          "file": "styles.css",
+          "line": 3621
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "company-panel",
+      "status": "excluded",
+      "note": "Native compact textarea, file-name chooser and labeled Send button; plaintext local event only. Reachable inside Company report \u2192 Panel \u2192 Chat, not as a Chat bubble variation. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "CHAT-50",
+      "label": "Seven-year stacked Expense / Revenue / Customers chart",
+      "sources": [
+        {
+          "file": "review.js",
+          "line": 171
+        },
+        {
+          "file": "styles.css",
+          "line": 3661
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "company-panel",
+      "status": "excluded",
+      "note": "Shared sourceChatGrowth renders seven-year stacked source fixture; normalized palette and explicit illustrative mixed-unit description. Reachable inside Company report \u2192 Panel \u2192 Chat, not as a Chat bubble variation. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "chart": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "CHAT-51",
+      "label": "Company chat draft and scroll restoration",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 227
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Draft persistence and route scroll restoration are application state machinery, not an extra visual family; preview listeners are scoped/disposed.",
+      "config": {}
+    },
+    {
+      "id": "CHAT-52",
+      "label": "Saved insight note with question, answer, timestamp, table/chart snapshots and external sources",
+      "sources": [
+        {
+          "file": "insight-notes.js",
+          "line": 2
+        },
+        {
+          "file": "notes.js",
+          "line": 100
+        }
+      ],
+      "helper": "sourceWorkspace",
+      "variant": "note-editor",
+      "status": "excluded",
+      "note": "Saved insight question/answer/source/table snapshot is owned and implemented by workspace Notes; no unshipped Save insight chat button invented. Catalogue removal: explicitly requested on 2026-10-09. Internal source extraction is retained only for provenance and shared helper dependencies; it is not a public component.",
+      "config": {
+        "snapshot": true
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Remove Note editor, Collection workspace and Company report entirely from the catalogue; retain source inventory only."
+      }
+    },
+    {
+      "id": "CHAT-53",
+      "label": "Request entry, answer/result entry and follow-up fade",
+      "sources": [
+        {
+          "file": "conversation-motion.js",
+          "line": 4
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "conversation",
+      "status": "excluded",
+      "note": "Full request/result/follow-up entrance sequencing is intentionally absent from the bubble-only specimen; it is retained in the internal transcript helper.",
+      "config": {},
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-54",
+      "label": "Added-column reveal and row reorder motion",
+      "sources": [
+        {
+          "file": "conversation-motion.js",
+          "line": 22
+        }
+      ],
+      "helper": "sourceChat",
+      "variant": "conversation",
+      "status": "excluded",
+      "note": "Transcript-specific generated-column and row-reorder animation is excluded with the full conversation. Table columns and sorting remain separately covered.",
+      "config": {
+        "response": "table",
+        "columnSet": "financial",
+        "addedColumns": [
+          "revenue"
+        ]
+      },
+      "catalogue": false,
+      "exclusion": {
+        "reason": "user-request",
+        "scope": "catalogue",
+        "instruction": "Keep Conversation to just the chat bubble; remove the full conversation, tables, prompt bar and navigation from this page."
+      }
+    },
+    {
+      "id": "CHAT-N1",
+      "label": "Retired projection mode",
+      "sources": [
+        {
+          "file": "projections.js",
+          "line": 21
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Efficiency is mapped to market; no missing third chart."
+    },
+    {
+      "id": "CHAT-N2",
+      "label": "Unrendered value table",
+      "sources": [
+        {
+          "file": "projections.js",
+          "line": 84
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Helper is not invoked by live projection rendering; no missing visible table."
+    },
+    {
+      "id": "CHAT-N3",
+      "label": "Unused old diligence renderer",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 119
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Live response uses company-brief.js; this older helper is dormant."
+    },
+    {
+      "id": "CHAT-N4",
+      "label": "Unrendered Save insight triggers",
+      "sources": [
+        {
+          "file": "app.js",
+          "line": 726
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Handlers exist but inspected current reply markup contains no buttons; saved snapshots remain live under Notes."
+    },
+    {
+      "id": "CHAT-N5",
+      "label": "Prompt intent and result persistence",
+      "sources": [
+        {
+          "file": "conversations.js",
+          "line": 18
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Business data/model parsing, not a reusable visual component."
+    },
+    {
+      "id": "CHAT-N6",
+      "label": "Predicate and criteria parser",
+      "sources": [
+        {
+          "file": "search-criteria.js",
+          "line": 1
+        }
+      ],
+      "helper": "",
+      "variant": "",
+      "status": "nonvisual",
+      "note": "Pure query matching; visible criteria forms and states are mapped separately."
+    }
+  ]
+}

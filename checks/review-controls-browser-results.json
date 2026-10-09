@@ -1,0 +1,155 @@
+{
+  "entries": 1428,
+  "properties": 2257,
+  "icons": 69,
+  "coverage": {
+    "button": [
+      "radius",
+      "padding",
+      "variant",
+      "icon"
+    ],
+    "icon": [
+      "icon"
+    ],
+    "input": [
+      "radius",
+      "padding"
+    ],
+    "badge": [
+      "radius",
+      "padding"
+    ],
+    "tag": [
+      "radius",
+      "padding",
+      "gap"
+    ],
+    "chip": [
+      "radius",
+      "padding",
+      "gap"
+    ],
+    "select": [
+      "radius",
+      "padding"
+    ],
+    "menu-panel": [
+      "radius",
+      "padding",
+      "gap"
+    ],
+    "menu-row": [
+      "radius",
+      "padding",
+      "gap"
+    ],
+    "combobox-input": [
+      "radius",
+      "padding"
+    ],
+    "inline-input": [
+      "padding"
+    ],
+    "combobox-field": [
+      "radius",
+      "padding",
+      "gap"
+    ],
+    "guided-popover": [
+      "radius",
+      "padding"
+    ],
+    "popover": [
+      "radius",
+      "padding"
+    ],
+    "alert": [
+      "radius",
+      "padding",
+      "gap"
+    ],
+    "date-panel": [
+      "radius",
+      "padding"
+    ],
+    "accordion-trigger": [
+      "padding",
+      "gap"
+    ],
+    "accordion-item": [
+      "radius"
+    ],
+    "dialog": [
+      "radius",
+      "padding"
+    ],
+    "stack": [
+      "gap"
+    ],
+    "drawer-panel": [
+      "radius",
+      "padding"
+    ],
+    "drawer-body": [
+      "padding"
+    ],
+    "note-card": [
+      "radius",
+      "padding"
+    ],
+    "information-panel": [
+      "radius",
+      "padding"
+    ],
+    "information-body": [
+      "radius",
+      "padding"
+    ],
+    "information-header": [
+      "padding",
+      "gap"
+    ],
+    "result-card": [
+      "radius",
+      "padding"
+    ],
+    "result-scroll": [
+      "radius"
+    ],
+    "command-panel": [
+      "radius",
+      "padding"
+    ],
+    "command-header": [
+      "padding",
+      "gap"
+    ],
+    "command-scopes": [
+      "padding"
+    ],
+    "command-row": [
+      "radius",
+      "padding",
+      "gap"
+    ],
+    "command-footer": [
+      "padding",
+      "gap"
+    ],
+    "filter-panel": [
+      "radius",
+      "padding"
+    ],
+    "filter-fields": [
+      "padding",
+      "gap"
+    ],
+    "row": [
+      "gap"
+    ]
+  },
+  "failures": [],
+  "tokenCases": 1385,
+  "variantCases": 174
+}

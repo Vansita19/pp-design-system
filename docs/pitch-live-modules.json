@@ -1,0 +1,294 @@
+{
+  "entry": "app.js",
+  "sourceRoot": "/Users/vansitaaddanki/pp-admin/investor-preview",
+  "auditedAt": "2026-10-09",
+  "modules": [
+    {
+      "file": "account-flow.js",
+      "kind": "ui-or-behavior",
+      "sha256": "0a9b1c1eab621c48bc36dba5026605656ac3e8d401b9ea7fe06bc9bb92690dc2"
+    },
+    {
+      "file": "app.js",
+      "kind": "ui-or-behavior",
+      "sha256": "c1a933c5e0c6dcc762647966e4a409df83461758e33b6c6c6b34326c2c4ad060"
+    },
+    {
+      "file": "application-fixtures.js",
+      "kind": "data-or-assets",
+      "sha256": "70f336922a94248b0a0354f6b5df82091ca337008f6d1f326c97939aa8b12421"
+    },
+    {
+      "file": "assets.js",
+      "kind": "data-or-assets",
+      "sha256": "1604e109e088bbdb07d89abb0a7f897d18f939a5fb48769ddfd4b6d391707299"
+    },
+    {
+      "file": "company-brief.js",
+      "kind": "ui-or-behavior",
+      "sha256": "4db0d9a0d7ff4c067887c64229e3328378bc69f62f41fc2be3f053d0b7edb97c"
+    },
+    {
+      "file": "company-marks.js",
+      "kind": "data-or-assets",
+      "sha256": "fe92b678756afb28477ede12f81aff85dc052397e4f46ab0d579ce721e09dcb8"
+    },
+    {
+      "file": "company-updates.js",
+      "kind": "ui-or-behavior",
+      "sha256": "33492ace9b6d99980e08185e842d2cd89f4e0090a448e8bec3a0e94296feab93"
+    },
+    {
+      "file": "composer-menus.js",
+      "kind": "ui-or-behavior",
+      "sha256": "6393131b1ed9bdc5ac79f5de48db9693f72664a9f047f19378101bb36a6ef724"
+    },
+    {
+      "file": "controls.js",
+      "kind": "ui-or-behavior",
+      "sha256": "12417b6c670d44494759172c5d97c22e0d3dd65f5721c284776e3bda24ad3c7e"
+    },
+    {
+      "file": "conversation-motion.js",
+      "kind": "ui-or-behavior",
+      "sha256": "bef2b3e772211485e9b6860d1ed7e6cf2de0b092bae07e9a4692d782c18b8540"
+    },
+    {
+      "file": "conversations.js",
+      "kind": "ui-or-behavior",
+      "sha256": "c66e67298aad2b65b4425cbaefefa497fd5f4c673eedf8e8f7785ff8c0317a5d"
+    },
+    {
+      "file": "data.js",
+      "kind": "data-or-assets",
+      "sha256": "803917eea73ad8b0f240534d619e5b96e6a81699228a14d610901d876f801df9"
+    },
+    {
+      "file": "decision-visuals.js",
+      "kind": "ui-or-behavior",
+      "sha256": "dc53c266cca47a0e2e4ec9271cc71b9e0e81c1f12cfc2afb434cb6347e814a71"
+    },
+    {
+      "file": "design-copy.js",
+      "kind": "data-or-assets",
+      "sha256": "16d5e99c2da5cdcbb31a1bff78def07372bf3bdea0552bf5d511c108044c5688"
+    },
+    {
+      "file": "detail-pages.js",
+      "kind": "ui-or-behavior",
+      "sha256": "af50d04e8b11789ef181255289afdf55120ee04da6209869a4aa55106d411c26"
+    },
+    {
+      "file": "detail-report-data.js",
+      "kind": "data-or-assets",
+      "sha256": "471b2cf8a72fa74afea388722a7a803d12afebc3116eac31416f9fd73d8c01d9"
+    },
+    {
+      "file": "detail-samples.js",
+      "kind": "data-or-assets",
+      "sha256": "385b04ef24969f497988c3e412d703ff295941097ddbe70abe47824d96981ec1"
+    },
+    {
+      "file": "dropdown.js",
+      "kind": "ui-or-behavior",
+      "sha256": "fd99fa131eada916fd49551d4f8c49b45790b5789fd9ae750ef7588ee4717296"
+    },
+    {
+      "file": "file-store.js",
+      "kind": "ui-or-behavior",
+      "sha256": "1c26a5f636dac7c3f517b290f402da6aa9bf3a0b05b2547e992a7378e7edfa8c"
+    },
+    {
+      "file": "hugeicon-data.js",
+      "kind": "data-or-assets",
+      "sha256": "4e09bd8c5fcb5c39f5c36a17ac0f5a6f1453069b6cef86454a4ce9806e2b7c35"
+    },
+    {
+      "file": "icons.js",
+      "kind": "ui-or-behavior",
+      "sha256": "aacd50d535db985150fd454ca39fb302279b221006d4927ccd679f3c353e23d6"
+    },
+    {
+      "file": "inbox-actions.js",
+      "kind": "ui-or-behavior",
+      "sha256": "bf4ba1d33e0262665b0c8ecad175eb553d36f80bbfefb9e57d17c2b826b6e058"
+    },
+    {
+      "file": "inbox-filters.js",
+      "kind": "ui-or-behavior",
+      "sha256": "6290e07dba819aa8f5d0a311c5ee9e146072ca0926cd4c03ee96cd4a885e1e56"
+    },
+    {
+      "file": "insight-notes.js",
+      "kind": "ui-or-behavior",
+      "sha256": "8b96785983b2f93d5a714e27aa738d90a2d8f780f36dcf1390fb5172763dd4ce"
+    },
+    {
+      "file": "integrations.js",
+      "kind": "ui-or-behavior",
+      "sha256": "b74b679b32b84e4a03b8fe86b19740dc07c35bd87ab30d36f9b6a91139e30ee5"
+    },
+    {
+      "file": "list-actions.js",
+      "kind": "ui-or-behavior",
+      "sha256": "a7b6ae17a64ba4f14be7c4c5e9dd3a3f91c5982933e3989fbe643ce6e86eb6d0"
+    },
+    {
+      "file": "lucide-data.js",
+      "kind": "data-or-assets",
+      "sha256": "ff4207df025a16b4fc7e03c5003900e3c9d9714aaba2a6015b8d9f183599171d"
+    },
+    {
+      "file": "note-examples.js",
+      "kind": "data-or-assets",
+      "sha256": "2433ec34c440092ee93f5d47b9e842f6b3662ca69a29a1444a6e28677be78b40"
+    },
+    {
+      "file": "notes-motion.js",
+      "kind": "ui-or-behavior",
+      "sha256": "f0a8562f93246b2ab5621818e5a7180205c8223f1c370908a5f4a46998a82ab2"
+    },
+    {
+      "file": "notes.js",
+      "kind": "ui-or-behavior",
+      "sha256": "1d84cc911b5f88b2bd87583d135973ab78cf7d2597ba2242007c0a1164477d57"
+    },
+    {
+      "file": "onboarding-preferences.js",
+      "kind": "ui-or-behavior",
+      "sha256": "0821cb6380acbe515d7e09a0074005d2b4eb3576dc9e74572863fe1fc94262d6"
+    },
+    {
+      "file": "onboarding.js",
+      "kind": "ui-or-behavior",
+      "sha256": "317ed4dd412c195832a62a5092265cfea05a106301c19797763c8ef54b396df3"
+    },
+    {
+      "file": "personal-review.js",
+      "kind": "ui-or-behavior",
+      "sha256": "d6fce1b6fc1798d81880ddb8d677aa3942080587b5ed353cc5a2f0c75f224afa"
+    },
+    {
+      "file": "phosphor-data.js",
+      "kind": "data-or-assets",
+      "sha256": "13b5e0dcdb3f6f47cbcc792b8c467f1bf47cb906ab166f3583baf21722cd65ea"
+    },
+    {
+      "file": "projections.js",
+      "kind": "ui-or-behavior",
+      "sha256": "ee2ee383db93ec91896b982a5689a248235db6c05ae14bc77158fb2f1871557e"
+    },
+    {
+      "file": "qa.js",
+      "kind": "ui-or-behavior",
+      "sha256": "50e02fb37e10c889d9bef9e3176b533dc0b4d5a256533545ffbfb4ea99b86f96"
+    },
+    {
+      "file": "research-activity.js",
+      "kind": "ui-or-behavior",
+      "sha256": "1309f9e2d15af4882495048e3c563498462174f834bd798aa9da1192b92c7b32"
+    },
+    {
+      "file": "research-fixtures.js",
+      "kind": "data-or-assets",
+      "sha256": "b41caa1e7c29c004d6b56f7c438ff1fe959871212337e01372638834ea36bef3"
+    },
+    {
+      "file": "review.js",
+      "kind": "ui-or-behavior",
+      "sha256": "bd70585529fc9786c46caa3fd51bf697852c0e5afdcc98796f885281a8ca7841"
+    },
+    {
+      "file": "search-criteria.js",
+      "kind": "ui-or-behavior",
+      "sha256": "3e48e690c10d843a220d3ca86d5001783279994bb55b25f0aaa657e3c79cb853"
+    },
+    {
+      "file": "smooth-cards.js",
+      "kind": "ui-or-behavior",
+      "sha256": "3d82d4eaa6ab01b0d66452299b93860f39c82a0beb8e275d83aeeec1c810f8a5"
+    },
+    {
+      "file": "summary-components.js",
+      "kind": "ui-or-behavior",
+      "sha256": "b42ea9e83a72a77e3b4c34f9212a3f0947e62cb4033571e5e0c9a6cb2136ec58"
+    },
+    {
+      "file": "summary-source-data.js",
+      "kind": "data-or-assets",
+      "sha256": "f077a9a3ad194909f59aba5072c577f0ff948b7d0679ce2949171e6e5432f300"
+    },
+    {
+      "file": "summary-staging.js",
+      "kind": "ui-or-behavior",
+      "sha256": "6511a672b12618b7b467b5c7ecbccce239790c26dd4a3761fc617faef6efa6c5"
+    },
+    {
+      "file": "trace-model.js",
+      "kind": "ui-or-behavior",
+      "sha256": "2ea0a9e891cf60e5a88983ba0567b96dd0b40eaf018523a4079d7c4ee20725fa"
+    },
+    {
+      "file": "trace-ui.js",
+      "kind": "ui-or-behavior",
+      "sha256": "dafca4694bc3f144afa19eeffcde43e91c7742ca4a4dd8c3c4409f95fa9d3867"
+    },
+    {
+      "file": "ui.js",
+      "kind": "ui-or-behavior",
+      "sha256": "7931ee8b5d92125c60eb17b415a8660d3263c9914f5782d5ea23897723f075bd"
+    },
+    {
+      "file": "view-assessments.js",
+      "kind": "ui-or-behavior",
+      "sha256": "70bb61df13593e9f44e3058c6bfdac976e969eac76589a11037d8c0da8256759"
+    },
+    {
+      "file": "view-builder.js",
+      "kind": "ui-or-behavior",
+      "sha256": "b46978f1a7e50ef7ca39056cc11e8113f6f3b4c0de2cc79bc454499e4380422a"
+    },
+    {
+      "file": "view-collections.js",
+      "kind": "ui-or-behavior",
+      "sha256": "2fdc8836a69d9f34ed7dea44cc68cc0f2bec164030cfc9a077667169fa9fd6d0"
+    },
+    {
+      "file": "view-examples.js",
+      "kind": "ui-or-behavior",
+      "sha256": "665d343d68a0eaa4e94b8364e697b3592f95586846008b500e835b90f34be7d3"
+    },
+    {
+      "file": "view-save-dialog.js",
+      "kind": "ui-or-behavior",
+      "sha256": "06c97b158318f4d75c4f1fe932cfa5dd5dd5c62a90e489b6f3d754166d7d93b0"
+    },
+    {
+      "file": "workspace.js",
+      "kind": "ui-or-behavior",
+      "sha256": "da078d21b3a4805c58c99fa99a58a4a5860edd9416dacb585a7bd2815381b054"
+    }
+  ],
+  "buildInputs": [
+    {
+      "file": "styles.css",
+      "sha256": "e8bd1693b9d306b44feb1058ae7c42347a0cd4fced41635b038d72a126e38e9a"
+    },
+    {
+      "file": "onboarding-system.css",
+      "sha256": "1138162034f4cb375a908c5c7a368fef5cd254c60351e07cb99c5c64b847cb9b"
+    },
+    {
+      "file": "trace.css",
+      "sha256": "da0067706ea247dfa3c1724d05041f00f49f54a7f0f846c68e64e8b13cef2e96"
+    },
+    {
+      "file": "detail-pages.css",
+      "sha256": "ea1c8c78f3e63433d15cd9125e602eed1b34c4d662ae4fd303b8c8ba6686fa62"
+    },
+    {
+      "file": "color-tokens.js",
+      "sha256": "4579528a816c66952685475f4804075444b1a22e8a3c91dfba8f6d7469808926"
+    }
+  ]
+}

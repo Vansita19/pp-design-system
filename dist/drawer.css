@@ -1,0 +1,56 @@
+.pp-drawer-demo{display:flex;flex-direction:column;align-items:center;gap:var(--pp-component-drawer-gap);width:100%;min-width:0}
+.pp-drawer-card{box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden;width:var(--drawer-width);max-width:100%;padding:0;border:var(--pp-border-width) solid var(--pp-component-drawer-border);background:var(--pp-component-drawer-background);color:var(--pp-component-drawer-foreground);font-family:var(--pp-font-family-sans);font-size:var(--pp-component-drawer-font);font-weight:var(--pp-font-weight-400);line-height:var(--pp-component-drawer-line);text-align:left}
+.pp-drawer-preview{height:var(--pp-component-drawer-previewHeight);border-radius:var(--pp-component-drawer-radius)}
+.pp-drawer-header{display:flex;align-items:center;gap:var(--pp-component-drawer-itemGap);flex-shrink:0;padding:var(--pp-component-drawer-padding);border-bottom:var(--pp-border-width) solid var(--pp-component-drawer-border)}
+.pp-drawer-header h3{flex:1;min-width:0;margin:0;overflow-wrap:anywhere;font-size:var(--pp-component-drawer-titleFont);font-weight:var(--pp-component-drawer-weight);line-height:var(--pp-component-drawer-titleLine)}
+.pp-drawer-header h3:focus{outline:none}
+.pp-drawer-preview-close{display:flex;align-items:center;justify-content:center;width:var(--pp-space-32);height:var(--pp-space-32)}
+.pp-drawer-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:var(--pp-component-drawer-padding)}
+.pp-drawer-profile{display:flex;align-items:center;gap:var(--pp-component-drawer-itemGap);padding-bottom:var(--pp-component-drawer-sectionGap)}
+.pp-drawer-profile>div{display:flex;flex-direction:column;gap:var(--pp-component-drawer-smallGap);min-width:0;flex:1}
+.pp-drawer-profile strong{font-size:var(--pp-component-drawer-titleFont);line-height:var(--pp-component-drawer-titleLine);font-weight:var(--pp-component-drawer-weight);overflow-wrap:anywhere}
+.pp-drawer-profile>div>span{color:var(--pp-component-drawer-muted);font-size:var(--pp-component-drawer-smallFont);line-height:var(--pp-component-drawer-smallLine)}
+.pp-drawer-profile>.pp-badge{flex-shrink:0}
+.pp-drawer-section{padding-top:var(--pp-component-drawer-sectionGap);border-top:var(--pp-border-width) solid var(--pp-component-drawer-border)}
+.pp-drawer-section+.pp-drawer-section{margin-top:var(--pp-component-drawer-sectionGap)}
+.pp-drawer-section h4{margin:0 0 var(--pp-component-drawer-itemGap);font-size:var(--pp-component-drawer-smallFont);line-height:var(--pp-component-drawer-smallLine);font-weight:var(--pp-component-drawer-weight);color:var(--pp-component-drawer-muted)}
+.pp-drawer-information{display:flex;flex-direction:column;gap:var(--pp-component-drawer-itemGap);margin:0}
+.pp-drawer-information>div{display:flex;justify-content:space-between;gap:var(--pp-component-drawer-gap)}
+.pp-drawer-information dt{color:var(--pp-component-drawer-muted);flex-shrink:0}
+.pp-drawer-information dd{min-width:0;margin:0;text-align:right;overflow-wrap:anywhere}
+.pp-drawer-activity-list{display:flex;flex-direction:column;gap:var(--pp-component-drawer-smallGap)}
+.pp-drawer-activity-trigger{display:flex;align-items:center;width:100%;gap:var(--pp-component-drawer-itemGap);padding:var(--pp-component-drawer-rowPadding) 0;border:0;border-radius:var(--pp-component-drawer-radius);background:transparent;color:inherit;text-align:left;font:inherit;cursor:pointer}
+.pp-drawer-activity-trigger:hover{background:var(--pp-component-drawer-hover)}
+.pp-drawer-activity-trigger:focus-visible{outline:none;box-shadow:var(--pp-component-drawer-focus)}
+.pp-drawer-activity-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0;box-sizing:border-box;width:var(--pp-component-drawer-iconContainer);height:var(--pp-component-drawer-iconContainer);border:var(--pp-border-width) solid var(--pp-component-drawer-border);border-radius:var(--pp-component-drawer-iconRadius);color:var(--pp-component-drawer-muted)}
+.pp-drawer-activity-icon svg{width:var(--pp-component-drawer-icon);height:var(--pp-component-drawer-icon)}
+.pp-drawer-activity-copy{display:flex;flex-direction:column;flex:1;min-width:0;gap:var(--pp-component-drawer-smallGap)}
+.pp-drawer-activity-copy strong{font-weight:var(--pp-component-drawer-weight);overflow-wrap:anywhere}
+.pp-drawer-activity-copy small{font-size:var(--pp-component-drawer-smallFont);line-height:var(--pp-component-drawer-smallLine);color:var(--pp-component-drawer-muted)}
+.pp-drawer-chevron{display:flex;flex-shrink:0;color:var(--pp-component-drawer-muted)}
+.pp-drawer-activity-trigger[aria-expanded=true] .pp-drawer-chevron{transform:rotate(90deg)}
+.pp-drawer-card .pp-drawer-activity-detail{margin:var(--pp-component-drawer-smallGap) 0 var(--pp-component-drawer-rowPadding);padding:var(--pp-component-drawer-itemGap);border-radius:var(--pp-component-drawer-radius);background:var(--pp-component-drawer-detailBackground);color:var(--pp-component-drawer-muted);font-size:var(--pp-component-drawer-smallFont);line-height:var(--pp-component-drawer-line)}
+.pp-drawer-status{display:block;color:var(--pp-component-drawer-muted);font-size:var(--pp-component-drawer-smallFont);line-height:var(--pp-component-drawer-smallLine)}
+.pp-drawer-status:not(:empty){margin-top:var(--pp-component-drawer-gap)}
+.pp-drawer-footer{display:flex;flex-shrink:0;gap:var(--pp-component-drawer-itemGap);padding:var(--pp-component-drawer-padding);border-top:var(--pp-border-width) solid var(--pp-component-drawer-border);background:var(--pp-component-drawer-background)}
+.pp-drawer-footer>.pp-button{flex:1;min-width:0;white-space:normal;height:auto;min-height:var(--pp-component-control-height-md);padding-block:var(--pp-space-8)}
+.pp-drawer-form{display:flex;flex-direction:column;flex:1;min-height:0}
+.pp-drawer-form .pp-field,.pp-drawer-form .pp-input{max-width:none}
+.pp-drawer-form .pp-field+.pp-field{margin-top:var(--pp-component-drawer-gap)}
+.pp-drawer-form textarea.pp-input{resize:vertical;min-height:var(--pp-space-64)}
+.pp-drawer-dialog{--drawer-direction:100%;position:fixed;inset:0 0 0 auto;margin:0;width:var(--drawer-width);max-width:100vw;height:100vh;height:100dvh;max-height:100vh;max-height:100dvh;border-radius:0;border-width:0 0 0 var(--pp-border-width);box-shadow:var(--pp-component-drawer-shadow)}
+.pp-drawer-dialog:not([open]){display:none}
+.pp-drawer-dialog[data-side=left]{--drawer-direction:-100%;inset:0 auto 0 0;border-width:0 var(--pp-border-width) 0 0}
+.pp-drawer-dialog::backdrop{background:var(--pp-component-drawer-backdrop)}
+.pp-drawer-dialog[data-phase=opening]{animation:pp-drawer-in var(--pp-component-drawer-duration) var(--pp-component-drawer-easing) both}
+.pp-drawer-dialog[data-phase=closing]{animation:pp-drawer-out var(--pp-component-drawer-duration) var(--pp-component-drawer-easing) both}
+.pp-drawer-dialog[data-phase=opening]::backdrop{animation:pp-drawer-backdrop-in var(--pp-component-drawer-duration) ease both}
+.pp-drawer-dialog[data-phase=closing]::backdrop{animation:pp-drawer-backdrop-out var(--pp-component-drawer-duration) ease both}
+@keyframes pp-drawer-in{from{transform:translateX(var(--drawer-direction))}to{transform:translateX(0)}}
+@keyframes pp-drawer-out{from{transform:translateX(0)}to{transform:translateX(var(--drawer-direction))}}
+@keyframes pp-drawer-backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes pp-drawer-backdrop-out{from{opacity:1}to{opacity:0}}
+.pp-drawer-dialog[data-motion=off],.pp-drawer-dialog[data-motion=off]::backdrop,body.motion-paused .pp-drawer-dialog,body.motion-paused .pp-drawer-dialog::backdrop,.preview-paused .pp-drawer-dialog,.preview-paused .pp-drawer-dialog::backdrop{animation:none;transform:none}
+@media(prefers-reduced-motion:reduce){.pp-drawer-dialog,.pp-drawer-dialog::backdrop,.pp-drawer-card *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:360px){.pp-drawer-profile{flex-wrap:wrap}.pp-drawer-information>div{flex-direction:column;gap:var(--pp-component-drawer-smallGap)}.pp-drawer-information dd{text-align:left}}
+@media(forced-colors:active){.pp-drawer-card,.pp-drawer-header,.pp-drawer-footer,.pp-drawer-section,.pp-drawer-activity-icon{border-color:CanvasText}.pp-drawer-activity-trigger:focus-visible{outline:var(--pp-border-width) solid Highlight}}

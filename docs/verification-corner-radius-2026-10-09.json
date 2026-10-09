@@ -1,0 +1,244 @@
+{
+  "date": "2026-10-09",
+  "change": "Remove corner smoothing everywhere; preserve standard CSS border-radius values",
+  "sourceChecks": [
+    {
+      "file": "checks/accessibility.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/action-feedback.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/ai-response.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/avatar.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/badge.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/card-patterns.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/chat-bubble.cjs",
+      "passed": true,
+      "rerun": "Passed after updating obsolete smoothing assertions to ordinary radius contracts"
+    },
+    {
+      "file": "checks/chip.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/command-menu.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/comprehensive-pattern-covers.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/corner-radius.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/date-picker.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/detail-blocks.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/detail-pages.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/disclosure-motion.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/drawer.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/feedback.cjs",
+      "passed": true,
+      "rerun": "Passed after updating obsolete smoothing assertions to ordinary radius contracts"
+    },
+    {
+      "file": "checks/file-upload.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/full-source-coverage.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/guided-popover.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/hairline.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/icon-consistency.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/information-cover.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/information-families.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/information-family-covers.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/layout-system.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/menus.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/navigation-controls.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/navigation.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/pitch-patterns.cjs",
+      "passed": true,
+      "rerun": "Passed after updating obsolete smoothing assertions to ordinary radius contracts"
+    },
+    {
+      "file": "checks/prompt-bar.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/prompt-suggestions.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/review-context.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/review-studio.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/slider.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/source-chat.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/source-details.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/source-pattern-covers.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/source-shell.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/source-trace.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/source-workspace.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/spacing.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/spectrum-toast.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/spinner.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/standards.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/switch-motion.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/tag.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/tooltip.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/utility-pattern-covers.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/variant-matrix.cjs",
+      "passed": true
+    },
+    {
+      "file": "checks/verify.cjs",
+      "passed": true
+    }
+  ],
+  "sourceMatrixSpecimens": 1428,
+  "browser": {
+    "passed": true,
+    "target": "artifacts/forma-design-system.html",
+    "specimens": 67,
+    "elements": 3548,
+    "roundedElements": 728,
+    "nativeShape": "superellipse(1)",
+    "radiusChecks": [
+      {
+        "name": "Prompt card",
+        "expected": "16px",
+        "actual": "16px"
+      },
+      {
+        "name": "Soft badge",
+        "expected": "8px",
+        "actual": "8px"
+      },
+      {
+        "name": "Circular badge",
+        "expected": "999px",
+        "actual": "999px"
+      }
+    ],
+    "failures": [],
+    "scope": "One default specimen per non-foundation family; all variation markup is covered separately by corner-radius.cjs",
+    "pageErrors": []
+  },
+  "browserScope": "Native geometry checked for one default specimen per family, including retained hidden/source families. Full variation markup/source is checked separately.",
+  "supersedes": "Previous percentage-smoothing and custom corner-painter implementation"
+}

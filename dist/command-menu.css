@@ -1,0 +1,42 @@
+/* Shared light command surface for the native dialog and catalogue specimen. */
+.pp-command-card{box-sizing:border-box;color-scheme:light;width:var(--pp-component-command-width);max-width:calc(100vw - var(--pp-space-32));margin:auto;padding:0;border:var(--pp-border-width) solid var(--pp-component-command-border);border-radius:var(--pp-component-command-radius);background:var(--pp-component-command-background);color:var(--pp-component-command-foreground);box-shadow:var(--pp-component-command-shadow);font-family:var(--pp-font-family-sans);font-size:var(--pp-component-command-font);line-height:var(--pp-component-command-line);overflow:hidden;text-align:left}
+.pp-command-dialog{max-height:calc(100dvh - var(--pp-space-32));overscroll-behavior:contain}
+.pp-command-dialog[open]{display:flex;flex-direction:column}
+.pp-command-dialog::backdrop{background:var(--pp-component-command-backdrop);backdrop-filter:blur(var(--pp-component-command-blur));-webkit-backdrop-filter:blur(var(--pp-component-command-blur))}
+.pp-command-card .pp-command-header{display:flex;align-items:center;gap:var(--pp-space-12);padding:var(--pp-space-12) var(--pp-space-16);border-bottom:var(--pp-border-width) solid var(--pp-component-command-border);flex-shrink:0}
+.pp-command-search-symbol,.pp-command-symbol{display:flex;align-items:center;justify-content:center;flex:none;color:var(--pp-component-command-muted)}
+.pp-command-card.pp-theme .pp-command-input{min-width:0;width:100%;flex:1;height:var(--pp-space-32);padding:0;border:0;outline:none;background:var(--pp-component-command-background);box-shadow:none;color:var(--pp-component-command-foreground);border-radius:0;font:inherit}
+.pp-command-card .pp-command-input::placeholder{color:var(--pp-component-input-placeholder);opacity:1}
+.pp-command-card .pp-command-header:focus-within{border-bottom-color:var(--pp-semantic-border-focus)}
+.pp-command-card .pp-command-header>.pp-button{flex-shrink:0}
+.pp-command-results{overflow:auto;min-height:0;max-height:min(52dvh,calc(var(--pp-space-64) * 6));padding:var(--pp-space-8) 0;overscroll-behavior:contain;scroll-padding:var(--pp-space-8)}
+.pp-command-group{padding:0 var(--pp-space-8)}
+.pp-command-group+.pp-command-group{margin-top:var(--pp-space-8);padding-top:var(--pp-space-8);border-top:var(--pp-border-width) solid var(--pp-component-command-border)}
+.pp-command-label{padding:var(--pp-space-8);font-size:var(--pp-component-command-labelFont);font-weight:var(--pp-font-weight-500);color:var(--pp-component-command-muted)}
+.pp-command-option{display:flex;align-items:center;gap:var(--pp-component-command-gap);min-height:var(--pp-component-command-rowHeight);padding:var(--pp-space-8);border-radius:var(--pp-component-command-rowRadius);cursor:pointer;color:var(--pp-component-command-foreground)}
+.pp-command-option-label{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pp-command-option[aria-selected=true]{background:var(--pp-component-command-selected)}
+.pp-command-chevron{display:flex;color:var(--pp-component-command-muted);opacity:0}
+.pp-command-option[aria-selected=true] .pp-command-chevron{opacity:1}
+.pp-command-footer{display:flex;flex-wrap:wrap;align-items:center;gap:var(--pp-space-16);flex-shrink:0;padding:var(--pp-space-12) var(--pp-space-16);border-top:var(--pp-border-width) solid var(--pp-component-command-border);font-size:var(--pp-component-command-labelFont);color:var(--pp-component-command-muted)}
+.pp-command-hint{display:flex;align-items:center;gap:var(--pp-space-4);white-space:nowrap}
+.pp-command-hint>span{margin-left:var(--pp-space-4)}
+.pp-command-close-hint{margin-left:auto;gap:var(--pp-space-8)}
+.pp-command-footer kbd{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-width:var(--pp-component-command-keyHeight);height:var(--pp-component-command-keyHeight);padding:0 var(--pp-space-4);border:var(--pp-border-width) solid var(--pp-component-command-border);border-radius:var(--pp-component-command-keyRadius);background:var(--pp-component-command-background);font-family:inherit;font-size:var(--pp-component-command-keyFont);font-weight:var(--pp-font-weight-500);line-height:1;color:var(--pp-component-command-muted)}
+.pp-command-empty{padding:var(--pp-space-32) var(--pp-space-16);text-align:center;font-weight:var(--pp-font-weight-500)}
+.pp-command-empty>span{display:block;margin-top:var(--pp-space-8);font-size:var(--pp-component-command-labelFont);font-weight:var(--pp-font-weight-400);color:var(--pp-component-command-muted)}
+.pp-command-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.pp-command-demo{width:100%;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;gap:var(--pp-space-16)}
+.pp-command-preview-backdrop{box-sizing:border-box;width:100%;max-width:100%;min-width:0;padding:var(--pp-space-32);background:var(--pp-semantic-surface-subtle);border-radius:var(--pp-radius-xl)}
+.pp-command-preview-backdrop .pp-command-card{width:100%;min-width:0;max-width:min(100%,var(--pp-component-command-width))}
+@media(max-width:480px){.pp-command-preview-backdrop{padding:var(--pp-space-12)}.pp-command-footer{gap:var(--pp-space-8);padding-inline:var(--pp-space-12)}.pp-command-card .pp-command-header{gap:var(--pp-space-8)}}
+@media(forced-colors:active){.pp-command-option[aria-selected=true]{outline:var(--pp-border-width) solid Highlight;outline-offset:calc(-1 * var(--pp-border-width))}}
+/* Removable shared filter chips narrow the same real catalogue used by search. */
+.pp-command-card .pp-command-header{padding-block:var(--pp-space-8)}
+.pp-command-scopes{padding:var(--pp-space-16);border-bottom:var(--pp-border-width) solid var(--pp-component-command-border);flex-shrink:0}
+.pp-command-scopes-label,.pp-command-result-caption{font-size:var(--pp-component-command-labelFont);font-weight:var(--pp-font-weight-500);color:var(--pp-component-command-muted)}
+.pp-command-scopes-label{margin-bottom:var(--pp-space-12)}
+.pp-command-scopes-values{display:flex;flex-wrap:wrap;align-items:center;gap:var(--pp-space-8)}
+.pp-command-card .pp-command-reset{padding:0;border:0;background:transparent;color:var(--pp-component-command-muted);font:inherit;font-size:var(--pp-component-command-labelFont);text-decoration:underline;text-underline-offset:var(--pp-space-4);cursor:pointer}
+.pp-command-result-caption{padding:var(--pp-space-16) var(--pp-space-16) 0;flex-shrink:0}
+.pp-command-card .pp-command-results{padding-top:0}

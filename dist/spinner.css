@@ -1,0 +1,30 @@
+/* A loading indicator inherits currentColor when embedded in a button.
+   Only the standalone status wrapper selects a loading color. */
+.pp-spinner{
+ width:var(--pp-component-spinner-size-md);
+ height:var(--pp-component-spinner-size-md);
+ border-width:var(--pp-component-spinner-stroke);
+ border-radius:var(--pp-component-spinner-radius);
+ animation-duration:calc(var(--pp-component-spinner-duration) / var(--speed,1));
+}
+.pp-spinner.size-sm{width:var(--pp-component-spinner-size-sm);height:var(--pp-component-spinner-size-sm)}
+.pp-spinner.size-lg{width:var(--pp-component-spinner-size-lg);height:var(--pp-component-spinner-size-lg)}
+.pp-spinner-status{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--spinner-color);line-height:0}
+.pp-spinner-status>.pp-spinner,.pp-spinner-segmented{width:var(--spinner-size);height:var(--spinner-size)}
+.pp-spinner-segmented{display:block;flex-shrink:0;overflow:visible;fill:none}
+.pp-spinner-spoke{
+ stroke:currentColor;
+ stroke-width:var(--pp-component-spinner-segment-stroke);
+ stroke-linecap:round;
+ opacity:.45;
+ animation:pp-spinner-fade calc(var(--pp-component-spinner-duration) / var(--speed,1)) linear infinite;
+ animation-delay:calc((var(--spoke-index) / 8 - 1) * var(--pp-component-spinner-duration) / var(--speed,1));
+}
+@keyframes pp-spinner-fade{from{opacity:1}to{opacity:.2}}
+body.motion-paused .pp-spinner,body.motion-paused .pp-spinner-spoke,
+.preview-paused .pp-spinner,.preview-paused .pp-spinner-spoke{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){
+ .pp-spinner,.pp-spinner-spoke{animation:none!important}
+ .pp-spinner-spoke{opacity:1}
+}
+@media(forced-colors:active){.pp-spinner-status{color:CanvasText}}

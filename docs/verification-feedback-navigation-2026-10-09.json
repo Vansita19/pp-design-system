@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-09",
+  "scope": "Source, simulated DOM/events/timers and token contracts. Browser appearance and assistive technology not verified.",
+  "checks": [
+    {
+      "check": "verify",
+      "exitCode": 0,
+      "output": "{\"pages\":80,\"components\":69,\"tokens\":2017,\"variantRenders\":577,\"status\":\"passed\"}\n"
+    },
+    {
+      "check": "standards",
+      "exitCode": 0,
+      "output": "{\"contrastPairs\":39,\"solidContrastExceptions\":[{\"foreground\":\"semantic.badge.blue.solid.foreground\",\"background\":\"semantic.badge.blue.solid.background\",\"ratio\":4.47,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"},{\"foreground\":\"semantic.badge.success.solid.foreground\",\"background\":\"semantic.badge.success.solid.background\",\"ratio\":2.404,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"},{\"foreground\":\"semantic.badge.purple.solid.foreground\",\"background\":\"semantic.badge.purple.solid.background\",\"ratio\":3.957,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"},{\"foreground\":\"semantic.badge.warning.solid.foreground\",\"background\":\"semantic.badge.warning.solid.background\",\"ratio\":2.148,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"},{\"foreground\":\"semantic.badge.danger.solid.foreground\",\"background\":\"semantic.badge.danger.solid.background\",\"ratio\":3.781,\"required\":4.5,\"reason\":\"User-selected family500 with white solid-badge text\"}],\"configurationMappings\":731,\"tokenTypes\":\"matched\",\"syntax\":\"passed\",\"status\":\"passed\",\"scope\":\"source contracts; listed solid badge exceptions do not meet 4.5:1; not computed browser styles\"}\n"
+    },
+    {
+      "check": "spacing",
+      "exitCode": 0,
+      "output": "{\"spacingSteps\":15,\"spacingRoles\":208,\"spacingDeclarations\":1474,\"foundationContracts\":\"bounded samples, unchanged copy values, preview before tokens\",\"inputStateBorders\":\"family500\",\"status\":\"passed\",\"scope\":\"registry, CSS and actual template rendering; browser appearance unverified\"}\n"
+    },
+    {
+      "check": "accessibility",
+      "exitCode": 0,
+      "output": "PASS buttons avoid accidental form submission and retain explicit form actions\nPASS button family preserves old routes and appears once in search and navigation\nPASS link variants are anchors and disabled links cannot activate\nPASS joined actions do not submit forms or pretend to be toggle selections\nPASS fields only describe helper text that exists, preserving readonly and invalid semantics\nPASS styled selection controls retain native input semantics and decorative indicators\nPASS radio instances form independent native groups with one selected value\nPASS checkbox appearance reuses the Inbox control without replacing native behavior\nPASS indeterminate examples set the native mixed property and badges stay noninteractive\nPASS confirmation dialogs describe the action and initially focus Cancel\nPASS source composer disables unavailable actions while keeping pending input editable\nPASS toast stack has a pre-existing polite status region\nPASS table select-all tracks mixed selection and only acts on visible results\nPASS multiselect chips reflect checked values and removal updates and focuses the checkbox\nPASS streaming text is available without character-by-character announcements\nPASS stream honors pause, resumes, reacts to reduced motion, and cleans timers/listeners\nPASS a closed popover does not steal focus when Escape is pressed elsewhere\n{\"accessibilityChecks\":17,\"status\":\"passed\",\"scope\":\"markup and simulated event contracts; browser/AT validation not performed\"}\n"
+    },
+    {
+      "check": "detail-pages",
+      "exitCode": 0,
+      "output": "{\"detailPages\":260,\"status\":\"passed\",\"scope\":\"Actual template rendering and tab content; simulated DOM bindings\"}\n"
+    },
+    {
+      "check": "variant-matrix",
+      "exitCode": 0,
+      "output": "{\"matrixPages\":69,\"matrixSpecimens\":1563,\"badgeSpecimens\":567,\"status\":\"passed\",\"scope\":\"Supported combinations, bounded rendering, token references and unique native input identities\"}\n"
+    },
+    {
+      "check": "card-patterns",
+      "exitCode": 0,
+      "output": "{\"cardPatternConfigurations\":29,\"cycleBehavior\":\"front-note change, focus, announcement, idempotent mount and timer/corner cleanup\",\"status\":\"passed\",\"scope\":\"Markup, source dimensions, reusable atom composition, scoped cycle behavior and token contracts; browser appearance unverified\"}\n"
+    },
+    {
+      "check": "ai-response",
+      "exitCode": 0,
+      "output": "{\"responseConfigurations\":46,\"uniqueIds\":12,\"sourcePopoverInteractions\":5,\"followupEvents\":1,\"projectionMath\":\"bounded and correct\",\"tokens\":\"aliased\",\"status\":\"passed\",\"scope\":\"source geometry, markup, data and simulated events; no browser validation\"}\n{\"compactActions\":\"copy success/failure, exclusive feedback, regenerate, cleanup\",\"status\":\"passed\",\"scope\":\"simulated DOM; no browser validation\"}\n"
+    },
+    {
+      "check": "feedback",
+      "exitCode": 0,
+      "output": "{\"alertConfigurations\":180,\"accordionConfigurations\":120,\"interactionContracts\":17,\"status\":\"passed\",\"scope\":\"native semantics, focus recovery, independent setup groups, cleanup, alias resolution, and motion\"}\n"
+    },
+    {
+      "check": "action-feedback",
+      "exitCode": 0,
+      "output": "{\"undo\":\"clock, all pause reasons, expiry, reset, undo, Escape and disposal\",\"actionDemo\":\"Delete/Undo focus and custom label\",\"toast\":\"capacity, timer pause, dismiss focus and disposal\",\"sequence\":\"progression, pause and loop\",\"status\":\"passed\",\"scope\":\"simulated DOM and timers; no browser validation\"}\n"
+    },
+    {
+      "check": "command-menu",
+      "exitCode": 0,
+      "output": "✓ all targets are live visible routes; search supports aliases and multiple words\n✓ preview has isolated IDs, accessible empty state and fully resolvable tokens\n✓ Cmd/Ctrl K uses native modal, focuses search, locks scroll and mounts once\n✓ arrows change active descendant without leaving input; Enter navigates\n✓ empty results remove active descendant and cannot navigate; typing recovers\n✓ focus is trapped in both directions; Escape restores focus and scroll\n✓ close button receives Enter normally; pointer selection navigates; backdrop closes\n✓ IME keys do not activate commands and native cancel restores focus\n✓ BFCache close keeps the shortcut; destruction removes portal and all listeners\n9 command-menu checks passed (simulated DOM; visual/browser accessibility unverified).\n"
+    },
+    {
+      "check": "guided-popover",
+      "exitCode": 0,
+      "output": "{\"guidedPopoverChecks\":7,\"status\":\"passed\",\"scope\":\"markup, token references, simulated native/fallback events and viewport positioning; browser appearance and assistive technology unverified\"}\n"
+    },
+    {
+      "check": "pitch-patterns",
+      "exitCode": 0,
+      "output": "{\"filterConfigurations\":8,\"filterInteractions\":16,\"countedTabKeyboardActions\":5,\"inboxConfigurations\":12,\"inboxInteractions\":\"pagination, selection, decisions, delete, undo, reset, company links/actions, list membership, cleanup\",\"pitchPatternConfigurations\":62,\"uniqueTabIds\":88,\"numericSortActions\":4,\"chatControllerActions\":6,\"sourceGeometry\":\"matched\",\"tokens\":\"aliased\",\"status\":\"passed\",\"scope\":\"markup, token, CSS and simulated event contracts; not browser visual validation\"}\n"
+    },
+    {
+      "check": "full-source-coverage",
+      "exitCode": 0,
+      "output": "{\"liveModules\":53,\"ledgers\":5,\"visualPatterns\":226,\"userExcludedVisualPatterns\":13,\"nonvisualDispositions\":29,\"sourceReferences\":308,\"composedRoutes\":50,\"migratedLedgerRoutes\":31,\"status\":\"passed\",\"scope\":\"Source inventory, registered helpers, render/token contracts, catalogue reachability and explicit user exclusions; no browser/AT claim\"}\n"
+    },
+    {
+      "check": "badge",
+      "exitCode": 0,
+      "output": "{\"configurations\":1260,\"solidText\":\"user-selected family500 with white text\",\"solidContrastExceptions\":{\"blue\":{\"foreground\":\"color.gray.white\",\"background\":\"color.blue.500\",\"ratio\":4.47,\"required\":4.5,\"reason\":\"User requested family500 with white solid-badge text\"},\"success\":{\"foreground\":\"color.gray.white\",\"background\":\"color.green.500\",\"ratio\":2.404,\"required\":4.5,\"reason\":\"User requested family500 with white solid-badge text\"},\"purple\":{\"foreground\":\"color.gray.white\",\"background\":\"color.purple.500\",\"ratio\":3.957,\"required\":4.5,\"reason\":\"User requested family500 with white solid-badge text\"},\"warning\":{\"foreground\":\"color.gray.white\",\"background\":\"color.amber.500\",\"ratio\":2.148,\"required\":4.5,\"reason\":\"User requested family500 with white solid-badge text\"},\"danger\":{\"foreground\":\"color.gray.white\",\"background\":\"color.red.500\",\"ratio\":3.781,\"required\":4.5,\"reason\":\"User requested family500 with white solid-badge text\"}},\"smoothing\":\"shared 60%; native circles/capsules\",\"status\":\"passed\",\"scope\":\"render/token contracts; listed contrast exceptions do not meet 4.5:1\"}\n"
+    },
+    {
+      "check": "smooth-corners",
+      "exitCode": 0,
+      "output": "{\"smoothingScheduleDiagnostic\":{\"surfaces\":120,\"readsDuringMount\":0,\"readPassesDuringMount\":0,\"queuedFrames\":1}}\n{\"geometryCases\":45,\"sharedMountContracts\":8,\"batching\":{\"surfaces\":120,\"readPasses\":1,\"coalescedEvents\":\"hover, focus, resize, forced colors\",\"cancelledOnUnmount\":true},\"status\":\"passed\",\"scope\":\"bounded geometry, simulated DOM read/write ordering, shared ownership and cleanup; browser appearance and wall-clock timings unverified\"}\n"
+    },
+    {
+      "check": "navigation",
+      "exitCode": 0,
+      "output": "{\"checks\":\"tab/header identity, focus, horizontal and sidebar scroll, disclosure preferences, one cleanup, rapid route coalescing/cancellation, new page position, back/forward hashes, category tabs, search restoration, color foundation cohort, page lifecycle cancellation\",\"sameFamilyShellRebuilds\":0,\"sameFamilyVisibleTabScrollResets\":0,\"status\":\"passed\",\"scope\":\"Actual routing/render functions with DOM fixtures; no browser appearance claim\"}\n"
+    }
+  ],
+  "hairline": "78 official benches built and validated",
+  "cornerTreatmentStatus": "Historical corner-smoothing checks are superseded by the latest user request: ordinary CSS border-radius only. See checks/corner-radius.cjs and checks/corner-radius-browser.cjs."
+}

@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Logo">
+<g clip-path="url(#clip0_0_24)">
+<g id="Logo Container">
+<rect width="29" height="25" rx="6" fill="black"/>
+</g>
+<line id="Line 1" x1="-2.06066" y1="19.9393" x2="19.9393" y2="-2.06066" stroke="white" stroke-width="3"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_24">
+<rect width="29" height="25" rx="7" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,201 @@
+{
+  "checks": [
+    {
+      "name": "accessibility",
+      "status": "passed"
+    },
+    {
+      "name": "action-feedback",
+      "status": "passed"
+    },
+    {
+      "name": "ai-response",
+      "status": "passed"
+    },
+    {
+      "name": "avatar",
+      "status": "passed"
+    },
+    {
+      "name": "badge",
+      "status": "passed"
+    },
+    {
+      "name": "card-patterns",
+      "status": "passed"
+    },
+    {
+      "name": "chat-bubble",
+      "status": "passed"
+    },
+    {
+      "name": "chip",
+      "status": "passed"
+    },
+    {
+      "name": "command-menu",
+      "status": "passed"
+    },
+    {
+      "name": "comprehensive-pattern-covers",
+      "status": "passed"
+    },
+    {
+      "name": "date-picker",
+      "status": "passed"
+    },
+    {
+      "name": "detail-blocks",
+      "status": "passed"
+    },
+    {
+      "name": "detail-pages",
+      "status": "passed"
+    },
+    {
+      "name": "disclosure-motion",
+      "status": "passed"
+    },
+    {
+      "name": "drawer",
+      "status": "passed"
+    },
+    {
+      "name": "feedback",
+      "status": "passed"
+    },
+    {
+      "name": "file-upload",
+      "status": "passed"
+    },
+    {
+      "name": "full-source-coverage",
+      "status": "passed"
+    },
+    {
+      "name": "guided-popover",
+      "status": "passed"
+    },
+    {
+      "name": "hairline",
+      "status": "passed"
+    },
+    {
+      "name": "information-cover",
+      "status": "passed"
+    },
+    {
+      "name": "information-families",
+      "status": "passed"
+    },
+    {
+      "name": "information-family-covers",
+      "status": "passed"
+    },
+    {
+      "name": "layout-system",
+      "status": "passed"
+    },
+    {
+      "name": "menus",
+      "status": "passed"
+    },
+    {
+      "name": "navigation-controls",
+      "status": "passed"
+    },
+    {
+      "name": "navigation",
+      "status": "passed"
+    },
+    {
+      "name": "pitch-patterns",
+      "status": "passed"
+    },
+    {
+      "name": "prompt-bar",
+      "status": "passed"
+    },
+    {
+      "name": "prompt-suggestions",
+      "status": "passed"
+    },
+    {
+      "name": "slider",
+      "status": "passed"
+    },
+    {
+      "name": "smooth-corners",
+      "status": "passed"
+    },
+    {
+      "name": "source-chat",
+      "status": "passed"
+    },
+    {
+      "name": "source-details",
+      "status": "passed"
+    },
+    {
+      "name": "source-pattern-covers",
+      "status": "passed"
+    },
+    {
+      "name": "source-shell",
+      "status": "passed"
+    },
+    {
+      "name": "source-trace",
+      "status": "passed"
+    },
+    {
+      "name": "source-workspace",
+      "status": "passed"
+    },
+    {
+      "name": "spacing",
+      "status": "passed"
+    },
+    {
+      "name": "spectrum-toast",
+      "status": "passed"
+    },
+    {
+      "name": "spinner",
+      "status": "passed"
+    },
+    {
+      "name": "standards",
+      "status": "passed"
+    },
+    {
+      "name": "switch-motion",
+      "status": "passed"
+    },
+    {
+      "name": "tag",
+      "status": "passed"
+    },
+    {
+      "name": "tooltip",
+      "status": "passed"
+    },
+    {
+      "name": "utility-pattern-covers",
+      "status": "passed"
+    },
+    {
+      "name": "variant-matrix",
+      "status": "passed"
+    },
+    {
+      "name": "verify",
+      "status": "passed"
+    }
+  ],
+  "total": 48,
+  "sourceToast": "Original registry files byte-identical; actual production bundle tested in happy-dom with Motion JS fallback.",
+  "covers": "75 official benches built and validated.",
+  "limits": "No browser visual or assistive-technology verification.",
+  "cornerTreatmentStatus": "Historical corner-smoothing checks are superseded by the latest user request: ordinary CSS border-radius only. See checks/corner-radius.cjs and checks/corner-radius-browser.cjs."
+}

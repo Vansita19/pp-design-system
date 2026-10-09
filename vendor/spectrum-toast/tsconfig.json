@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "lucide-react": [
+        "./hugeicons-react.tsx"
+      ]
+    }
+  }
+}

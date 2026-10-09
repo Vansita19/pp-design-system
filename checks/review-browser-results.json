@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "target": "dist/index.html",
+  "viewports": [
+    {
+      "workspace": {
+        "right": 1096,
+        "bottom": 5504.59375
+      },
+      "drawer": {
+        "left": 1096,
+        "top": 0,
+        "right": 1440,
+        "bottom": 1000
+      },
+      "width": 1440,
+      "height": 1000,
+      "overflow": 1440
+    },
+    {
+      "workspace": {
+        "right": 756,
+        "bottom": 7213.59375
+      },
+      "drawer": {
+        "left": 756,
+        "top": 0,
+        "right": 1100,
+        "bottom": 1000
+      },
+      "width": 1100,
+      "height": 1000,
+      "overflow": 1100
+    },
+    {
+      "workspace": {
+        "right": 1000,
+        "bottom": 540
+      },
+      "drawer": {
+        "left": 320,
+        "top": 540,
+        "right": 1000,
+        "bottom": 1000
+      },
+      "width": 1000,
+      "height": 1000,
+      "overflow": 1000
+    },
+    {
+      "workspace": {
+        "right": 900,
+        "bottom": 540
+      },
+      "drawer": {
+        "left": 320,
+        "top": 540,
+        "right": 900,
+        "bottom": 1000
+      },
+      "width": 900,
+      "height": 1000,
+      "overflow": 900
+    },
+    {
+      "workspace": {
+        "right": 768,
+        "bottom": 540
+      },
+      "drawer": {
+        "left": 52,
+        "top": 540,
+        "right": 768,
+        "bottom": 1000
+      },
+      "width": 768,
+      "height": 1000,
+      "overflow": 768
+    },
+    {
+      "workspace": {
+        "right": 390,
+        "bottom": 540
+      },
+      "drawer": {
+        "left": 52,
+        "top": 540,
+        "right": 390,
+        "bottom": 1000
+      },
+      "width": 390,
+      "height": 1000,
+      "overflow": 390
+    }
+  ],
+  "checks": [
+    "Docked geometry and no page overflow",
+    "Identifiable target labels",
+    "Visible icon grid/filter, repeated swaps and separate-state isolation",
+    "Radius and padding changes",
+    "Original comparison and reset",
+    "Button appearance",
+    "Comment create/locate/resolve/reopen/delete/copy",
+    "Comments persist while appearance resets on close/reopen/reload",
+    "Escape stops picking then closes",
+    "Real click editing at six viewport widths",
+    "Animated component redraw preserves the open preview and restores on close",
+    "Icon choice preserves keyboard focus"
+  ],
+  "pageErrors": []
+}

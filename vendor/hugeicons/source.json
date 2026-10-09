@@ -1,0 +1,16 @@
+{
+  "package": "@hugeicons/core-free-icons",
+  "version": "4.3.5",
+  "style": "Stroke Rounded",
+  "viewBox": "0 0 24 24",
+  "license": "MIT",
+  "repository": "git+https://github.com/hugeicons/hugeicons.git",
+  "tarball": "https://registry.npmjs.org/@hugeicons/core-free-icons/-/core-free-icons-4.3.5.tgz",
+  "integrity": "sha512-Sv+NjHRPnQk+yZsGCMcGznCHdTfJR9PMMOEKcJYAQU4gy90dmlc9PwdtvYOImBZIjiheMsTLL5eMn2DmHxUiUg==",
+  "verifiedIntegrity": true,
+  "reference": "https://hugeicons.com/icons/stroke-rounded",
+  "retrieved": "2026-10-09",
+  "definitionSource": "dist/cjs/{exportName}.js",
+  "semanticKeys": 79,
+  "uniqueAssets": 69
+}

@@ -1,0 +1,9 @@
+/* No chat shell or interaction: these surfaces compose inside a message view. */
+.pp-chat-bubble-group{display:flex;flex-direction:column;width:100%;min-width:0}
+.pp-chat-bubble-group[data-grouping=grouped]{gap:var(--pp-component-chatBubble-gap)}
+.pp-chat-bubble{box-sizing:border-box;width:fit-content;min-width:0;max-width:80%;align-self:flex-start;padding:var(--pp-component-chatBubble-paddingY) var(--pp-component-chatBubble-paddingX);border:0 solid var(--chat-bubble-border);border-radius:var(--pp-component-chatBubble-radius);background:var(--chat-bubble-background);color:var(--chat-bubble-foreground);font-family:var(--pp-font-family-sans);font-size:var(--pp-component-chatBubble-font);font-weight:var(--pp-component-chatBubble-weight);line-height:var(--pp-component-chatBubble-line);overflow-wrap:anywhere}
+.pp-chat-bubble[data-align=end]{align-self:flex-end}
+.pp-chat-bubble[data-appearance=outline]{border-width:var(--pp-component-chatBubble-borderWidth)}
+.pp-chat-bubble[data-appearance=ghost]{width:100%;max-width:100%;padding:0;border:0;border-radius:0;background:none}
+.pp-theme .pp-chat-bubble>p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(forced-colors:active){.pp-chat-bubble{background:Canvas;color:CanvasText;border:1px solid CanvasText}.pp-chat-bubble[data-appearance=primary]{background:Highlight;color:HighlightText}.pp-chat-bubble[data-appearance=ghost]{background:none;border:0}}
