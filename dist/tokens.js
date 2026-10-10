@@ -10,32 +10,35 @@ F.addToken('icon.stroke.large','dimension','1.5px','improved');
 F.addToken('icon.size.threshold','dimension','16px','improved');
 F.palettes={
   gray:{white:'#FFFFFF',50:'#FAFAFA',100:'#F5F5F5',200:'#E5E5E5',300:'#D4D4D4',400:'#A3A3A3',500:'#737373',600:'#525252',700:'#404040',800:'#262626',900:'#171717',950:'#0A0A0A'},
-  blue:{50:'#EFF6FF',100:'#E8EFFF',200:'#BFDBFE',300:'#93C5FD',400:'#60A5FA',500:'#3470EE',550:'#326EEC',600:'#2563EB',700:'#1D4ED8',800:'#1E40AF',900:'#1E3A8A'},
-  green:{50:'#DCFBE6',100:'#D1FAE5',200:'#A7F3D0',300:'#6EE7B7',400:'#34D399',500:'#19BE83',600:'#119D4E',700:'#047857',800:'#065F46',900:'#064E3B'},
-  red:{50:'#FFE8EC',100:'#FFE4E6',200:'#FFD1D8',300:'#FDA4AF',400:'#FF455B',500:'#EF405B',600:'#D43155',700:'#BE123C',800:'#9F1239',900:'#881337'},
-  purple:{50:'#EEE5FA',100:'#F3E8FF',200:'#E9D5FF',300:'#D8B4FE',400:'#C084FC',500:'#A855F7',600:'#8938E7',700:'#7E22CE',800:'#6B21A8',900:'#581C87'},
-  amber:{50:'#FFFBEB',75:'#FFF7DC',100:'#FEF3C7',200:'#FDE68A',300:'#FCD34D',400:'#FBBF24',450:'#FFBF00',500:'#F59E0B',600:'#D97706',700:'#B45309',800:'#92400E',900:'#78350F'}
+  blue:{50:'#EFF6FF',100:'#DBEAFE',200:'#BFDBFE',300:'#93C5FD',400:'#60A5FA',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8',800:'#1E40AF',900:'#1E3A8A',950:'#172554'},
+  green:{50:'#F0FDF4',100:'#DCFCE7',200:'#BBF7D0',300:'#86EFAC',400:'#4ADE80',500:'#22C55E',600:'#16A34A',700:'#15803D',800:'#166534',900:'#14532D',950:'#052E16'},
+  red:{50:'#FEF2F2',100:'#FEE2E2',200:'#FECACA',300:'#FCA5A5',400:'#F87171',500:'#EF4444',600:'#DC2626',700:'#B91C1C',800:'#991B1B',900:'#7F1D1D',950:'#450A0A'},
+  purple:{50:'#FAF5FF',100:'#F3E8FF',200:'#E9D5FF',300:'#D8B4FE',400:'#C084FC',500:'#A855F7',600:'#9333EA',700:'#7E22CE',800:'#6B21A8',900:'#581C87',950:'#3B0764'},
+  amber:{50:'#FFFBEB',100:'#FEF3C7',200:'#FDE68A',300:'#FCD34D',400:'#FBBF24',500:'#F59E0B',600:'#D97706',700:'#B45309',800:'#92400E',900:'#78350F',950:'#451A03'},
+  orange:{50:'#FFF7ED',100:'#FFEDD5',200:'#FED7AA',300:'#FDBA74',400:'#FB923C',500:'#F97316',600:'#EA580C',700:'#C2410C',800:'#9A3412',900:'#7C2D12',950:'#431407'},
+  sky:{50:'#F0F9FF',100:'#E0F2FE',200:'#BAE6FD',300:'#7DD3FC',400:'#38BDF8',500:'#0EA5E9',600:'#0284C7',700:'#0369A1',800:'#075985',900:'#0C4A6E',950:'#082F49'}
 };
+// Numeric object keys sort before names; explicitly keep white at the light end.
+F.paletteEntries=steps=>Object.entries(steps).sort(([a],[b])=>(a==='white'?-1:a==='black'?Infinity:Number(a))-(b==='white'?-1:b==='black'?Infinity:Number(b)));
 for(const [family,steps] of Object.entries(F.palettes))for(const [step,value] of Object.entries(steps)) F.addToken(`color.${family}.${step}`,'color',value,['gray','blue'].includes(family)?'existing':'extended');
-F.tokens['color.blue.550'].source='improved';
 const semantic={
  'text.heading':'color.gray.900','text.body':'color.gray.700','text.secondary':'color.gray.600','text.placeholder':'color.gray.500','text.disabled':'color.gray.400','text.inverse':'color.gray.white','text.link':'color.blue.600',
  'surface.canvas':'color.gray.50','surface.default':'color.gray.white','surface.subtle':'color.gray.100','surface.disabled':'color.gray.100',
  'border.default':'color.gray.200','border.strong':'color.gray.300','border.focus':'color.blue.500','border.danger':'color.red.500','border.success':'color.green.500',
- 'action.primary':'color.blue.600','action.hover':'color.blue.550','action.pressed':'color.blue.700','action.foreground':'color.gray.white',
- 'action.danger.background':'color.red.50','action.danger.foreground':'color.red.700','action.danger.hover':'color.red.100','action.danger.pressed':'color.red.200',
+ 'action.primary':'color.blue.600','action.hover':'color.blue.700','action.pressed':'color.blue.800','action.foreground':'color.gray.white',
+ 'action.danger.background':'color.red.50','action.danger.foreground':'color.red.800','action.danger.hover':'color.red.100','action.danger.pressed':'color.red.200',
  'action.success.background':'color.green.50','action.success.foreground':'color.green.700','action.success.hover':'color.green.100','action.success.pressed':'color.green.100',
  'status.success':'color.green.700','status.successSubtle':'color.green.50','status.danger':'color.red.600','status.dangerContent':'color.red.700','status.dangerSubtle':'color.red.50','status.warning':'color.amber.700','status.warningSubtle':'color.amber.50','status.info':'color.blue.600','status.infoSubtle':'color.blue.50'
 };
 for(const [id,v]of Object.entries(semantic)) F.addToken('semantic.'+id,'color','{'+v+'}',['status.success','status.dangerContent','action.hover'].includes(id)?'improved':'existing');
-F.badgeTones={neutral:['gray.100','gray.700','gray.500'],blue:['blue.50','blue.700','blue.500'],success:['green.50','green.700','green.500'],purple:['purple.50','purple.600','purple.600'],warning:['amber.75','amber.700','amber.450'],danger:['red.50','red.700','red.400']};
+F.badgeTones={neutral:['gray.100','gray.700','gray.500'],blue:['blue.50','blue.700','blue.500'],success:['green.50','green.700','green.500'],purple:['purple.50','purple.600','purple.600'],warning:['amber.50','amber.700','amber.400'],danger:['red.50','red.700','red.500']};
 for(const [tone,values] of Object.entries(F.badgeTones))for(const [n,role] of ['background','foreground','indicator'].entries())F.addToken(`semantic.badge.${tone}.${role}`,'color',`{color.${values[n]}}`,'normalized');
 for(const [role,target]of Object.entries({background:'color.gray.50',foreground:'color.gray.500',indicator:'color.gray.400'}))F.addToken('semantic.badge.inactive.'+role,'color',`{${target}}`,'normalized');
 // User-selected 500 fills with white labels; contrast exceptions are documented.
 // Inactive solids deliberately desaturate to the shared neutral pairing.
 const badgeFinishes={neutral:['gray.300','gray.500','gray.white'],blue:['blue.200','blue.500','gray.white'],success:['green.200','green.500','gray.white'],purple:['purple.200','purple.500','gray.white'],warning:['amber.200','amber.500','gray.white'],danger:['red.200','red.500','gray.white'],inactive:['gray.200','gray.500','gray.white']};
 for(const [tone,values]of Object.entries(badgeFinishes))for(const [n,role]of ['border','solid.background','solid.foreground'].entries())F.addToken(`semantic.badge.${tone}.${role}`,'color',`{color.${values[n]}}`,'normalized');
-for(const [tone,target]of Object.entries({neutral:'color.gray.700',blue:'color.blue.600',success:'color.green.500',warning:'color.amber.450',danger:'color.red.500'}))F.addToken('semantic.progress.fill.'+tone,'color',`{${target}}`,'normalized');
+for(const [tone,target]of Object.entries({neutral:'color.gray.700',blue:'color.blue.600',success:'color.green.500',warning:'color.amber.400',danger:'color.red.500'}))F.addToken('semantic.progress.fill.'+tone,'color',`{${target}}`,'normalized');
 F.addToken('semantic.progress.track','color','{semantic.surface.subtle}','normalized');
 F.addToken('semantic.progress.label','color','{semantic.text.secondary}','normalized');
 // Layout spacing follows a 4px rhythm, with 2px/6px fine steps and zero reset.
@@ -57,9 +60,9 @@ F.addToken('border.width.hairline','dimension','0.5px','existing');
 F.addToken('border.width.selection','dimension','1.5px','existing');
 F.addToken('color.black.alpha05','color','#0000000d','existing');
 F.addToken('shadow.control','shadow','inset 0 1.5px 0 #ffffff33, 0 1px 2px #1717171f');
-F.addToken('shadow.focus','shadow','0 0 0 3px #3470EE33');
-F.addToken('shadow.focusDanger','shadow','0 0 0 3px #D4315533','normalized');
-F.addToken('shadow.focusSuccess','shadow','0 0 0 3px #04785733','normalized');
+F.addToken('shadow.focus','shadow','0 0 0 3px color-mix(in srgb, var(--pp-color-blue-500) 20%, transparent)');
+F.addToken('shadow.focusDanger','shadow','0 0 0 3px color-mix(in srgb, var(--pp-color-red-500) 20%, transparent)','normalized');
+F.addToken('shadow.focusSuccess','shadow','0 0 0 3px color-mix(in srgb, var(--pp-color-green-500) 20%, transparent)','normalized');
 F.addToken('shadow.menu','shadow','0 8px 30px #26262614, 0 2px 5px #26262608');
 F.addToken('shadow.modal','shadow','0 24px 80px #00000020');
 F.addToken('shadow.card','shadow','0 1px 3px #1717170a');
@@ -121,7 +124,7 @@ F.resolve=(id,seen=[])=>{if(seen.includes(id))throw Error('Circular token: '+id)
 F.chain=id=>{let chain=[id];while(/^\{.+\}$/.test(F.tokens[id]?.value)){id=F.tokens[id].value.slice(1,-1);if(chain.includes(id))throw Error('Circular token');chain.push(id);}return chain;};
 F.varName=id=>'--pp-'+id.replaceAll('.','-');F.v=id=>`var(${F.varName(id)})`;
 /* One badge contract drives every instance and its token inspector. */
-F.statusOptions={pending:['Pending','warning','warning'],failed:['Failed','danger','x-circle-fill'],success:['Success','success','check-circle-fill'],progress:['In progress','blue','reset'],review:['In review','purple','search'],submitted:['Submitted','blue','arrow'],expired:['Expired','neutral','clock']};
+F.statusOptions={pending:['Pending','warning','warning'],failed:['Failed','danger','x-circle-fill'],success:['Success','success','check-circle-fill'],progress:['In progress','blue','circle-dashed'],review:['In review','purple','search'],submitted:['Submitted','blue','arrow'],expired:['Expired','neutral','clock']};
 F.statusBadgeConfig=(c={})=>{const v=F.statusOptions[c.status]||F.statusOptions.pending;return {...c,variant:'soft',tone:v[1],iconName:v[2],label:v[0],indicator:c.statusIcon===false?'none':'icon'};};
 F.badgeTokens=(c={})=>{
  if(c.variant==='status'){const v=F.statusBadgeConfig(c),map=F.badgeTokens(v);map.radius='radius.full';map.border='component.badge.'+v.tone+'.border';return map;}

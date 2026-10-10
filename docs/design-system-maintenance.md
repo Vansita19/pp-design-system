@@ -55,7 +55,7 @@ Current color choices keep focus/validation borders on the corresponding 500 sha
 
 Use `F.addToken`, `F.resolve`, `F.chain`, `F.v` and `F.tokenCSS` consistently. Component inspectors use `F.tokenTable`/`F.tokenRow` and named references; literal primitive definitions belong in Foundations. Reusable design values belong in the registry; structural CSS such as `100%` is not a reason to create a token. An inspector is a maintained contract, not a claim that every computed property has been extracted automatically.
 
-Existing exceptions remain documented until their scope is deliberately changed. For example, do not renumber the retained purple scale to resemble another library, or alter every warning color to fix a spinner. See [the source audit](source-audit.md) and [standards audit](standards-audit.md).
+The 11 October 2026 palette normalization supersedes the previously retained PP shade overrides: all eight product primitive palettes use complete Tailwind 3.4.17 ramps. See [the palette contract](color-palettes.md) for the pinned source and semantic migrations. Never mix an isolated custom shade into a standard ramp. Historical source audits remain extraction evidence, not current color specifications.
 
 ## Source completeness rule
 

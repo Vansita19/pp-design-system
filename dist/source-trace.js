@@ -22,7 +22,7 @@
  };
  for(const [role,target]of Object.entries(aliases))ref('component.trace.'+role,target);
  const areas=[['team','Team','users','blue'],['product','Product','grid','purple'],['traction','Traction','chart','green'],['market','Market','globe','blue'],['competition','Competition','layers','amber'],['risk','Risk','warning','amber']];
- for(const [id,,,family]of areas)for(const [role,step]of [['surface',family==='green'?50:family==='amber'?75:100],['icon',family==='purple'?600:family==='green'?600:700]])ref('component.trace.area.'+id+'.'+role,'color.'+family+'.'+step);
+ for(const [id,,,family]of areas)for(const [role,step]of [['surface',family==='green'?50:family==='amber'?50:100],['icon',family==='purple'?600:family==='green'?600:700]])ref('component.trace.area.'+id+'.'+role,'color.'+family+'.'+step);
  const keys=prefix=>Object.keys(aliases).filter(k=>!['map.companyAvatar','map.companyRadius'].includes(k)&&(!prefix||k.startsWith(prefix))).map(k=>'component.trace.'+k),px=id=>parseFloat(F.resolve('component.trace.'+id));
  const variant=c=>['sidebar','map','confidence','sources'].includes(c.variant)?c.variant:'sidebar';
  const level=v=>['high','moderate','low'].includes(String(v).toLowerCase())?String(v).toLowerCase():'moderate';

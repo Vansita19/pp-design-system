@@ -2,8 +2,6 @@
    The segmented shape follows the supplied eight-spoke reference. */
 (() => {
  const F=window.Forma;
- F.palettes.orange={...(F.palettes.orange||{}),500:'#FF6B18'};
- F.addToken('color.orange.500','color',F.palettes.orange[500],'extended');
  F.addToken('border.width.spinner','dimension','1.7px','existing');
  const tones={neutral:'color.gray.400',blue:'color.blue.600',success:'color.green.500',warning:'color.orange.500',danger:'color.red.500'};
  for(const [tone,token] of Object.entries(tones))F.addToken(`semantic.loading.${tone}`,'color',`{${token}}`,'normalized');

@@ -9,8 +9,6 @@
  seed('font.line.22','dimension','22px');
  seed('font.line.19','dimension','19px');
  seed('border.width.hairline','dimension','0.5px');
- seed('color.gray.75','color','#F7F7F7');
- F.palettes.gray[75]='#F7F7F7';
  seed('color.black.alpha10','color','#0000001a');
  seed('shadow.segmented','shadow','0 8px 1px transparent, 0 5px 1px #00000003, 0 3px 1px #00000008, 0 1px .5px #0000000d, 0 0 .5px #0000000f');
  seed('shadow.information','shadow','0 22px 3px #00000000, 0 14px 3px #00000003, 0 8px 2.5px #00000005, 0 3px 1.5px #00000008, 0 1px 1px #0000000a');
@@ -21,7 +19,7 @@
  const semantic={
   'table.selected':'color.blue.50','table.background':'semantic.surface.default','table.header':'semantic.surface.canvas','table.hover':'semantic.surface.canvas','table.border':'semantic.border.default','table.text':'semantic.text.body','table.label':'semantic.text.secondary',
   'navigation.segmented.track':'semantic.surface.subtle','navigation.segmented.selected':'semantic.surface.default','navigation.segmented.label':'semantic.text.secondary','navigation.segmented.selectedLabel':'semantic.text.heading','navigation.segmented.border':'semantic.border.strong',
-  'information.callout.background':'color.blue.50','information.callout.heading':'color.blue.900','information.callout.body':'color.blue.800','information.callout.icon':'color.blue.500','information.shell':'color.gray.75','information.surface':'semantic.surface.default','information.border':'color.black.alpha10','information.heading':'semantic.text.heading','information.text':'semantic.text.body'
+  'information.callout.background':'color.blue.50','information.callout.heading':'color.blue.900','information.callout.body':'color.blue.800','information.callout.icon':'color.blue.500','information.shell':'color.gray.50','information.surface':'semantic.surface.default','information.border':'color.black.alpha10','information.heading':'semantic.text.heading','information.text':'semantic.text.body'
  };
  for(const [role,target]of Object.entries(semantic))F.addToken('semantic.'+role,F.tokens[target].type,`{${target}}`,'normalized');
  const component={

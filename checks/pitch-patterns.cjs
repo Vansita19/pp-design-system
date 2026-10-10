@@ -135,7 +135,7 @@ for(const html of [
 for(const [id,value]of Object.entries({
  'component.tabs.segmented.width':'148px','component.tabs.segmented.height':'32px','component.tabs.segmented.firstWidth':'84px','component.tabs.segmented.lastWidth':'64px','component.tabs.segmented.radius':'8px','component.tabs.segmented.borderWidth':'0.5px',
  'component.table.radius':'16px','component.table.innerRadius':'12px','component.table.inset':'4px','component.table.headerHeight':'40px','component.table.rowHeight':'44px','component.table.cellPaddingX':'12px',
- 'component.information.inset':'2px','component.information.padding':'16px','component.information.radius':'12px','component.information.labelWidth':'212px','component.information.shell':'#F7F7F7'
+ 'component.information.inset':'2px','component.information.padding':'16px','component.information.radius':'12px','component.information.labelWidth':'212px','component.information.shell':'#FAFAFA'
 }))assert.equal(F.resolve(id),value,id);
 for(const [id,token]of Object.entries(F.tokens).filter(([id])=>/^component\.(table|filter|tabs|information)\./.test(id))){
  assert.match(token.value,/^\{.+\}$/,'Component tokens alias named values');

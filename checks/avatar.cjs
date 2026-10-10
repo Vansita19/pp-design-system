@@ -113,7 +113,7 @@ test('the supplied portrait is preserved and used across every image demo',()=>{
 test('colored text and profile placeholders share the existing token system',()=>{
  assert.equal(F.resolve('component.avatar.blue.background'),F.resolve('color.blue.200'));
  assert.equal(F.resolve('component.avatar.blue.foreground'),F.resolve('color.blue.900'));
- assert.equal(F.resolve('component.avatar.purple.background'),'#C8C0FC');
+ assert.equal(F.resolve('component.avatar.purple.background'),'#E9D5FF');
  for(const tone of Object.keys(F.avatarTones))for(const variant of ['text','placeholder']){
   const markup=F.avatar({tone,variant,name:'Alex',initials:'AM'});
   assert.match(markup,new RegExp('--avatar-background:var\\(--pp-component-avatar-'+tone+'-background\\)'));

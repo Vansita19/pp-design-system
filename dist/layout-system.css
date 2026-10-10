@@ -35,7 +35,7 @@
 .layout-legend i{width:8px;height:8px;border-radius:50%}
 .layout-key-sidebar{fill:var(--pp-color-green-100);background:var(--pp-color-green-500)}
 .layout-key-column{fill:var(--pp-color-purple-200);background:var(--pp-color-purple-500)}
-.layout-key-gutter{fill:var(--pp-color-amber-100);background:var(--pp-color-amber-450)}
+.layout-key-gutter{fill:var(--pp-color-amber-100);background:var(--pp-color-amber-400)}
 .layout-comparison-item{margin:0 0 24px}
 .layout-comparison-item>div:first-child{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 .layout-comparison-item h3{color:#dedee5;font-size:14px;font-weight:500;margin:0}

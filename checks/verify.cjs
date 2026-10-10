@@ -2,6 +2,16 @@ const vm=require('node:vm');const fs=require('node:fs');const assert=require('no
 const context={window:{},document:{createElement:()=>({}),getElementById:()=>({}),head:{append(){}}}};vm.createContext(context);
 for(const file of ['tokens.js','hugeicons-icons.js','tag.js','utility-atoms.js','navigation-controls.js','drawer.js','avatar.js','spinner.js','chip.js','switch-motion.js','menus.js','pitch-patterns.js','feedback.js','layout-system.js','slider.js','prompt-bar.js','ai-response.js','detail-blocks.js','card-patterns.js','prompt-suggestions.js','catalogue.js','previews.js','command-menu.js','guided-popover.js','tooltip.js','file-upload.js','date-picker.js','source-shell.js','source-workspace.js','source-details.js','source-trace.js','source-chat.js','chat-bubble.js','token-display.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),context,{filename:file});
 const F=context.window.Forma;
+const paletteReference=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/references/tailwind-palettes.json'),'utf8'));
+assert.deepEqual(JSON.parse(JSON.stringify(F.palettes)),paletteReference.palettes,'Every primitive palette must match the pinned Tailwind ramp');
+for(const [family,steps]of Object.entries(F.palettes)){
+ for(const shade of [50,100,200,300,400,500,600,700,800,900,950]){
+  assert.match(steps[shade]||'',/^#[0-9a-f]{6}$/i,`${family}.${shade}: complete primitive ramp`);
+  assert.equal(F.resolve(`color.${family}.${shade}`),steps[shade]);
+ }
+}
+assert.equal(F.paletteEntries(F.palettes.gray)[0][0],'white');
+assert.deepEqual(Array.from(F.paletteEntries(F.palettes.gray).slice(1),([step])=>Number(step)),[50,100,200,300,400,500,600,700,800,900,950]);
 assert.equal(new Set(F.items.map(i=>i.id)).size,F.items.length,'Duplicate component IDs');
 for(const id of Object.keys(F.tokens))assert.notEqual(F.resolve(id),undefined);
 let variations=0;for(const item of F.items){for(const token of item.tokens)assert.ok(F.tokens[token],`${item.id}: ${token}`);for(const part of item.parts)assert.ok(F.byId[part],`${item.id}: ${part}`);if(item.group==='Foundations')continue;const config=F.defaults(item);assert.ok(F.preview(item,config).length>10,item.id);for(const control of item.controls){for(const value of control.options){assert.ok(F.preview(item,{...config,[control.key]:value}).length>10,`${item.id}: ${control.key} ${value}`);variations++;}}}

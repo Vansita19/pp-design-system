@@ -32,7 +32,7 @@ assert.match(F.spinner({label:'</span><script>x</script>'}),/&lt;script&gt;/);
 assert.equal(F.resolve('component.spinner.size.sm'),'12px');
 assert.equal(F.resolve('component.spinner.size.md'),'16px');
 assert.equal(F.resolve('component.spinner.size.lg'),'24px');
-assert.equal(F.resolve('semantic.loading.warning'),'#FF6B18');
+assert.equal(F.resolve('semantic.loading.warning'),'#F97316');
 assert.equal(F.resolve('semantic.status.warning'),'#B45309','Orange loading color must not change warning text');
 assert.equal(F.resolve('component.spinner.duration'),F.resolve('motion.duration.spin'));
 const variables=new Set(Object.keys(F.tokens).map(F.varName));
