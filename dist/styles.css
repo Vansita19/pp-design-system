@@ -96,7 +96,7 @@ body{background:#0c0c0f;color:#ededf0;-webkit-font-smoothing:antialiased}
 .project-header{position:relative;display:flex;align-items:center;min-height:64px;padding:var(--pp-space-8) var(--pp-space-12);background:#181818;border-bottom:1px solid var(--shell-border)}
 .project-picker{margin:0;width:100%;height:44px;padding:var(--pp-space-8) var(--pp-space-8);gap:var(--pp-space-12);border-radius:var(--control-radius);border:1px solid transparent;background:transparent;box-shadow:none;font-size:13px;min-width:0}
 .project-picker:hover,.project-picker[aria-expanded=true]{background:var(--control-fill);border-color:var(--control-border);box-shadow:var(--control-shadow)}
-.project-logo{display:block;width:29px;height:25px;object-fit:contain;border:0;border-radius:0;background:transparent;box-shadow:none;flex-shrink:0}
+.project-logo{display:block;width:var(--pp-space-28);height:var(--pp-space-28);object-fit:contain;border:0;border-radius:0;background:transparent;box-shadow:none;flex-shrink:0}
 .project-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .project-picker .chevron{color:#92929c}
 .project-menu{left:10px;right:10px;top:calc(100% + 4px);border-radius:10px;background:#1b1b1b;border-color:#343434;box-shadow:inset 0 1px 0 #ffffff0a,0 12px 32px #0009;padding:var(--pp-space-4)}
